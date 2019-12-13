@@ -1,0 +1,63 @@
+/**
+Commons
+*/
+
+body {
+    background: #f8f8f8;
+    color: #66697A;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.container{
+	max-width: 1400px;
+	width: 100%;
+}
+.first:first-child{
+	padding-left: 0;
+	margin-left: 0;
+}
+.last:last-child{
+	padding-right: 0;
+	margin-right: 0;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+
+.hide-lg{
+	display: block!important;
+}
+.show-lg{
+	display: none!important;
+}
+.hide-md{
+	display: block!important;
+}
+.show-md{
+	display: none!important;
+}
+.hide-sm{
+	display: block!important;
+}
+.show-sm{
+	display: none!important;
+}
+.hide-xs{
+	display: block!important;
+}
+.show-xs{
+	display: none!important;
+}
+
+
+
+
+.divider{
+	line-height: 0;
+	font-size: 0;
+}
