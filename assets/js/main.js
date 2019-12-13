@@ -20,12 +20,11 @@ var windowWidth = $(window).width();
 // }
 
 
-
 // http://codepen.io/norman_pixelkings/pen/NNbqgG
 // https://stackoverflow.com/questions/38686650/slick-slides-on-pagination-hover
 
 
-
+//$("[data-fancybox]").fancybox({});
 
 
 /**
@@ -72,3 +71,12 @@ if( $('.responsive-slider').length ){
     new WOW().init();
 
 })(jQuery);
+
+
+
+
+
+
+
+
+
