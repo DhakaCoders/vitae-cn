@@ -1,5 +1,46 @@
 /*
 -------------------------
+ Footer top dsc
+-------------------------
+*/
+.footer-top-dsc-wrp{
+	background: #47a348;
+	padding: 62px 0 40px;
+	text-align: center;
+}
+.footer-top-dsc{
+	max-width: 905px;
+	width: 100%;
+	margin: 0 auto;
+	color: #fff;
+	line-height: 24px;
+}
+.footer-top-dsc h3{
+	margin: 0;
+	margin-bottom: 20px;
+}
+.footer-top-dsc a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 600;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	border: 2px solid #FFFFFF;
+	box-sizing: border-box;
+	border-radius: 6px;
+	padding: 18px 65px 16px;
+}
+.footer-top-dsc a:hover{
+	color: #e0a602;
+}
+
+/*
+-------------------------
 footer-wrp
 -------------------------
 */
