@@ -1,14 +1,16 @@
 (function($) {
-
+var windowWidth = $(window).width();
 $('.navbar-toggle').on('click', function(){
 	$('#mobile-nav').slideToggle(300);
 });
 	
-
+if($('.matchHeightCol').length){
+    $('.matchHeightCol').matchHeight();
+  };
 /**
 Responsive on 767px
 */
-var windowWidth = $(window).width();
+
 // if (windowWidth <= 767) {
 
   $('.toggle-btn').on('click', function(){
@@ -26,6 +28,26 @@ var windowWidth = $(window).width();
 
 //$("[data-fancybox]").fancybox({});
 
+
+
+/*Milon*/
+
+
+
+
+
+
+
+/*Prashanto*/
+
+
+
+
+
+
+
+
+/*Rannojit*/
 
 /**
 Slick slider
