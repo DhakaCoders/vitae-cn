@@ -32,6 +32,7 @@ Responsive on 767px
 
 /*Milon*/
 
+$('[data-toggle="tooltip"]').tooltip(); 
 
 
 
