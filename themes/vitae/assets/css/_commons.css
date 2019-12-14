@@ -5,7 +5,7 @@ Commons
 	outline: 0!important;
 	text-decoration: none;
 }
-a, button, input{
+a, button, input{ 
 	outline: 0;
 	border: 0;
 }
@@ -87,7 +87,7 @@ Containers
 	max-width: 1550px;
 }
 .container{
-	max-width: 1405px;
+	max-width: 1400px;
 	width: 100%;
 }
 
