@@ -83,7 +83,9 @@ Containers
 	clear: both;
 }
 .container-xlg{}
-.container-lg{}
+.container-lg{
+	max-width: 1550px;
+}
 .container{
 	max-width: 1405px;
 	width: 100%;
