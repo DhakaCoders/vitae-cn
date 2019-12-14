@@ -1,0 +1,152 @@
+/*
+-------------------
+faq-overview-sec-wrp
+-------------------
+*/
+.faq-overview-sec-wrp{
+	padding-top: 110px;
+	padding-bottom: 60px;
+}
+.faq-overview-sec-wrp .vt-sec-hdr{
+	max-width: 958px;
+	width: 100%;
+	margin: 0 auto;
+}
+.faq-overview-sec-wrp .vt-sec-hdr h2{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.faq-overview-sec-wrp .vt-sec-hdr p{
+	margin-bottom: 25px;
+}
+.faq-overview-sec-wrp .vt-sec-hdr a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 18px;
+	color: #47A348;
+	font-weight: 600;
+}
+.faq-overview-sec-wrp .vt-faq-grds ul {
+    padding-bottom: 75px;
+}
+.faq-overview-sec-wrp .vt-sec-hdr a:hover{
+	color: #e1a501;
+}
+.faq-pagination-wrp{
+	text-align: center;
+}
+.faq-pagination-wrp ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.faq-pagination-wrp ul li{
+	display: inline-block;
+	vertical-align: baseline;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 600;
+}
+.faq-pagination-wrp ul li a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	text-align: center;
+	color: #66697A;
+	padding: 0 26px 21px;
+	position: relative;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.faq-pagination-wrp ul li a:after{
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 25px;
+	height: 4px;
+	background: #47a348;
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.faq-pagination-wrp ul li a:hover:after,
+.faq-pagination-wrp ul li a.active:after{
+	opacity: 1;
+	visibility: visible;
+}
+.faq-pagination-wrp ul li a:hover,
+.faq-pagination-wrp ul li a.active{
+	color: #47a348;
+}
+
+/*
+---------------------------
+faq-detalis-content-sec-wrp
+---------------------------
+*/
+.faq-detalis-content-sec-wrp{
+	padding-top: 55px;
+	padding-bottom: 90px;
+}
+.faq-detalis-block{
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+.faq-back-btn{
+	padding-left: 25px;
+	padding-bottom: 50px;
+}
+.faq-back-btn a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 18px;
+	color: #66697A;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-left: 35px;
+	position: relative;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.faq-back-btn a:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -2px;
+	background: url(../images/back-btn-icon.png);
+	background-repeat: no-repeat;
+	background-size: 24px 18px;
+	width: 24px;
+	height: 18px;
+}
+.faq-back-btn a:hover{
+	color: #03b605;
+}
+.faq-detalis-dsc-wrp{
+	background: #FFFFFF;
+	box-shadow: 0px 18px 30px #F0F2F6;
+	border-radius: 6px;
+	padding: 70px 50px;
+}
+.faq-detalis-dsc-wrp h3{
+	margin: 0;
+	margin-bottom: 25px;
+}
+.faq-detalis-dsc-wrp p{
+	margin-bottom: 25px;
+}

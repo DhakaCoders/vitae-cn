@@ -15,9 +15,10 @@
 	color: #fff;
 	line-height: 24px;
 }
-.footer-top-dsc h3{
-	margin: 0;
-	margin-bottom: 20px;
+.footer-top-dsc h3 {
+    margin: 0;
+    margin-bottom: 20px;
+    color: #fff;
 }
 .footer-top-dsc a{
 	display: inline-block;
