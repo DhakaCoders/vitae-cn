@@ -2,9 +2,10 @@
 All heading
 */
 h1,h2,h3,h4,h5,h6{
-	line-height: 1;	
+	line-height: 1.1;	
     font-weight: 600;
     margin-top: 0;
+    color: #10303C;
 }
 h1{
 	font-size: 70px;
