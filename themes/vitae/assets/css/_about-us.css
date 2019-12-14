@@ -1,0 +1,216 @@
+/*
+------------------------
+about-us-secvice-sec-wrp
+------------------------
+*/
+.about-us-secvice-sec-wrp{
+	padding-top: 110px;
+}
+.about-us-dsc-lft{
+	padding-right: 30px;
+}
+.about-us-dsc-lft span{
+	display: inline-block;
+	vertical-align: baseline;
+	font-size: 16px;
+	line-height: 18px;
+	color: #47A348;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.about-us-dsc-lft h1{
+	margin: 0;
+	margin-top: 20px;
+	margin-bottom: 48px;
+	line-height: 55px;
+}
+.about-us-dsc-lft h5{
+	margin: 0;
+	font-weight: 200;
+	color: #66697A;
+	line-height: 40px;
+}
+.about-us-dsc-rgt {
+    padding-top: 145px;
+    padding-right: 10px;
+}
+.about-us-dsc-rgt p{
+	margin-bottom: 22px;
+}
+.about-service-wrp{
+	padding-top: 35px;
+}
+.about-service-wrp ul{
+	list-style: none;
+	margin: 0 -12px;
+	padding: 0;
+}
+.about-service-wrp ul li{
+	float: left;
+	width: 25%;
+	padding: 0 12px;
+}
+.about-service-inr{
+	background: #FFFFFF;
+	box-shadow: 0px 18px 30px #F0F2F6;
+	border-radius: 6px;
+	padding: 30px 30px 55px;
+}
+.about-service-dsc{
+	text-align: center;
+}
+.about-service-dsc h6{
+	margin: 0;
+	font-size: 22px;
+	line-height: 24px;
+	color: #10303c;
+	font-weight: 600;
+	margin-top: 20px;
+	margin-bottom: 8px;
+}
+.about-service-dsc p{
+	margin-bottom: 25px;
+}
+.about-service-dsc a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 18px;
+	color: #47A348;
+	font-weight: 600;
+}
+.about-service-dsc a:hover{
+	color: #f0ba00;
+}
+
+/*
+----------------------
+about-our-team-sec-wrp
+----------------------
+*/
+.about-our-team-sec-wrp{
+	padding-top: 90px;
+}
+.about-our-team-lft{
+	float: left;
+	width: 41%;
+	text-align: right;
+	padding-right: 35px;
+}
+.about-our-team-rgt{
+	float: right;
+	width: 59%;
+}
+.about-our-team-img-small{
+	padding-bottom: 35px;
+}
+.about-our-team-img img{
+	width: 100%;
+	max-width: 100%;
+}
+.about-our-team-dsc{
+	padding-top: 120px;
+	padding-left: 140px;
+	padding: 120px 140px 60px 120px;
+}
+.about-our-team-dsc h3{
+	margin: 0;
+	margin-bottom: 25px;
+}
+.about-our-team-dsc p{
+	margin-bottom: 15px;
+}
+/*
+--------------------------
+about-partners-4-prosperity-sec
+--------------------------
+*/
+.about-prd-tp{
+	padding-top: 140px;
+}
+/*
+-------------------------
+.about-our-community-sec
+-------------------------
+*/
+.about-our-community-sec{
+	padding-bottom: 105px; 
+}
+.about-our-community-sec .our-community-des{
+	padding-top: 80px;
+	padding-left: 115px;
+}
+.about-our-community-sec .our-community-des p {
+    margin-bottom: 25px;
+}
+
+
+/*
+-----------------------
+about-new-life-sec-wrp
+-----------------------
+*/
+.about-new-life-sec-wrp{
+	padding-bottom: 80px;
+}
+.about-new-life-dsc-tp{
+	border-top: 3px solid #F8F9FA;
+	padding: 95px 0; 
+}
+.about-new-life-dsc-tp h2{
+	margin: 0;
+	float: left;
+	padding-right: 150px;
+}
+.about-new-life-dsc-tp p{
+	font-size: 18px;
+	line-height: 32px;
+	color: #66697A;
+}
+.about-new-life-img{
+	padding-bottom: 60px;
+}
+.about-new-life-dsc-btm h3{
+	margin: 0;
+	margin-bottom: 32px;
+}
+.about-new-life-blockquote{
+	background: #FFFFFF;
+	box-shadow: 0px 18px 30px #F0F2F6;
+	border-radius: 6px;
+	padding: 45px 80px 50px 160px;
+	position: relative;
+	margin-top: 40px;
+}
+.about-new-life-blockquote blockquote{
+	font-style: italic;
+	font-weight: 200;
+	font-size: 36px;
+	line-height: 48px;
+	color: #66697A;
+	margin: 0;
+}
+.about-new-life-blockquote blockquote:after{
+	content: "";
+	position: absolute;
+	left: 50px;
+	top: 45px;
+	background: url(../images/quote-icon.png);
+	background-repeat: no-repeat;
+	background-size: 71px 71px;
+	width: 71px;
+	height: 71px;
+}
+.about-new-life-blockquote span{
+	display: inline-block;
+	vertical-align: baseline;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 500;
+	color: #66697A;
+	padding-top: 10px;
+}
+.about-social-media-sec{
+	padding-bottom: 75px;
+}
