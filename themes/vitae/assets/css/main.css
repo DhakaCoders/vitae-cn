@@ -7,11 +7,13 @@
 @import url('_page.css');
 /*Rannojit*/
 @import url('_home.css');
+@import url('_innerpage.css');
 
 
 /*Milon*/
 @import url('_faq-overview.css');
 @import url('_about-us.css');
+@import url('_about-dark.css');
 
 
 /*Prashanto*/
