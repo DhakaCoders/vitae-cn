@@ -80,13 +80,14 @@ contact-form-sec-wrp
 	box-sizing: border-box !important;
 	border: 2px solid #F3F3F3 !important;
 	border-radius: 6px;
-	padding: 10px 18px !important;
+	padding: 10px 20px !important;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 	font-size: 16px;
 	line-height: 18px;
 	color: #B7B7B7;
+	background:#fff !important;
 }
 .contact-form .wpforms-form .wpforms-field-container .wpforms-field.wpforms-has-error input{
 	border-color: #FF5C26!important;
@@ -192,4 +193,7 @@ contact-form-sec-wrp
 	color: #FF5C26 !important;
 	font-weight: 400 !important;
 	padding-top: 10px;
+}
+.contact-prd-btm .subscribe-cmnt{
+	padding-bottom: 0;
 }
