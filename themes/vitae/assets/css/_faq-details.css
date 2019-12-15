@@ -1,4 +1,4 @@
-.faq-detalis-content-sec-wrp{
+.faq-detalis-page-con{
 	padding-top: 55px;
 	padding-bottom: 90px;
 }
@@ -6,6 +6,9 @@
 	max-width: 1000px;
 	width: 100%;
 	margin: 0 auto;
+}
+.vt-faq-details-con-block.default-page-con{
+	max-width: 100%;
 }
 .faq-back-btn{
 	padding-left: 25px;
@@ -40,16 +43,27 @@
 .faq-back-btn a:hover{
 	color: #03b605;
 }
-.faq-detalis-dsc-wrp{
+.vt-faq-details-con-block{
 	background: #FFFFFF;
 	box-shadow: 0px 18px 30px #F0F2F6;
 	border-radius: 6px;
 	padding: 70px 50px;
 }
-.faq-detalis-dsc-wrp h3{
-	margin: 0;
+
+
+.dfp-faq-promo-module h1{
+	font-size: 40px;
+	line-height: 45px;
 	margin-bottom: 25px;
 }
-.faq-detalis-dsc-wrp p{
-	margin-bottom: 25px;
+.vt-faq-details-con-block.default-page-con ol{
+	padding-left: 0;
+}
+
+.vt-faq-details-con-block .dfp-fancy-bx{
+	margin-bottom: 45px;
+}
+
+.vt-faq-details-con-block .dfp-tbl-wrap{
+	padding-top: 5px;
 }
