@@ -80,7 +80,7 @@ footer-wrp
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	padding-right: 141px;
+	padding-right: 140px;
 }
 .ftr-menu-item ul:nth-child(2){
 	padding-right: 130px;
@@ -109,6 +109,9 @@ footer-wrp
 .ftr-socail-icon ul li{
 	float: left;
 	padding: 0 12px;
+}
+.ftr-socail-icon ul li:first-child{
+	padding-left: 0;
 }
 .ftr-socail-icon ul li:last-child{
 	padding-right: 0;

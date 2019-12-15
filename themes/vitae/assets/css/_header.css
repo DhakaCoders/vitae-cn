@@ -39,7 +39,6 @@ nav.main-nav ul li a{
 	vertical-align: baseline;
 	color: #66697A;
 	position: relative;
-	text-transform: uppercase;
 }
 
 nav.main-nav > ul{
@@ -53,6 +52,9 @@ nav.main-nav > ul > li{
 	font-weight: 500;
 	padding: 0 25px 0;
 	position: relative;
+}
+nav.main-nav > ul > li:last-child{
+	padding-right: 0;
 }
 nav.main-nav > ul > li.menu-item-has-children > a{
 	position: relative;
