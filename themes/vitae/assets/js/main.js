@@ -57,6 +57,8 @@ if( $('.partnersSlider').length ){
       speed: 300,
       slidesToShow: 4,
       slidesToScroll: 1,
+      prevArrow: $('.partners-slider-ctlr .slide-prev-btn'),
+      nextArrow: $('.partners-slider-ctlr .slide-next-btn'),
       responsive: [
         {
           breakpoint: 1024,
