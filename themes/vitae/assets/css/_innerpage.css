@@ -37,7 +37,7 @@
 	content: "";
 	position: absolute;
 	left: 0;
-	top: 6px;
+	top: 7px;
 	background: url(../images/list-icon.svg);
 	background-repeat: no-repeat;
 	background-size: 100% auto;
@@ -191,7 +191,7 @@
 	font-size: 36px;
 	line-height: 48px;
 	position: relative;
-	clear: #66697A;
+	color: #66697A;
 }
 
 .dfp-blockquote-inner::before {
@@ -639,7 +639,7 @@ ul.dft-2-grd-slider{
 /*table*/
 
 .dfp-tbl-wrap{
-	padding-top: 50px;
+	padding-top: 60px;
 }
 
 .table-dsc{
