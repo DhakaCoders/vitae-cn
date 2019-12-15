@@ -49,6 +49,9 @@ $('[data-toggle="tooltip"]').tooltip();
 
 
 /*Rannojit*/
+/*if( $('.tooltip-btn').length ){
+  $('[data-toggle="tooltip"]').tooltip();
+}*/
 
 if( $('.partnersSlider').length ){
     $('.partnersSlider').slick({
@@ -59,6 +62,45 @@ if( $('.partnersSlider').length ){
       slidesToScroll: 1,
       prevArrow: $('.partners-slider-ctlr .slide-prev-btn'),
       nextArrow: $('.partners-slider-ctlr .slide-next-btn'),
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+}
+if( $('.exchangeSolutionSlider').length ){
+    $('.exchangeSolutionSlider').slick({
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      prevArrow: $('.exchange-solution-slider-ctlr .slide-prev-btn'),
+      nextArrow: $('.exchange-solution-slider-ctlr .slide-next-btn'),
       responsive: [
         {
           breakpoint: 1024,
