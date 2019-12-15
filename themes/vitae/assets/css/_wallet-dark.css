@@ -279,11 +279,20 @@
 
 
 
-
-
-
-
-
+#wlt-dark-service-sec .about-dark-service-wrp {
+    margin-bottom: 0;
+}
+#wlt-dark-partners-4-sec .partnersSlideItemInner {
+    -ms-box-shadow: 0px 18px 30px #141C28;
+    -webkit-box-shadow: 0px 18px 30px #141C28;
+    box-shadow: 0px 18px 30px #141C28;
+}
+#wlt-dark-partners-4-sec .vt-sec-hdr h3 {
+	color:#fff;
+}
+#wlt-dark-partners-4-sec .vt-sec-hdr p {
+	color:#fff;
+}
 
 
 
