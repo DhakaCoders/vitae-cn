@@ -32,7 +32,7 @@ about-us-secvice-sec-wrp
 }
 .about-us-dsc-rgt {
     padding-top: 145px;
-    padding-right: 10px;
+    padding-right: 8px;
 }
 .about-us-dsc-rgt p{
 	margin-bottom: 22px;
@@ -96,7 +96,7 @@ about-our-team-sec-wrp
 	float: left;
 	width: 41%;
 	text-align: right;
-	padding-right: 35px;
+	padding-right: 25px;
 }
 .about-our-team-rgt{
 	float: right;
@@ -137,9 +137,10 @@ about-partners-4-prosperity-sec
 .about-our-community-sec{
 	padding-bottom: 105px; 
 }
-.about-our-community-sec .our-community-des{
-	padding-top: 80px;
-	padding-left: 115px;
+.about-our-community-sec .our-community-des {
+    padding-top: 80px;
+    padding-left: 90px;
+    padding-right: 30px;
 }
 .about-our-community-sec .our-community-des p {
     margin-bottom: 25px;
@@ -213,4 +214,72 @@ about-new-life-sec-wrp
 }
 .about-social-media-sec{
 	padding-bottom: 75px;
+}
+
+/*
+----------------------
+ Responsive Css
+----------------------
+*/
+/*----- max-width 1199px -----*/
+@media(max-width: 1199px){
+	.hide-lg{
+		display: none!important;
+	}
+	.show-lg{
+		display: block!important;
+	}
+	.about-us-dsc-lft {
+	    padding-right: 15px;
+	}
+
+}
+
+/*----- max-width 991px -----*/
+@media(max-width: 991px){
+	.hide-md{
+		display: none!important;
+	}
+	.show-md{
+		display: block!important;
+	}
+	.about-us-secvice-sec-wrp {
+	    padding-top: 70px;
+	}
+}
+
+/*----- max-width 767px -----*/
+@media(max-width: 767px){
+	.hide-sm{
+		display: none!important;
+	}
+	.show-sm{
+		display: block!important;
+	}
+}
+
+
+/*----- max-width 575 -----*/
+@media(max-width: 575px){
+	.hide-xs{
+		display: none!important;
+	}
+	.show-xs{
+		display: block!important;
+	}
+
+}
+
+
+
+/*----- max-width 439 -----*/
+@media(max-width: 479px){
+
+
+}
+
+
+/*----- max-width 369 -----*/
+@media(max-width: 359px){
+
 }

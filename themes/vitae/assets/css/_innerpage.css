@@ -705,10 +705,9 @@ ul.dft-2-grd-slider{
 .table-dsc table tbody{
 	border-top: 0;
 	margin: 0 3px;
-	border-top: 2px solid #f0f0f0;
 }
 .table-dsc table tbody tr td{
-	border-left: 3px solid #F0F0F0;
+	border-left: 2px solid #F0F0F0;
 }
 .table-dsc table tbody tr td span{
 	padding-top: 22px;
@@ -751,6 +750,12 @@ ul.dft-2-grd-slider{
 }
 .table-dsc table tbody tr:last-child td{
 	padding-bottom: 40px;
+}
+.table-dsc table thead tr th:first-child{
+	border-radius: 6px 0 0 0;
+}
+.table-dsc table thead tr th:last-child{
+	border-radius: 0 6px 0 0;
 }
 
 

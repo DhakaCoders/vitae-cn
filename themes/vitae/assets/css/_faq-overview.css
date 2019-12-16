@@ -12,9 +12,10 @@ faq-overview-sec-wrp
 	width: 100%;
 	margin: 0 auto;
 }
-.faq-overview-sec-wrp .vt-sec-hdr h2{
+.faq-overview-sec-wrp .vt-sec-hdr h1{
 	margin-top: 10px;
 	margin-bottom: 20px;
+	font-size: 56px;
 }
 .faq-overview-sec-wrp .vt-sec-hdr p{
 	margin-bottom: 25px;
@@ -91,62 +92,64 @@ faq-overview-sec-wrp
 }
 
 /*
----------------------------
-faq-detalis-content-sec-wrp
----------------------------
+----------------------
+ Responsive Css
+----------------------
 */
-.faq-detalis-content-sec-wrp{
-	padding-top: 55px;
-	padding-bottom: 90px;
+/*----- max-width 1199px -----*/
+@media(max-width: 1199px){
+	.hide-lg{
+		display: none!important;
+	}
+	.show-lg{
+		display: block!important;
+	}
+
 }
-.faq-detalis-block{
-	max-width: 1000px;
-	width: 100%;
-	margin: 0 auto;
+
+/*----- max-width 991px -----*/
+@media(max-width: 991px){
+	.hide-md{
+		display: none!important;
+	}
+	.show-md{
+		display: block!important;
+	}
 }
-.faq-back-btn{
-	padding-left: 25px;
-	padding-bottom: 50px;
+
+/*----- max-width 767px -----*/
+@media(max-width: 767px){
+	.hide-sm{
+		display: none!important;
+	}
+	.show-sm{
+		display: block!important;
+	}
 }
-.faq-back-btn a{
-	display: inline-block;
-	vertical-align: baseline;
-	text-decoration: none;
-	font-size: 16px;
-	line-height: 18px;
-	color: #66697A;
-	font-weight: 600;
-	text-transform: uppercase;
-	padding-left: 35px;
-	position: relative;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
+
+
+/*----- max-width 575 -----*/
+@media(max-width: 575px){
+	.hide-xs{
+		display: none!important;
+	}
+	.show-xs{
+		display: block!important;
+	}
+
 }
-.faq-back-btn a:after{
-	content: "";
-	position: absolute;
-	left: 0;
-	top: -2px;
-	background: url(../images/back-btn-icon.png);
-	background-repeat: no-repeat;
-	background-size: 24px 18px;
-	width: 24px;
-	height: 18px;
+
+
+
+/*----- max-width 439 -----*/
+@media(max-width: 479px){
+
+
 }
-.faq-back-btn a:hover{
-	color: #03b605;
+
+
+/*----- max-width 369 -----*/
+@media(max-width: 359px){
+
 }
-.faq-detalis-dsc-wrp{
-	background: #FFFFFF;
-	box-shadow: 0px 18px 30px #F0F2F6;
-	border-radius: 6px;
-	padding: 70px 50px;
-}
-.faq-detalis-dsc-wrp h3{
-	margin: 0;
-	margin-bottom: 25px;
-}
-.faq-detalis-dsc-wrp p{
-	margin-bottom: 25px;
-}
+

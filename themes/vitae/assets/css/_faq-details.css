@@ -1,0 +1,69 @@
+.faq-detalis-page-con{
+	padding-top: 55px;
+	padding-bottom: 90px;
+}
+.faq-detalis-block{
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+.vt-faq-details-con-block.default-page-con{
+	max-width: 100%;
+}
+.faq-back-btn{
+	padding-left: 25px;
+	padding-bottom: 55px;
+}
+.faq-back-btn a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 18px;
+	color: #66697A;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-left: 35px;
+	position: relative;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.faq-back-btn a:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(../images/back-btn-icon.svg);
+	background-repeat: no-repeat;
+	background-size: 24px 17px;
+	width: 24px;
+	height: 18px;
+}
+.faq-back-btn a:hover{
+	color: #03b605;
+}
+.vt-faq-details-con-block{
+	background: #FFFFFF;
+	box-shadow: 0px 18px 30px #F0F2F6;
+	border-radius: 6px;
+	padding: 70px 50px;
+}
+
+
+.dfp-faq-promo-module h1{
+	font-size: 40px;
+	line-height: 45px;
+	margin-bottom: 25px;
+}
+.vt-faq-details-con-block.default-page-con ol{
+	padding-left: 0;
+}
+
+.vt-faq-details-con-block .dfp-fancy-bx{
+	margin-bottom: 45px;
+}
+
+.vt-faq-details-con-block .dfp-tbl-wrap{
+	padding-top: 5px;
+}

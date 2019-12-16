@@ -8,12 +8,15 @@
 /*Rannojit*/
 @import url('_home.css');
 @import url('_innerpage.css');
+@import url('_faq-details.css');
+@import url('_exchange.css');
 
 
 /*Milon*/
 @import url('_faq-overview.css');
 @import url('_about-us.css');
 @import url('_about-dark.css');
+@import url('_contact.css');
 
 
 /*Prashanto*/

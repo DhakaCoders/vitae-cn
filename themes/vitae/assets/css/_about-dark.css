@@ -23,12 +23,11 @@ about-drk-banner-sec-wrp
 }
 .about-drk-des {
     color: #fff;
-    padding-right: 20px;
+    padding-right: 15px;
 }
 .about-dark-utility-dsc{
 	padding-top: 30px;
 	padding-left: 115px;
-	padding-right: 5px;
 }
 .about-dark-utility-dsc h4{
 	margin: 0;
@@ -92,7 +91,8 @@ about-drk-banner-sec-wrp
 	padding: 20px 85px;
 }
 .about-dark-utility-dsc a:hover{
-	color: #efb600;
+	background: #47a348;
+	border-color: #47a348;
 }
 .about-drk-sec-wrp .our-community-vdo{
 	position: relative;
@@ -188,6 +188,15 @@ about-dark-service-sec-wrp
 	background: #47a348;
 	border-color: #47a348;
 	margin-right: 15px;
+}
+.about-dark-ser-btn a:hover:first-of-type{
+	border-color: #fff;
+	background: #fff;
+	color: #47a348;
+}
+.about-dark-ser-btn a:hover:last-of-type{
+	background: #47a348;
+	border-color: #47a348;
 }
 .about-dark-ser-btn a:last-of-type{
 	padding: 20px 26px;
@@ -290,11 +299,14 @@ about-dark-service-sec-wrp
 about-drk-ipsum-sec-wrp
 --------------------
 */
+.about-drk-ipsum-sec-wrp{
+	padding-bottom: 90px;
+}
 .about-drk-ipsum-wrp{
 	background: #111823;
 	opacity: 0.8;
 	border-radius: 6px;
-	padding: 70px 0;
+	padding: 70px 0 60px;
 	margin-bottom: 90px;
 }
 .about-drk-ipsum-wrp ul{
@@ -324,8 +336,9 @@ about-drk-ipsum-sec-wrp
 	color: #fff;
 }
 .about-drk-ipsum-btm-dsc{
-	padding-left: 100px;
+	padding-left: 105px;
 	padding-top: 60px;
+	padding-right: 10px;
 	color: #fff;
 }
 .about-drk-ipsum-btm-dsc h2{
@@ -359,5 +372,67 @@ about-drk-ipsum-sec-wrp
 	background-repeat: no-repeat;
 	background-size: 12px 10px;
 	background-position: left top 3px;
+
+}
+
+/*
+----------------------
+ Responsive Css
+----------------------
+*/
+/*----- max-width 1199px -----*/
+@media(max-width: 1199px){
+	.hide-lg{
+		display: none!important;
+	}
+	.show-lg{
+		display: block!important;
+	}
+
+}
+
+/*----- max-width 991px -----*/
+@media(max-width: 991px){
+	.hide-md{
+		display: none!important;
+	}
+	.show-md{
+		display: block!important;
+	}
+}
+
+/*----- max-width 767px -----*/
+@media(max-width: 767px){
+	.hide-sm{
+		display: none!important;
+	}
+	.show-sm{
+		display: block!important;
+	}
+}
+
+
+/*----- max-width 575 -----*/
+@media(max-width: 575px){
+	.hide-xs{
+		display: none!important;
+	}
+	.show-xs{
+		display: block!important;
+	}
+
+}
+
+
+
+/*----- max-width 439 -----*/
+@media(max-width: 479px){
+
+
+}
+
+
+/*----- max-width 369 -----*/
+@media(max-width: 359px){
 
 }
