@@ -110,8 +110,6 @@ about-our-team-sec-wrp
 	max-width: 100%;
 }
 .about-our-team-dsc{
-	padding-top: 120px;
-	padding-left: 140px;
 	padding: 120px 140px 60px 120px;
 }
 .about-our-team-dsc h3{
@@ -221,6 +219,26 @@ about-new-life-sec-wrp
  Responsive Css
 ----------------------
 */
+/*----- max-width 1399px -----*/
+@media(max-width: 1399px){
+	.about-service-dsc p br{
+		display: none;
+	}
+	.about-our-team-dsc {
+	    padding: 100px 120px 60px 100px;
+	}
+	.about-our-community-sec .our-community-des {
+	    padding-top: 40px;
+	    padding-left: 40px;
+	    padding-right: 20px;
+	}
+	.about-new-life-dsc-tp h2 {
+	    padding-right: 120px;
+	}
+	.about-new-life-blockquote {
+	    padding: 45px 50px 50px 150px;
+	}
+}
 /*----- max-width 1199px -----*/
 @media(max-width: 1199px){
 	.hide-lg{
@@ -231,6 +249,28 @@ about-new-life-sec-wrp
 	}
 	.about-us-dsc-lft {
 	    padding-right: 15px;
+	}
+	.about-service-wrp ul li {
+	    width: 33.3333%;
+	    padding: 0 12px 25px;
+	}
+	.about-our-team-dsc {
+	    padding: 70px 60px 50px 60px;
+	}
+	.about-prd-tp {
+	    padding-top: 100px;
+	}
+	.about-our-community-sec .our-community-des {
+	    padding-top: 0px;
+	    padding-left: 10px;
+	    padding-right: 0;
+	}
+	.about-new-life-dsc-tp h2 {
+	    padding-right: 70px;
+	}
+	.about-new-life-blockquote blockquote {
+	    font-size: 34px;
+	    line-height: 45px;
 	}
 
 }
@@ -246,6 +286,67 @@ about-new-life-sec-wrp
 	.about-us-secvice-sec-wrp {
 	    padding-top: 70px;
 	}
+	.about-us-dsc-lft h1 {
+	    margin-top: 20px;
+	    margin-bottom: 35px;
+	    line-height: 45px;
+	}
+	.about-us-dsc-rgt {
+	    padding-top: 75px;
+	    padding-right: 0;
+	}
+	.about-us-dsc-lft {
+	    padding-right: 0;
+	}
+	.about-us-dsc-lft h5 {
+	    line-height: 35px;
+	}
+	.about-service-inr {
+	    padding: 30px 10px 40px;
+	}
+	.about-our-team-lft {
+	    float: left;
+	    width: 100%;
+	    text-align: center;
+	    padding-right: 0;
+	}
+	.about-our-team-rgt {
+	    float: left;
+	    width: 100%;
+	}
+	.about-our-team-img:first-of-type{
+		padding-top: 30px;
+	}
+	.about-our-team-dsc {
+	    padding: 70px 30px 50px 0px;
+	}
+	.about-our-community-sec .our-community-des {
+	    padding-top: 50px;
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+	.about-our-community-sec {
+	    padding-bottom: 60px;
+	}
+	.about-new-life-dsc-tp {
+	    padding: 70px 0;
+	}
+	.about-new-life-dsc-tp h2 {
+	    padding-right: 0;
+	    float: none;
+	    margin-bottom: 20px;
+	}
+	.about-new-life-dsc-tp h2 br{
+		display: none;
+	}
+	.about-new-life-blockquote {
+	    padding: 45px 20px 50px 150px;
+	}
+	.about-new-life-blockquote blockquote {
+	    font-size: 32px;
+	    line-height: 42px;
+	}
+	
 }
 
 /*----- max-width 767px -----*/
@@ -255,6 +356,35 @@ about-new-life-sec-wrp
 	}
 	.show-sm{
 		display: block!important;
+	}
+	.about-us-dsc-lft h1 {
+	    margin-top: 20px;
+	    margin-bottom: 25px;
+	    line-height: 42px;
+	}
+	.about-service-wrp ul li {
+	    width:50%;
+	    padding: 0 12px 25px;
+	}
+	.about-prd-tp {
+	    padding-top: 50px;
+	}
+	.about-new-life-blockquote {
+	    padding: 45px 10px 50px 100px;
+	}
+	.about-new-life-blockquote blockquote:after {
+	    left: 15px;
+	    top: 50px;
+	    background-size: 50px 50px;
+	    width: 50px;
+	    height: 50px;
+	}
+	.about-new-life-blockquote blockquote {
+	    font-size: 29px;
+	    line-height: 38px;
+	}
+	.about-new-life-sec-wrp {
+	    padding-bottom: 60px;
 	}
 }
 
@@ -267,6 +397,38 @@ about-new-life-sec-wrp
 	.show-xs{
 		display: block!important;
 	}
+	.about-us-secvice-sec-wrp {
+	    padding-top: 50px;
+	}
+	.about-us-dsc-rgt {
+	    padding-top: 50px;
+	}
+	.about-service-wrp {
+	    padding-top: 25px;
+	}
+	.about-us-dsc-lft h1 {
+	    line-height: 38px;
+	}
+	.about-our-team-dsc {
+	    padding: 70px 0 50px 0px;
+	}
+	.about-prd-tp {
+	    padding-top: 0;
+	}
+	.about-our-community-sec {
+	    padding-bottom: 0;
+	    padding-top: 30px;
+	}
+	.about-new-life-dsc-tp {
+	    padding: 50px 0;
+	}
+	.about-new-life-blockquote {
+	    padding: 45px 10px 50px 80px;
+	}
+	.about-new-life-blockquote blockquote {
+	    font-size: 27px;
+	    line-height: 35px;
+	}
 
 }
 
@@ -274,8 +436,42 @@ about-new-life-sec-wrp
 
 /*----- max-width 439 -----*/
 @media(max-width: 479px){
-
-
+	.about-service-wrp ul li {
+	    width:100%;
+	    padding: 0 12px 25px;
+	}
+	.about-service-wrp ul {
+		margin: 0;
+	    text-align: center;
+	}
+	.about-service-wrp ul li {
+	    width: 100%;
+	    padding: 0 0 25px;
+	    float: none;
+	}
+	.about-service-inr {
+	    padding: 20px 10px 30px;
+	    max-width: 300px;
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	.about-new-life-blockquote {
+	    padding: 60px 10px 50px 10px;
+	}
+	.about-new-life-blockquote blockquote:after {
+	    left: 50%;
+	    top: 10px;
+	    background-size: 50px 50px;
+	    width: 50px;
+	    height: 50px;
+	    transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	    -webkit-transform: translateX(-50%);
+	}
+	.about-new-life-blockquote blockquote {
+	    font-size: 25px;
+	    line-height: 30px;
+	}
 }
 
 
