@@ -179,6 +179,9 @@
 	background: #fff;
 	position: relative;
 }
+.partnersSlideItemInner:hover{
+	box-shadow: 0px 20px 20px #e9ecf1;
+}
 
 .partners-logo-bx{
 	min-height: 145px;
@@ -279,13 +282,20 @@
 	top: 0;
 }
 .vt-faq-grd-item h6{
-	color: #10303C;
 	margin-bottom: 15px;
+}
+.vt-faq-grd-item h6 a{
+	display: inline-block;
+	vertical-align: baseline;
+	color: #10303C;
+}
+.vt-faq-grd-item h6 a:hover{
+	color: #47A348;
 }
 .vt-faq-grd-item p{
 	margin-bottom: 20px;
 }
-.vt-faq-grd-item a{
+.vt-faq-grd-item > a{
 	border: 2px solid #66697A;
 	border-radius: 6px;
 	display: flex;
@@ -297,6 +307,10 @@
 	text-transform: uppercase;
 	color: #66697A;
 	font-weight: 600;
+}
+.vt-faq-grd-item > a:hover{
+	border-color: #47A348;
+	color: #47A348;
 }
 .more-faq-btn{
 	display: flex;
@@ -346,6 +360,9 @@
 	font-size: 16px;
 	line-height: 30px;
 }
+#newsletter-form #wp-form input[type="email"]:focus{
+	border-color: #ddd;
+}
 #newsletter-form #wp-form input[type="email"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #D7D7D9;
   opacity: 1;
@@ -385,8 +402,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 }
+#newsletter-form #wp-form  .wpforms-submit-container button:hover{
+	background: #47A348;
 
+}
 
 
 
@@ -439,10 +460,20 @@
 	justify-content: center;
 	text-transform: uppercase;
 }
+.vt-about-the-token-btn a:hover{
+	color: #47A348;
+	border-color: #47A348;
+}
 .vt-about-the-token-btn:first-child a{
 	background: linear-gradient(323.07deg, #3C8A3D 2.71%, #47A348 61.2%), #47A348;
 	color: #fff;
 	border: none;
+}
+.vt-about-the-token-btn:first-child a:hover,
+.our-community-des a:hover,
+.map-img-grd-col-des a:hover,
+.home-bnr-des a:hover{
+	background: #47A348;
 }
 .vt-about-tokens{
 	max-width: 685px;
@@ -450,7 +481,14 @@
 	height: 775px;
 	position: relative;
 }
-
+.bt-tooltip-btn span{
+	display: inline-block;
+	vertical-align: baseline;
+	position: relative;
+}
+.vt-about-token-inner{
+	position: relative;
+}
 .subscribe-cmnt{
 	padding-bottom: 150px;
 }
