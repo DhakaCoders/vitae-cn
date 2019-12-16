@@ -66,7 +66,70 @@ $('[data-toggle="tooltip"]').tooltip();
 
 
 /*Prashanto*/
+// var windowWidth = $(window).width();
+// if (windowWidth <= 767) {
+//   if( $('.lmSocialSilder').length ){
+//     $('.lmSocialSilder').slick({
+//       pauseOnHover: false,
+//       autoplay: false,
+//       autoplaySpeed: 6000,
+//       dots: true,
+//       infinite: true,
+//       arrows:true,
+//       speed: 1000,
+//       slidesToShow: 1,
+//       slidesToScroll: 1,
+//       fade: true,
 
+
+//       prevArrow: $('.blogGrdSlider-arrows .leftArrow'),
+//       nextArrow: $('.blogGrdSlider-arrows .rightArrow'),
+//       responsive: [
+//         {
+//           breakpoint: 576,
+//           settings: {
+//             slidesToShow: 1,
+//             dots: true,
+//           }
+//         }
+//       ]
+
+//     });
+//   }
+
+
+// }
+
+// if (windowWidth <= 767) {}
+
+  // if( $('.lmCommunitySlider').length ){
+  //   $('.lmCommunitySlider').slick({
+  //     pauseOnHover: false,
+  //     autoplay: false,
+  //     autoplaySpeed: 6000,
+  //     dots: true,
+  //     infinite: true,
+  //     arrows:true,
+  //     speed: 1000,
+  //     slidesToShow: 2,
+  //     slidesToScroll: 1,
+  //     fade: true,
+
+
+  //     prevArrow: $('.blogGrdSlider-arrows .leftArrow'),
+  //     nextArrow: $('.blogGrdSlider-arrows .rightArrow'),
+  //     responsive: [
+  //       {
+  //         breakpoint: 576,
+  //         settings: {
+  //           slidesToShow: 1,
+  //           dots: true,
+  //         }
+  //       }
+  //     ]
+
+  //   });
+  // }
 
 
 
