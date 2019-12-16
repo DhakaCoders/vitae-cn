@@ -7,9 +7,6 @@ $('.navbar-toggle').on('click', function(){
 if($('.matchHeightCol').length){
     $('.matchHeightCol').matchHeight();
   };
-if($('.mHc').length){
-    $('.mHc').matchHeight();
-  };
 /**
 Responsive on 767px
 */
@@ -69,72 +66,57 @@ $('[data-toggle="tooltip"]').tooltip();
 
 
 /*Prashanto*/
-// var windowWidth = $(window).width();
-// if (windowWidth <= 767) {
-//   if( $('.lmSocialSilder').length ){
-//     $('.lmSocialSilder').slick({
-//       pauseOnHover: false,
-//       autoplay: false,
-//       autoplaySpeed: 6000,
-//       dots: true,
-//       infinite: true,
-//       arrows:true,
-//       speed: 1000,
-//       slidesToShow: 1,
-//       slidesToScroll: 1,
-//       fade: true,
+if (windowWidth <= 767) {
+
+  if( $('.lmSocialSilder').length ){
+      $('.lmSocialSilder').slick({
+      dots: true,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      infinite: true,
+      speed: 1000,
+      arrows:true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      prevArrow: $('.lmSocialSilder-arrows .slide-prev-btn'),
+      nextArrow: $('.lmSocialSilder-arrows .slide-next-btn'),
+      responsive: [
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  }
 
 
-//       prevArrow: $('.blogGrdSlider-arrows .leftArrow'),
-//       nextArrow: $('.blogGrdSlider-arrows .rightArrow'),
-//       responsive: [
-//         {
-//           breakpoint: 576,
-//           settings: {
-//             slidesToShow: 1,
-//             dots: true,
-//           }
-//         }
-//       ]
 
-//     });
-//   }
+  if( $('.lmCommunitySlider').length ){
+    $('.lmCommunitySlider').slick({
+      dots: true,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      infinite: true,
+      speed: 1000,
+      arrows:true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      prevArrow: $('.lmCommunitySlider-arrows .slide-prev-btn'),
+      nextArrow: $('.lmCommunitySlider-arrows .slide-next-btn'),
+      responsive: [
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  }
 
-
-// }
-
-// if (windowWidth <= 767) {}
-
-  // if( $('.lmCommunitySlider').length ){
-  //   $('.lmCommunitySlider').slick({
-  //     pauseOnHover: false,
-  //     autoplay: false,
-  //     autoplaySpeed: 6000,
-  //     dots: true,
-  //     infinite: true,
-  //     arrows:true,
-  //     speed: 1000,
-  //     slidesToShow: 2,
-  //     slidesToScroll: 1,
-  //     fade: true,
-
-
-  //     prevArrow: $('.blogGrdSlider-arrows .leftArrow'),
-  //     nextArrow: $('.blogGrdSlider-arrows .rightArrow'),
-  //     responsive: [
-  //       {
-  //         breakpoint: 576,
-  //         settings: {
-  //           slidesToShow: 1,
-  //           dots: true,
-  //         }
-  //       }
-  //     ]
-
-  //   });
-  // }
-
-
+}
 
 
 
@@ -227,45 +209,32 @@ if( $('.exchangeSolutionSlider').length ){
     });
 }
 
-if( $('.dfp-grd-slider-1').length ){
-    $('.dfp-grd-slider-1').slick({
-      dots: false,
-      arrow:false,
-      prevArrow: $('.dfp-grd-slider-ctlr .slide-prev-btn'),
-      nextArrow: $('.dfp-grd-slider-ctlr .slide-next-btn'),
+if( $('.dfp-grd-slider').length ){
+    $('.dfp-grd-slider').slick({
+      dots: true,
       infinite: false,
       speed: 300,
       slidesToShow: 2,
       slidesToScroll: 1,
       responsive: [
         {
-          breakpoint: 576,
+          breakpoint: 1024,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-            arrow: true
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
           }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-    });
-}
-
-
-if( $('.dfp-grd-slider-2').length ){
-    $('.dfp-grd-slider-2').slick({
-      dots: false,
-      arrow:false,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      responsive: [
+        },
         {
-          breakpoint: 576,
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
@@ -277,6 +246,7 @@ if( $('.dfp-grd-slider-2').length ){
       ]
     });
 }
+
 /**
 Slick slider
 */

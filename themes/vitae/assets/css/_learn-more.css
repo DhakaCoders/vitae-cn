@@ -24,6 +24,7 @@
 }
 .lm-social-platform-block {
 	padding-bottom: 20px;
+	position: relative;
 }
 .lm-social-platform-block .lmSocialSilder{
 	margin-left: -10px;
@@ -46,12 +47,12 @@
 	border-radius: 6px;
 	min-height: 296px;
 }
-.lm-social-platform-block li i{
+.lm-social-platform-block .lmSocialSilder-item i{
 	max-width: 145px;
 	display: inline-block;	
 	margin-bottom: 15px;
 }
-.lm-social-platform-block li i img{
+.lm-social-platform-block .lmSocialSilder-item i img{
 	width:100%;
 }
 .lm-social-platform-tag {
@@ -189,18 +190,18 @@
 	text-align: center;
 }
 .lm-community-features{
-
+	position: relative;
 }
-.lm-community-features li{
+.lm-community-features .lmCommunitySlider-item{
 	position: relative;
 	width: 50%;
 	float: left;
 	padding: 25px 10px 35px 173px;
 }
-.lm-community-features li:nth-child(2n+1){
+/*.lm-community-features .lmCommunitySlider-item:nth-child(2n+1){
 	clear: left;
-}
-.lm-community-features li i{
+}*/
+.lm-community-features .lmCommunitySlider-item i{
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -208,10 +209,10 @@
 	display: inline-block;
 	vertical-align: baseline;
 }
-.lm-community-features li i img{
+.lm-community-features .lmCommunitySlider-item i img{
 	width:100%;
 }
-.lm-community-features li h6{
+.lm-community-features .lmCommunitySlider-item h6{
 	line-height: 30px;
 	margin-bottom: 12px;
 }
@@ -393,7 +394,7 @@
 	.lm-mauris-aliquam-des {
 	    padding: 58px 70px 90px 0;
 	}
-	.lm-community-features li {
+	.lm-community-features .lmCommunitySlider-item {
 	    padding: 25px 10px 35px 155px;
 	}
 	.lm-homework-des-sec .lm-homework-des-top-bar{
@@ -460,11 +461,11 @@
 	    margin-bottom: 22px;
 	    text-align: center;
 	}
-	.lm-community-features li i {
+	.lm-community-features .lmCommunitySlider-item i {
 	    top: 13px;
 	    max-width: 120px;
 	}
-	.lm-community-features li {
+	.lm-community-features .lmCommunitySlider-item {
 	    padding: 18px 10px 18px 125px;
 	}
 	.lm-homework-des-hdr-lft {
@@ -544,14 +545,27 @@
 	    clear: initial;
 	}
 	.lm-social-platform-block .lmSocialSilder-item:nth-child(2n+1) {
-	    clear: left;
-	}
-	.lm-community-features li:nth-child(2n+1) {
 	    clear: initial;
 	}
-	.lm-community-features li {
+	.lm-community-head {
+	    padding-bottom: 12px;
+	}
+	.lm-community-features .lmCommunitySlider-item:nth-child(2n+1) {
+	    clear: initial;
+	}
+	.lm-community-features .lmCommunitySlider-item {
 	    width: 100%;
-	    padding: 15px 0 20px 125px;
+	    padding: 20px 20px 10px;
+	    text-align: center;
+	}
+	.lm-community-features .lmCommunitySlider-item i {
+	    position: static;
+	    max-width: 170px;
+	    margin-bottom: 10px;
+	}
+	.lmSocialSilder .slick-slide img {
+	    display: block;
+	    margin: auto;
 	}
 	.lm-homework-des-hdr-rgt {
     	padding-top: 0;
@@ -568,6 +582,21 @@
 	    line-height: 24px;
 	    text-align: center;
 	}
+
+	.lmCommunitySlider.xs-pagi-ctrl .slick-dots,
+	.lmSocialSilder.xs-pagi-ctrl .slick-dots {
+	    margin-top: 10px;
+	}
+	.lmSocialSilder-arrows .slide-prev-btn, 
+	.lmSocialSilder-arrows .slide-next-btn {
+	    bottom: 45px;
+	}
+	.lmCommunitySlider-arrows .slide-prev-btn, 
+	.lmCommunitySlider-arrows .slide-next-btn{
+	    bottom: -4px;
+	}
+
+
 }
 
 
@@ -587,28 +616,15 @@
 	.lm-homework-des-sec .lm-homework-des-top-bar h3{
 		line-height: 35px;
 	}
-	.lm-community-features li h6{
-		line-height: 27px;
-		margin-bottom: 10px;
-	}
 	.lm-social-platform-tag a {
 	    font-size: 14px;
 	    line-height: 20px;
 	    padding: 13px 13px;
 	    margin-right: 15px;
 	}
-	.lm-community-features li {
-	    width: 100%;
-	    max-width: 400px;
-	    margin: 0 auto;
-	    float: none;
-	    padding: 10px 0;
-	    text-align: center;
-	}
-	.lm-community-features li i {
-	    position: static;
-	    max-width: 170px;
-	    margin-bottom: 10px;
+	.lm-community-features .lmCommunitySlider-item h6{
+		line-height: 27px;
+		margin-bottom: 10px;
 	}
 	.lm-homework-des-sec .lm-homework-des-top-bar {
 	    text-align: center;
@@ -617,15 +633,6 @@
 
 
 @media(max-width: 479px){
-	.lm-social-platform-block li {
-	    width: 100%;
-	    max-width: 350px;
-    	margin: 0 auto 25px;
-    	float: none;
-	}
-	.lm-social-platform-block li:nth-child(2n+1) {
-	    clear: initial;
-	}
 	.lm-social-platform-tag a {
 		max-width: 330px;
 		width: 100%;
