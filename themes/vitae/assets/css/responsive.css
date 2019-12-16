@@ -1,4 +1,3 @@
-/*----- max-width 1199px -----*/
 @media(max-width: 1199px){
 	.hide-lg{
 		display: none!important;
@@ -6,10 +5,11 @@
 	.show-lg{
 		display: block!important;
 	}
-
+	h1{
+		font-size: 60px;
+	}
 }
 
-/*----- max-width 991px -----*/
 @media(max-width: 991px){
 	.hide-md{
 		display: none!important;
@@ -17,9 +17,26 @@
 	.show-md{
 		display: block!important;
 	}
+	h1{
+		font-size: 50px;
+	}
+	h2{
+		font-size: 45px ;
+	}
+	h3{
+		font-size: 40px;
+	}
+	h4{
+		font-size: 35px;
+	}
+	h5{
+		font-size: 30px;
+	}
+	h6{
+		font-size: 24px;
+	}
 }
 
-/*----- max-width 767px -----*/
 @media(max-width: 767px){
 	.hide-sm{
 		display: none!important;
@@ -27,10 +44,28 @@
 	.show-sm{
 		display: block!important;
 	}
+	h1{
+		font-size: 45px;
+	}
+	h2{
+		font-size: 40px ;
+	}
+	h3{
+		font-size: 35px;
+	}
+	h4{
+		font-size: 30px;
+	}
+	h5{
+		font-size: 27px;
+	}
+	h6{
+		font-size: 23px;
+	}
+
 }
 
 
-/*----- max-width 575 -----*/
 @media(max-width: 575px){
 	.hide-xs{
 		display: none!important;
@@ -38,19 +73,34 @@
 	.show-xs{
 		display: block!important;
 	}
+	h1{
+		font-size: 40px;
+	}
+	h2{
+		font-size: 35px ;
+	}
+	h3{
+		font-size: 30px;
+	}
+	h4{
+		font-size: 28px;
+	}
+	h5{
+		font-size: 24px;
+	}
+	h6{
+		font-size: 22px;
+	}
 
 }
 
 
-
-/*----- max-width 439 -----*/
 @media(max-width: 479px){
 
 
 }
 
 
-/*----- max-width 369 -----*/
 @media(max-width: 359px){
 
 }
