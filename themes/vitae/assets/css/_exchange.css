@@ -35,6 +35,9 @@
 .vt-exchange-form-sec{
 	padding-bottom: 95px;
 }
+.vt-more-exchange-sec{
+	overflow: hidden;
+}
 .vt-more-exchange-sec-hdr{
 	text-align: center;
 	max-width: 900px;
@@ -53,7 +56,7 @@
 .exchange-solution-slider-ctlr{
 	position: relative;
 	overflow: hidden;
-	margin: 0 -102px;
+	margin: 0 -90px;
 }
 .exchangeSolutionSlider {
     overflow: hidden;
@@ -88,9 +91,71 @@
 	font-size: 24px;
 	line-height: 30px;
 	display: block;
+	word-break: break-all;
 }
 .vt-more-exchange-sec .partnersSlideItem strong {
 	font-size: 24px;
 	line-height: 30px;
     color: #FFFFFF;
+}
+
+
+
+@media(max-width: 1599px){
+	.exchange-solution-slider-ctlr{
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+}
+
+@media(max-width: 991px){
+
+}
+
+@media(max-width: 767px){
+	.vt-exchange-page-con {
+	    padding-top: 100px;
+	}
+	.vt-more-exchange-sec-hdr p{
+		line-height: 26px;
+	}
+	.esSlideItem{
+		padding-bottom: 50px;
+	}
+}
+
+
+@media(max-width: 575px){
+	.vt-exchange-entry-hdr strong{
+		padding-bottom: 10px;
+	}
+	.vt-exchange-page-con {
+	    padding-top: 80px;
+	}
+	.vt-more-exchange-sec-hdr p{
+		font-size: 15px;
+		line-height: 25px;
+	}
+	.exchangeSolutionSlider{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	/*.esSlideItem{
+		padding-left: 0;
+		padding-right: 0;
+	}*/
+}
+
+
+@media(max-width: 479px){
+	.vt-exchange-page-con {
+	    padding-top: 70px;
+	}
+
+}
+
+
+@media(max-width: 359px){
+
 }
