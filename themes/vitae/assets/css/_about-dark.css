@@ -588,7 +588,12 @@ about-drk-ipsum-sec-wrp
 	.about-dark-service-sec-wrp {
 	    padding-bottom: 60px;
 	}
-	
+	.about-drk-ipsum-sec-wrp {
+	    padding-bottom: 50px;
+	}
+	.about-drk-ipsum-btm-dsc ul {
+	    padding-left: 0;
+	}
 }
 
 
@@ -655,6 +660,13 @@ about-drk-ipsum-sec-wrp
 	    width: 100%;
 	    margin-left: auto;
 	    margin-right: auto;
+	    min-height: 720px;
+	}
+	.about-ser-box-dsc {
+	    padding: 30px 10px 30px;
+	}
+	.about-drk-ipsum-wrp {
+	    margin-top: 20px;
 	}
 
 
@@ -689,13 +701,17 @@ about-drk-ipsum-sec-wrp
 	.about-ser-box-dsc h4 {
 	    font-size: 23px;
 	}
-	.about-dark-ser-box-wrp{
-		min-height: 700px;
+	.about-dark-ser-box-wrp {
+	    min-height: 650px;
 	}
 	.about-dark-ser-box-wrp{
 		max-width: 290px;
 		width: 100%;
 		margin-top: 60px;
+	}
+	.about-ser-box-dsc p{
+		font-size: 14px;
+		line-height: 16px;
 	}
 
 }
