@@ -54,6 +54,7 @@
 
 .social-media-platform-sec{
 	padding-bottom: 25px;
+	overflow: hidden;
 }
 .map-img-grd-col-des a{
 	max-width: 440px;
@@ -94,7 +95,7 @@
 	overflow: hidden;
 }
 .our-community-des{
-	padding-right: 95px;
+	padding: 70px 95px 65px 0;
 } 
 .our-community-des h2{
 	margin-bottom: 25px;
@@ -105,7 +106,8 @@
 	padding: 0 0 0 80px;
 	background: url(../images/hrt-green.svg);
 	background-repeat: no-repeat;
-	background-size: 65px 60px;
+	background-size: 65px auto;
+
 }
 .our-community-des p{
 	margin-bottom: 30px;
@@ -172,6 +174,7 @@
 .partnersSlideItem{
 	padding: 30px 10px 70px;
 }
+
 .partnersSlideItemInner{
 	padding: 60px 10px 70px;
 	text-align: center;
@@ -188,14 +191,16 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 15px;
 }
 
 .partnersSlideItem strong{
 	font-weight: 600;
 	font-size: 24px;
-	line-height: 56px;
+	line-height: 28px;
 	display: block;
 	color: #10303C;
+	word-break: break-all;
 }
 .partners-slider-ctlr{
 	overflow: hidden;
@@ -282,7 +287,7 @@
 	top: 0;
 }
 .vt-faq-grd-item h6{
-	margin-bottom: 15px;
+	line-height: 1.2;
 }
 .vt-faq-grd-item h6 a{
 	display: inline-block;
@@ -330,7 +335,7 @@
     background: url(../images/hrt-green.svg);
     background-repeat: no-repeat;
     background-size: 58px 54px;
-    background-position: right center;
+    background-position: right 3px center;
 }
 .community-we-hdr p{
 	font-size: 18px;
@@ -390,7 +395,7 @@
 	bottom: 0;	
 	z-index: 5;
 }
-#newsletter-form #wp-form  .wpforms-submit-container button{
+#newsletter-form #wp-form .wpforms-submit-container button{
 	height: 100%;
 	width: 100%;
 	background: linear-gradient(299.73deg, #3C8A3D 2.71%, #47A348 61.2%), #47A348;
@@ -418,7 +423,7 @@
 	padding-top: 175px;
 }
 .vt-about-the-token-des h2{
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 	color: #10303C;
 }
 .vt-about-the-token-des p{
@@ -486,6 +491,7 @@
 	display: inline-block;
 	vertical-align: baseline;
 	position: relative;
+	z-index: 3;
 }
 .vt-about-token-inner{
 	position: relative;
@@ -577,6 +583,13 @@
 		width: 300px;
 		height: 300px;
 	}
+	.our-community-des {
+	    padding: 45px 40px 65px 0;
+	}
+	.partnersSlideItem strong{
+		font-size: 20px;
+	}
+
 }
 @media(max-width: 1199px){
 	.hide-lg{
@@ -603,7 +616,52 @@
 	.home-banner{
 		padding-bottom: 70px;
 	}
-	
+	.our-community-des h2 span {
+	    background-size: 50px auto;
+	    padding-left: 60px;
+	}
+	.our-community-des {
+	    padding-right: 25px;
+	}
+	.video-play a i{
+		max-width: 80px;
+	}
+	.our-community-des{
+		padding-top: 20px;
+	}
+	.vt-about-token {
+	    max-width: 173px;
+	    width: 100%;
+	    height: 250px;
+	    padding: 11px 13px 43px 13px;
+	}
+	.vt-about-token-con img{
+		max-width: 100px;
+	}
+	.vt-about-token-con strong {
+	    font-size: 25px;
+	    line-height: 24px;
+	    padding-bottom: 4px;
+	    padding-top: 20px;
+	}
+	.vt-about-token-02, .vt-about-token-03 {
+	    top: 148px;
+	}
+	.vt-about-tokens {
+	    height: 630px;
+	}
+	.vt-about-token-center-logo img{
+		max-width: 80px;
+	}
+	.vt-about-the-token-des {
+	    padding-top: 91px;
+	}
+	.vt-about-the-token-des h2{
+		font-size: 45px;
+	}
+	.vt-about-tokens{
+		max-width: 550px;
+	}
 }
 
 @media(max-width: 991px){
@@ -631,6 +689,49 @@
 	.radius-gren{
 		display: none;
 	}
+	.our-community-des {
+	    padding-top: 0;
+	}
+	.our-community-des {
+	    padding-right: 0;
+	}
+	.our-community-des p {
+	    margin-bottom: 15px;
+	}
+	.vt-about-the-token-des {
+	    padding-top: 10px;
+	}
+	.vt-about-the-token-des{
+		padding-bottom: 40px;
+	}
+	.vt-about-tokens{
+		margin: 0 auto;
+	}
+	.vt-about-the-token-des{
+		padding-right: 80px;
+	}
+	.vt-about-token-con span{
+		font-size: 15px;
+	}
+	.vt-faq-grd-item {
+	    padding: 35px 20px 30px 110px;
+	}
+	.vt-faq-grd-item i{
+		width: 110px;
+		padding-left: 5px;
+	}
+	.vt-faq-grd-item i img{
+		max-width: 100px;
+	}
+	.vt-faq-grd-item h6{
+		font-size: 20px;
+	}
+	.home-vt-faq-sec .vt-sec-hdr h2{
+		font-size: 40px;
+	}
+	.subscribe-cmnt {
+	    padding-bottom: 100px;
+	}
 }
 
 @media(max-width: 767px){
@@ -647,7 +748,8 @@
 		margin-left: -50px!important;
 		margin-right: -50px!important;
 	}
-	.home-bnr-des {
+	.home-bnr-des,
+	.map-img-grd-col-des {
 	    padding-right: 0;
 	}
 	.home-bnr-des h1 {
@@ -655,6 +757,105 @@
 	}
 	.map-img-grd-col strong {
 	    padding-bottom: 30px;
+	    line-height: 28px;
+	}
+
+	.map-img-grd-col-des h2 {
+	    margin-bottom: 25px;
+	}
+	.our-community-sec{
+		padding-top: 30px;
+	}
+	.our-community-des{
+		padding-top: 30px;
+	}
+	.our-community-des h2 span {
+	    background-size: 45px auto;
+	    padding-left: 56px;
+	}
+	.our-community-des h2 {
+	    margin-bottom: 20px;
+	}
+	.home-banner {
+	    padding-bottom: 110px;
+	}
+	.vt-about-the-token-des{
+		padding-right: 0;
+	}
+	.vt-faq-grds ul li{
+		width: 100%;
+	}
+	.home-vt-faq-sec .vt-sec-hdr h2 {
+	    font-size: 35px;
+	}
+	#newsletter-form #wp-form  .wpforms-submit-container{
+		max-width: 150px;
+	}
+	#newsletter-form #wp-form input[type="email"],
+	#newsletter-form #wp-form .wpforms-submit-container{
+		height: 60px;
+	}
+	.community-we-hdr{
+		padding-bottom: 20px;
+	}
+	.home-vt-faq-sec{
+		padding-bottom: 70px;
+	}
+	.community-we-hdr p {
+	    font-size: 17px;
+	    line-height: 26px;
+	}
+	#newsletter-form #wp-form input[type="email"]{
+		padding-right: 190px;
+	}
+	.subscribe-cmnt {
+	    padding-bottom: 80px;
+	}
+	.partnersSlideItem{
+		padding-bottom: 50px;
+	}
+	.xs-pagi-ctrl .slick-dots{
+		position: static;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.xs-pagi-ctrl .slick-dots li{
+		width: 24px;
+		height: 24px;
+		padding: 0;
+		margin: 0 5px;
+		background: #F1F1F2;
+		border-radius: 100% 100%;
+	}
+	.xs-pagi-ctrl .slick-dots li.slick-active{
+		background: #47A348;
+	}
+	.xs-pagi-ctrl .slick-dots li button{
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+	}
+	.xs-pagi-ctrl .slick-dots li button:before{
+		content: none;
+	}
+	.slide-prev-btn, 
+	.slide-next-btn {
+	    position: absolute;
+	    top: auto;
+	    transform: initial;
+	    width: 32px;
+	    height: 32px;
+	    background-size: 100% auto;
+	    bottom: 25px;
+	}
+	.partnersSlider {
+	    overflow: hidden;
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+	.home-vt-faq-sec .vt-sec-hdr{
+		padding-top: 60px;
 	}
 }
 
@@ -669,16 +870,194 @@
 	.home-bnr-des h1 {
 	    margin-bottom: 25px;
 	}
-
+	.map-img-grd-col-des h2 {
+	    margin-bottom: 20px;
+	}
+	.map-img-grd-col-des p {
+	    margin-bottom: 20px;
+	}
+	.vt-sm-map-xs-ctlr{
+		margin-left: -25px;
+		margin-right: -25px;
+	}
+	.video-play a i {
+	    max-width: 65px;
+	}
+	.our-community-des h2 span {
+	    background-size: 39px auto;
+	    padding-left: 49px;
+	}
+	.our-community-des h2 {
+	    margin-bottom: 15px;
+	}
+	.our-community-sec {
+	    padding-top: 25px;
+	}
+	.vt-about-the-token-des h2 {
+	    font-size: 40px;
+	}
+	.vt-about-the-token-des{
+		padding-top: 0;
+	}
+	.vt-about-the-token-btns{
+		width: auto;
+	}
+	.vt-about-tokens {
+	    max-width: 355px;
+	    height: 607px;
+	}
+	.vt-about-token-01 {
+	    top: 0;
+	    left: 0;
+	    transform: initial;
+	}
+	.vt-about-token-02{
+		left: auto;
+		right: 0;
+		top: 20px;
+	}
+	.vt-about-token-03{
+		right: auto;
+		left: 0;
+		bottom: 20px;
+		transform: initial;
+		top: auto;
+	}
+	.vt-about-token-04 {
+	    bottom: 0;
+	    left: auto;
+	    transform: initial;
+	    right: 0;
+	}
+	.vt-about-token-con span{
+		font-size: 14px;
+	}
+	.vt-about-token{
+		padding: 11px 13px 30px 13px;
+	}
+	.vt-about-token-con{
+		padding: 0;
+		margin-top: -5px;
+	}
+	.vt-about-token{
+		height: 220px;
+	}
+	.partners-4-prosperity-sec .vt-sec-hdr p {
+	    line-height: 28px;
+	}
+	.home-vt-faq-sec .vt-sec-hdr h2 {
+	    font-size: 34px;
+	}
+	.home-vt-faq-sec .vt-sec-hdr{
+		padding-bottom: 20px;
+	}
+	.community-we-hdr span{
+		background-size: 50px auto;
+		padding-right: 60px;
+		background-position: right 3px center;
+	}
+	#newsletter-form #wp-form .wpforms-submit-container{
+		position: static;
+		margin: 10px auto;
+		display: table;
+	}
+	#newsletter-form #wp-form .wpforms-submit-container button{
+		border-radius: 6px;
+		height: 50px;
+	}
+	#newsletter-form #wp-form input[type="email"] {
+	    padding-right: 15px;
+	    padding-left: 15px;
+	}
+	.subscribe-cmnt {
+	    padding-bottom: 60px;
+	}
+	#newsletter-form #wp-form form{
+		margin-bottom: 45px;
+	}
+	.xs-pagi-ctrl .slick-dots li{
+		width: 18px;
+		height: 18px;
+		margin: 0 4px;
+	}
+	.slide-prev-btn, .slide-next-btn{
+		width: 30px;
+		bottom: 23px;
+	}
 }
 
 
 @media(max-width: 479px){
-
-
+	.video-play a i {
+	    max-width: 60px;
+	}
+	.vt-about-the-token-des h2 {
+	    font-size: 35px;
+	}
+	.vt-about-the-token-btn a{
+		font-size: 14px;
+	}
+	.vt-about-the-token-btns{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.vt-about-the-token-btn{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.vt-about-the-token-des p:first-of-type,
+	.home-bnr-des p strong {
+	    font-size: 17px;
+	    line-height: 30px;
+	}
+	.vt-about-tokens{
+		height: auto;
+	}
+	.vt-about-token,
+	.vt-about-token-center-logo{
+		position: static!important;
+		margin: 0 auto!important;
+		margin-bottom: 25px!important;
+		transform: initial!important;
+	}
+	.vt-about-token-center-logo{
+		text-align: center;
+	}
+	.vt-about-the-token-sec {
+	    padding-bottom: 55px;
+	}
+	.vt-faq-grd-item i{
+		position: static;
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding: 0;
+		padding-bottom: 5px;
+	}
+	.vt-faq-grd-item {
+	    padding: 30px 20px 30px 20px;
+	    text-align: center;
+	}
+	.vt-faq-grd-item > a{
+		margin: 0 auto;
+	}
+	.community-we-hdr h3 {
+	    font-size: 28px;
+	}
+	.community-we-hdr span {
+	    background-size: 40px auto;
+	    padding-right: 57px;
+	}
+	.community-we-hdr span{
+		background: none;
+		padding-right: 0;
+	}
 }
 
 
 @media(max-width: 359px){
+	.video-play a i {
+	    max-width: 55px;
+	}
 
 }
