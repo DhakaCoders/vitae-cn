@@ -472,7 +472,8 @@
 .vt-about-the-token-btn:first-child a:hover,
 .our-community-des a:hover,
 .map-img-grd-col-des a:hover,
-.home-bnr-des a:hover{
+.home-bnr-des a:hover,
+.more-faq-btn a:hover{
 	background: #47A348;
 }
 .vt-about-tokens{
