@@ -94,12 +94,15 @@
 	line-height: 30px;
     color: #FFFFFF;
 }
-
-.vt-drk-page-ctlr .footer-top{
+body.vt-drk-page-ctlr{
 	background-color: #141c28;
 }
 
-.vt-drk-page-ctlr .ftr-col-innr{
+body.vt-drk-page-ctlr .footer-top{
+	background-color: #141c28;
+}
+
+body.vt-drk-page-ctlr .ftr-col-innr{
 	border-top: 3px solid rgba(248, 249, 250, 0.04);
 }
 
