@@ -19,6 +19,11 @@
 	h2{
 		font-size: 48px ;
 	}
+	.contac-form-dsc h1,
+	.faq-overview-sec-wrp .vt-sec-hdr h1{
+		font-size: 48px;
+		line-height: 48px;
+	}
 
 }
 
@@ -46,6 +51,11 @@
 	}
 	h6{
 		font-size: 24px;
+	}
+	.contac-form-dsc h1,
+	.faq-overview-sec-wrp .vt-sec-hdr h1{
+		font-size: 45px;
+		line-height: 46px;
 	}
 }
 
@@ -77,6 +87,11 @@
 	h1,h2,h3,h4,h5,h6{
 		line-height: 1.2;	
 	}
+	.contac-form-dsc h1,
+	.faq-overview-sec-wrp .vt-sec-hdr h1{
+		font-size: 40px;
+		line-height: 44px;
+	}
 }
 
 
@@ -104,6 +119,11 @@
 	}
 	h6{
 		font-size: 22px;
+	}
+	.contac-form-dsc h1,
+	.faq-overview-sec-wrp .vt-sec-hdr h1{
+		font-size: 35px;
+		line-height: 42px;
 	}
 
 }

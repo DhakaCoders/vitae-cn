@@ -60,6 +60,19 @@ if (windowWidth <= 767) {
 
 $('[data-toggle="tooltip"]').tooltip(); 
 
+if (windowWidth <= 767) {
+  if( $('#AboutSerSlider').length ){
+      $('#AboutSerSlider').slick({
+        arrows:false,
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      });
+  }
+}
+
 
 
 

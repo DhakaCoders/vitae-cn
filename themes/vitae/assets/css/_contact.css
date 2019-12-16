@@ -232,6 +232,16 @@ contact-form-sec-wrp
 	.show-sm{
 		display: block!important;
 	}
+	.contact-form-sec-wrp {
+	    padding-top: 60px;
+	    padding-bottom: 70px;
+	}
+	.contac-form-dsc{
+		padding-bottom: 30px;
+	}
+	.contact-form-wrp {
+	    padding-bottom: 70px;
+	}
 }
 
 
@@ -242,6 +252,23 @@ contact-form-sec-wrp
 	}
 	.show-xs{
 		display: block!important;
+	}
+	.contact-form .wpforms-form .wpforms-field-container .wpforms-field .wpforms-field-row .wpforms-one-half {
+	    width: 100% !important;
+	    float: left !important;
+	    margin-left: 0% !important;
+	    padding: 0;
+	    padding-bottom: 20px;
+	}
+	.wpforms-form .wpforms-field-container .wpforms-field .wpforms-field-row .fullwidth{
+		padding-bottom: 20px;
+	}
+	.contact-form .wpforms-form .wpforms-field-container .wpforms-field {
+	    width: 100%;
+	    margin-bottom: 0;
+	}
+	.contact-form .wpforms-form .wpforms-field-container .wpforms-field textarea {
+	    height: 200px !important;
 	}
 
 }
