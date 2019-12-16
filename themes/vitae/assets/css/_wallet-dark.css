@@ -46,6 +46,9 @@
 	border-radius: 6px;
 	margin-right: 13px;
 }
+.wallet-dark-main-top-lft a:last-child{
+	margin-right: 0;
+}
 .wallet-dark-main-top-lft a:hover{
 	background: -ms-linear-gradient(297.9deg, #3C8A3D 2.71%, #47A348 61.2%), #47A348;
 	background: -webkit-linear-gradient(297.9deg, #3C8A3D 2.71%, #47A348 61.2%), #47A348;
@@ -53,19 +56,6 @@
 	border-color: #47A348;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .wallet-dark-main-top-rgt{
 	width:32.12%;
@@ -80,8 +70,8 @@
 .wallet-dark-main-top-rgt ul{
 	width:100%;
 	float: left;
-	margin-left: -12px;
-	margin-right: -12px;
+/*	margin-left: -12px;
+	margin-right: -12px;*/
 }
 .wallet-dark-main-top-rgt li{
 	width:50%;
@@ -154,22 +144,22 @@
 	padding-top:30px;
 	padding-bottom: 30px; 
 }
-.wallet-dark-feature-des li{
-	padding-top: 30px;
-	padding-left: 145px;
-	padding-bottom: 15px;
-	position: relative;
+.wallet-dark-feature-des li {
+    padding-top: 30px;
+    padding-left: 161px;
+    padding-bottom: 15px;
+    position: relative;
 }
-.wallet-dark-feature-des li:after{
-	content: "";
+.wallet-dark-feature-des li i{
+	display: inline-block;
+	vertical-align: baseline;
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 145px;
-	height: 134px;
-	background-image: url(../images/wallet-dark-feature-des-icon.png);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
+	max-width: 145px;
+}
+.wallet-dark-feature-des li i img{
+	width: 100%;
 }
 .wallet-dark-feature-des li h6{
 	line-height: 30px;
@@ -180,10 +170,10 @@
 	line-height: 24px;
 	color: #fff;
 }
-.wallet-dark-feature-des-innr{
-	max-width: 650px;
-	width:100%;
-	float: left;
+.wallet-dark-feature-des-innr {
+    max-width: 662px;
+    width: 100%;
+    float: left;
 }
 .wallet-dark-feature-two-part > ul > li:nth-child(2){
 	padding: 75px 0 85px;
@@ -277,8 +267,6 @@
 }
 
 
-
-
 #wlt-dark-service-sec .about-dark-service-wrp {
     margin-bottom: 0;
 }
@@ -305,19 +293,114 @@
 
 
 
+/*=======================
+ 	Responsive Design
+========================*/
+
+
+/*----- max-width 1459px -----*/
+@media(max-width: 1459px){
+	.wallet-dark-feature-two-part > ul > li:nth-child(2) .wallet-dark-feature-img-innr {
+	    min-height: 592px;
+	    max-width: 280px;
+	}
+	.mobile-img-feature-1{
+		top: ;
+	    left: -40px;
+	}
+	.mobile-img-feature-2{
+		top: ;
+	    right: -40px;
+	}
+	.mobile-img-feature-3{
+		top: ;
+	    left: -40px;
+	}
+	.mobile-img-feature-4{
+		top:;
+	    right: -40px;
+	}
+
+}
+
+/*----- max-width 1399px -----*/
+@media(max-width: 1399px){
+	.wallet-dark-main-top-lft {
+	    width: 58%;
+	    padding-right: 185px;
+	    float: left;
+	}
+	.wallet-dark-main-top-rgt {
+	    width: 42%;
+	    float: left;
+	}
+
+}
+
+/*----- max-width 1199px -----*/
+@media(max-width: 1199px){
+	.wallet-dark-main-top-lft {
+	    width: 55%;
+	    padding-right: 70px;
+	    float: left;
+	}
+	.wallet-dark-main-top-rgt {
+	    width: 45%;
+	    float: left;
+	}
+}
+
+/*----- max-width 991px -----*/
+@media(max-width: 991px){
+	.wallet-dark-main-top-lft {
+	    width: 100%;
+	    padding-right: 0;
+	    margin-bottom: 35px;
+	}
+	.wallet-dark-main-top-rgt {
+	    width: 100%;
+	    float: left;
+	}
+	.wallet-dark-main-top-rgt li a {
+	    max-width: 350px;
+	    min-height: 56px;
+	}
+
+
+}
+
+/*----- max-width 767px -----*/
+@media(max-width: 767px){
+
+}
+
+/*----- max-width 575 -----*/
+@media(max-width: 575px){
+
+}
+
+/*----- max-width 439 -----*/
+@media(max-width: 479px){
+
+
+}
+
+/*----- max-width 369 -----*/
+@media(max-width: 359px){
+	.wallet-dark-main-top-rgt li a {
+		font-size:12px;
+	}
+	.wallet-dark-main-top-lft a {
+	    padding: 15px 19px;
+	    font-size: 13px;
+	}
+}
+
+/*----- max-width 369 -----*/
+@media(max-width: 359px){
+
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
