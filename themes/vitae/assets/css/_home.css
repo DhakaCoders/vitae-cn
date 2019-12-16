@@ -613,9 +613,6 @@
 	.show-sm{
 		display: block!important;
 	}
-	.home-banner .nav-opener.show-sm{
-		display: none!important;
-	}
 	.home-bnr-img{
 		margin-left: -50px!important;
 		margin-right: -50px!important;
