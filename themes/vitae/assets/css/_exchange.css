@@ -96,8 +96,16 @@
 }
 body.vt-drk-page-ctlr{
 	background-color: #141c28;
+	color: #fff;
 }
-
+body.vt-drk-page-ctlr h1,
+body.vt-drk-page-ctlr h2,
+body.vt-drk-page-ctlr h3,
+body.vt-drk-page-ctlr h4,
+body.vt-drk-page-ctlr h5,
+body.vt-drk-page-ctlr h6{
+	color: #fff;
+}
 body.vt-drk-page-ctlr .footer-top{
 	background-color: #141c28;
 }
