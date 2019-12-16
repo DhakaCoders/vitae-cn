@@ -22,6 +22,32 @@ Responsive on 767px
 // }
 
 
+ /*
+---------------------------
+ Xs Menu js
+---------------------------
+*/
+if (windowWidth <= 767) {
+
+    $('.opener-inner').on('click', function(){
+    $('nav.main-nav').fadeIn(500);
+    $('nav.main-nav').addClass('add-cls-show');
+  });
+
+  $('.opener-inner').on('click', function(){
+    $('nav.main-nav').fadeOut(500);
+    $('nav.main-nav').removeClass('add-cls-show');
+  });
+
+  $('nav.main-nav > ul > li.menu-item-has-children > a').on('click', function(e){
+    e.preventDefault();
+    $(this).parent().find('ul.sub-menu').slideToggle(500);
+    $(this).toggleClass('sub-menu-expend')
+  });
+
+}
+
+
 // http://codepen.io/norman_pixelkings/pen/NNbqgG
 // https://stackoverflow.com/questions/38686650/slick-slides-on-pagination-hover
 

@@ -229,6 +229,9 @@ about-new-life-sec-wrp
 	.show-lg{
 		display: block!important;
 	}
+	.about-us-dsc-lft {
+	    padding-right: 15px;
+	}
 
 }
 
@@ -239,6 +242,9 @@ about-new-life-sec-wrp
 	}
 	.show-md{
 		display: block!important;
+	}
+	.about-us-secvice-sec-wrp {
+	    padding-top: 70px;
 	}
 }
 
