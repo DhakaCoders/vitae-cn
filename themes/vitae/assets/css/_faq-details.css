@@ -67,3 +67,59 @@
 .vt-faq-details-con-block .dfp-tbl-wrap{
 	padding-top: 5px;
 }
+
+
+
+@media(max-width: 1199px){
+	
+
+}
+
+@media(max-width: 991px){
+	.vt-faq-details-con-block {
+	    padding: 49px 30px;
+	}
+}
+
+@media(max-width: 767px){
+	.dfp-faq-promo-module h1 {
+	    font-size: 35px;
+	    line-height: 40px;
+	}
+	.vt-faq-details-con-block.default-page-con ol{
+		margin-bottom: 0;
+	}
+	.vt-faq-details-con-block.default-page-con .fl-dft-lftimg-rgtdes{
+		padding-bottom: 10px;
+	}
+	.vt-faq-details-con-block .dfp-tbl-wrap {
+	    padding-top: 25px;
+	}
+}
+
+
+@media(max-width: 575px){
+	.faq-back-btn{
+		padding-left: 20px;
+		padding-bottom: 35px;
+	}
+	.vt-faq-details-con-block {
+	    padding: 45px 20px;
+	}
+	.dfp-faq-promo-module h1 {
+	    font-size: 31px;
+	    line-height: 36px;
+	}
+
+}
+
+
+@media(max-width: 479px){
+
+
+}
+
+
+@media(max-width: 359px){
+
+}

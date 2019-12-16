@@ -7,6 +7,9 @@ $('.navbar-toggle').on('click', function(){
 if($('.matchHeightCol').length){
     $('.matchHeightCol').matchHeight();
   };
+if($('.mHc').length){
+    $('.mHc').matchHeight();
+  };
 /**
 Responsive on 767px
 */
@@ -224,32 +227,45 @@ if( $('.exchangeSolutionSlider').length ){
     });
 }
 
-if( $('.dfp-grd-slider').length ){
-    $('.dfp-grd-slider').slick({
-      dots: true,
+if( $('.dfp-grd-slider-1').length ){
+    $('.dfp-grd-slider-1').slick({
+      dots: false,
+      arrow:false,
+      prevArrow: $('.dfp-grd-slider-ctlr .slide-prev-btn'),
+      nextArrow: $('.dfp-grd-slider-ctlr .slide-next-btn'),
       infinite: false,
       speed: 300,
       slidesToShow: 2,
       slidesToScroll: 1,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 576,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            arrow: true
           }
-        },
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+}
+
+
+if( $('.dfp-grd-slider-2').length ){
+    $('.dfp-grd-slider-2').slick({
+      dots: false,
+      arrow:false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
         {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
+          breakpoint: 576,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
@@ -261,7 +277,6 @@ if( $('.dfp-grd-slider').length ){
       ]
     });
 }
-
 /**
 Slick slider
 */
