@@ -171,7 +171,7 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: 600;
-	padding: 0 48px 35px;
+	padding: 0 48px;
 	position: relative;
 }
 .hdr-btm-menu ul li:first-child{
@@ -189,11 +189,10 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
+	position: relative;
+	padding-bottom: 35px;
 }
-.drk-header .hdr-btm-menu ul li a{
-	color: #fff;
-}
-.hdr-btm-menu ul li:after{
+.hdr-btm-menu ul li a:after{
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -215,11 +214,11 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 .hdr-btm-menu ul li a:hover{
 	color: #47a348;
 }
-.hdr-btm-menu ul li.current-menu-item:after{
+.hdr-btm-menu ul li.current-menu-item a:after{
 	opacity: 1;
 	visibility: visible;
 }
-.hdr-btm-menu ul li:hover:after{
+.hdr-btm-menu ul li:hover a:after{
 	opacity: 1;
 	visibility: visible;
 }
@@ -231,9 +230,12 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
     width: 56px;
     height: 56px;
     background: #2B323D;
-	box-shadow: 0px 18px 30px #F0F2F6;
-	border-radius: 50px;
-	padding: 15px 14px;
+    box-shadow: 0px 18px 30px #F0F2F6;
+    border-radius: 50px;
+    padding: 16px 14px 15px;
+    position: absolute;
+    right: 20px;
+    bottom: 20%;
 }
 .nav-opener span{
 	-webkit-transition:all .2s;	/* Chrome, Safari, Opera */
@@ -267,6 +269,7 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 
 .opener-inner.menu-expend{
 	position: relative;
+	height: 20px;
 }
 .menu-expend span:nth-child(1){
   position: absolute;
@@ -316,7 +319,7 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 	    padding: 0 20px 0;
 	}
 	.hdr-btm-menu ul li {
-	    padding: 0 30px 35px;
+	    padding: 0 30px;
 	}
 
 }
@@ -335,7 +338,7 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 	    line-height: 17px;
 	}
 	.hdr-btm-menu ul li {
-	    padding: 0 20px 35px;
+	    padding: 0 20px;
 	    font-size: 15px;
 	    line-height: 17px;
 	}
@@ -391,7 +394,7 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 	}
 	nav.main-nav ul li.current-menu-item a:hover,
 	nav.main-nav > ul > li > a:hover{
-		color: #0e857b;
+		color: #04b707 !important;
 	}
 
 	header nav.main-nav > ul > li::after,
@@ -443,7 +446,7 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 	    transition: none;
 	}
 	a.menu-expend-sub{
-		color: #0e857b!important;
+		color: #47a348!important;
 	}
 	nav.main-nav li.menu-item-has-children a.menu-expend-sub{
 		padding-bottom: 10px;
@@ -469,7 +472,7 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 		background: rgba(255, 255, 255, 0.15);
 	}
 	.hdr-btm-menu ul li {
-	    padding: 0 0 22px;
+	    padding: 0;
 	    font-size: 22px;
 	    line-height: 24px;
 	    font-weight: 600;
