@@ -7,6 +7,7 @@ $('.navbar-toggle').on('click', function(){
 if($('.matchHeightCol').length){
     $('.matchHeightCol').matchHeight();
   };
+
 /**
 Responsive on 767px
 */
@@ -133,7 +134,9 @@ if (windowWidth <= 767) {
 /*if( $('.tooltip-btn').length ){
   $('[data-toggle="tooltip"]').tooltip();
 }*/
-
+if($('.mHc').length){
+    $('.mHc').matchHeight();
+};
 if( $('.partnersSlider').length ){
     $('.partnersSlider').slick({
       dots: false,

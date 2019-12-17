@@ -1,0 +1,109 @@
+Header
+----------------
+
+Desktop--->
+1. https://www.screencast.com/t/A3fcKxv6FP
+	a te padding bottom diye. a ar after a border ta use koro. last li te hover korle border ta onek left a chole ase
+
+2. https://www.screencast.com/t/qDowff8Puq
+	logo just .svg hobe. sprite lagbena
+
+
+
+Footer
+---------------
+
+Desktop--->
+1. https://www.screencast.com/t/7fD9lHonMRNC
+	ai 2 ta akta ul a hobe.
+	r porer ta akta ul
+
+2. https://www.screencast.com/t/6D1qafoHPd
+	a te ato padding bottom deoa jabena . heigh 5px deoa jete pare.  akta a thake porer a pojonto cousor dekhasche
+
+3. https://www.screencast.com/t/9XO0qnZBehOh
+	aigulor a te target blank hobe
+
+4. https://prnt.sc/qbvxql
+	ai button ar width besi hoiche
+
+5. https://www.screencast.com/t/25RZWpJD
+	ai icon ta kata porche
+
+6. https://www.screencast.com/t/Sh6Tx4AIr2lG
+	ata aktu niche nambe
+
+7. https://www.screencast.com/t/xdpw9BMqZR
+	entity code hobe
+
+8. https://www.screencast.com/t/DztQ5YzuTb
+	i) logo ar width 119px hobe 
+	ii) .svg hobe, sprite lagbena
+
+9. https://www.screencast.com/t/4HBBQL8aO0TK
+	i) ai icon ta hobe
+	ii) button a hover korle border color tao green daw
+
+
+
+About Us
+---------------------------
+
+Desktop---->
+1. https://www.screencast.com/t/5uQTj67a6
+	ai icon ta green hobe
+2. https://www.screencast.com/t/Leuxaa0zx2N
+	ai div .matchHeightCol ai class ta use koro. content barle ba komle jate problem na hoy
+3. https://www.screencast.com/t/9A73o2GHa0FX
+	link hobe
+4. https://www.screencast.com/t/QFjUmrVON8
+	text break gulo mileni
+5. https://www.screencast.com/t/ig70ZmHn
+	.svg hobe
+6. https://www.screencast.com/t/2KkgKNswk
+	ai page ar bottom a gap hobe. amader gap div use korte paro
+
+
+
+About Dark
+---------------------------
+
+Desktop---->
+1. https://www.screencast.com/t/71FTUlRr2zjy
+	i)img ta mileni
+	ii) ai img ar border radius hobe na
+
+2. https://www.screencast.com/t/T3rz4hIR
+	.svg hobe
+
+3. https://www.screencast.com/t/bldZvPqC
+	sob aki icon hoye geche
+
+4. https://www.screencast.com/t/spDc6CXDR2n
+	button gulo ai borabor end hobe. onek niche chole geche. upore and nicher alignment ta dekhte hobe j thik thak position a ache kina 
+
+5. https://www.screencast.com/t/AesUS4Jq
+	clearfix class ar pore ulc class dilei to ai code gulo r lagena
+
+6. https://www.screencast.com/t/aNJLHSZHZHzF
+	aigulo .vt-drk-page-ctlr ai class ta diye manage koro
+
+
+Contact
+---------------------------
+
+Desktop---->
+1. https://www.screencast.com/t/3ImuBG4RS
+	ai section ta home page thake copy kore daw
+
+
+FAQ Overview
+---------------------------
+
+Desktop---->
+1. https://www.screencast.com/t/ml4vxSeyUu
+	ai pagi ar markup, active item and css ager project thake dekhe niye korte hobe
+
+
+
+
