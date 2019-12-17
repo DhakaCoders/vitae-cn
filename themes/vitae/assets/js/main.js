@@ -28,23 +28,17 @@ Responsive on 767px
 ---------------------------
 */
 if (windowWidth <= 767) {
-
-    $('.opener-inner').on('click', function(){
-    $('nav.main-nav').fadeIn(500);
-    $('nav.main-nav').addClass('add-cls-show');
-  });
-
   $('.opener-inner').on('click', function(){
-    $('nav.main-nav').fadeOut(500);
-    $('nav.main-nav').removeClass('add-cls-show');
+    $(this).toggleClass('menu-expend');
+    $('header nav.main-nav').slideToggle(500);
   });
 
-  $('nav.main-nav > ul > li.menu-item-has-children > a').on('click', function(e){
+  $('nav.main-nav li.menu-item-has-children > a').on('click', function(e){
     e.preventDefault();
-    $(this).parent().find('ul.sub-menu').slideToggle(500);
-    $(this).toggleClass('sub-menu-expend')
+    $('.main-nav').toggleClass("color-changes-mobile");
+    $(this).toggleClass('menu-expend-sub');
+    $(this).parent().find('.sub-menu').slideToggle(500);
   });
-
 }
 
 
