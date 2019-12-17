@@ -8,7 +8,7 @@ Desktop--->
 2. https://www.screencast.com/t/qDowff8Puq
 	logo just .svg hobe. sprite lagbena
 
-
+3. header responsive hoye gele sob page pest koro
 
 Footer
 ---------------
@@ -44,6 +44,7 @@ Desktop--->
 	i) ai icon ta hobe
 	ii) button a hover korle border color tao green daw
 
+10. Footer sob page pest koro
 
 
 About Us
@@ -62,6 +63,10 @@ Desktop---->
 	.svg hobe
 6. https://www.screencast.com/t/2KkgKNswk
 	ai page ar bottom a gap hobe. amader gap div use korte paro
+7. https://www.screencast.com/t/vyNbpAgo
+	margin bottom 20px hobe
+8. https://www.screencast.com/t/adVp3lpl68dH
+	Learn More page a heart icon ache. so 'our' text ta jodi span ar moddhe rakhe tahole heart icon ta peye jabe. ata design kore rakhte hobe. then responsive tane dekhte hobe thik ache kina.
 
 
 
@@ -107,3 +112,4 @@ Desktop---->
 
 
 
+Fix ses hole overall check diba. responsive thik ache kina

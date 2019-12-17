@@ -1,0 +1,53 @@
+Learn More
+---------------------------
+
+Desktop---->
+1. https://www.screencast.com/t/QCE1Ii4V
+	match height class use koro
+
+2.	https://www.screencast.com/t/2t3sFMTcbsX
+	aigulo tab hobe. uporer 4 ta grd akta tab ar under a
+
+3. https://www.screencast.com/t/Oyt0EtY65
+	img ta aro nich thake suru hobe
+
+4. https://www.screencast.com/t/xRD06BGfG
+	ai button ar hover effect ta home page thake dekhe nao. pore dada jemon ta bole use kora jabe
+
+5. https://www.screencast.com/t/s8HPDEGXQ
+	https://www.screencast.com/t/ibTMXgQXPwBh
+	.svg daw ai icon gulo
+
+6. https://www.screencast.com/t/fKxXr4Jdr
+	flex use koro
+
+7.	https://www.screencast.com/t/vLAYq8DHWm
+	gap hobe . amader gap div use korte paro
+
+8. https://www.screencast.com/t/adVp3lpl68dH
+	ai pagea heart icon ache. onno page a nai.  milon k fix dichi.
+	or ses hole tomay milay nite hobe just.
+
+	milon ar about us page ar 8 no fix ta pore nio
+
+
+wallet dark
+---------------------------
+
+Desktop---->
+1. https://www.screencast.com/t/ZivwkyWfCDdB
+	space hobena
+
+2. https://www.screencast.com/t/ivCdNZbu5Bp
+	exchange dark thake dekhe niye class ta daw
+
+3. https://www.screencast.com/t/jrrAgx3Z
+	around monitor ar frame ta thakbe . r maje j kono img dile pabe amon korte hobe
+
+4. https://www.screencast.com/t/BMKOluoqav
+	https://www.screencast.com/t/FVGvhaWorWk
+	.svg daw
+5. https://www.screencast.com/t/bfDpAKDoDouJ
+	icon payni
+
+Fix ses hole overall check diba. responsive thik ache kina
