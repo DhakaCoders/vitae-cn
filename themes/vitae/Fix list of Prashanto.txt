@@ -3,16 +3,16 @@ Learn More
 
 Desktop---->
 1. https://www.screencast.com/t/QCE1Ii4V
-	match height class use koro
+	match height class use koro --done
 
 2.	https://www.screencast.com/t/2t3sFMTcbsX
 	aigulo tab hobe. uporer 4 ta grd akta tab ar under a
 
 3. https://www.screencast.com/t/Oyt0EtY65
-	img ta aro nich thake suru hobe
+	img ta aro nich thake suru hobe --done
 
 4. https://www.screencast.com/t/xRD06BGfG
-	ai button ar hover effect ta home page thake dekhe nao. pore dada jemon ta bole use kora jabe
+	ai button ar hover effect ta home page thake dekhe nao. pore dada jemon ta bole use kora jabe --done
 
 5. https://www.screencast.com/t/s8HPDEGXQ
 	https://www.screencast.com/t/ibTMXgQXPwBh

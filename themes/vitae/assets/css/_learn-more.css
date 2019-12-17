@@ -101,6 +101,9 @@
 	max-width: 1166px;
 	width:100%;
 }
+.lm-mauris-aliquam-sec{
+	padding-top: 58px;
+}
 .lm-mauris-aliquam-innr{
 	display: flex;
 	align-items: center;
@@ -143,7 +146,7 @@
 .lm-mauris-aliquam-des{
 	width:51%;
 	order: 1;
-	padding: 58px 150px 90px 0;
+	padding: 0px 150px 90px 0;
 }
 .lm-mauris-aliquam-des h2{
 	line-height: 60px;
@@ -169,8 +172,7 @@
 	padding: 15px 43px;
 }
 .lm-mauris-aliquam-lnc a:hover{
-	color: #47A348;
-	background:#fff;
+	background: #47A348;;
 }
 .lm-community-innr {
 	padding: 80px 0 28px;
