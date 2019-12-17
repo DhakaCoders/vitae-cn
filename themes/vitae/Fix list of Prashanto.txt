@@ -16,10 +16,10 @@ Desktop---->
 
 5. https://www.screencast.com/t/s8HPDEGXQ
 	https://www.screencast.com/t/ibTMXgQXPwBh
-	.svg daw ai icon gulo
+	.svg daw ai icon gulo --done
 
 6. https://www.screencast.com/t/fKxXr4Jdr
-	flex use koro
+	flex use koro --done
 
 7.	https://www.screencast.com/t/vLAYq8DHWm
 	gap hobe . amader gap div use korte paro
@@ -36,18 +36,20 @@ wallet dark
 
 Desktop---->
 1. https://www.screencast.com/t/ZivwkyWfCDdB
-	space hobena
+	space hobena --done
 
 2. https://www.screencast.com/t/ivCdNZbu5Bp
-	exchange dark thake dekhe niye class ta daw
+	exchange dark thake dekhe niye class ta daw --done
 
 3. https://www.screencast.com/t/jrrAgx3Z
 	around monitor ar frame ta thakbe . r maje j kono img dile pabe amon korte hobe
 
 4. https://www.screencast.com/t/BMKOluoqav
 	https://www.screencast.com/t/FVGvhaWorWk
-	.svg daw
+	.svg daw --done
 5. https://www.screencast.com/t/bfDpAKDoDouJ
-	icon payni
+	icon payni --done
 
 Fix ses hole overall check diba. responsive thik ache kina
+
+
