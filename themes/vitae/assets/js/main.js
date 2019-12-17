@@ -100,7 +100,6 @@ if (windowWidth <= 767) {
   }
 
 
-
   if( $('.lmCommunitySlider').length ){
     $('.lmCommunitySlider').slick({
       dots: true,
