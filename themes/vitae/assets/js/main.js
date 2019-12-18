@@ -29,19 +29,21 @@ Responsive on 767px
 ---------------------------
 */
 if (windowWidth <= 767) {
-  $('.opener-inner').on('click', function(){
-    $(this).toggleClass('menu-expend');
-    $('header nav.main-nav').slideToggle(500);
+  $('.nav-opener').on('click', function(){
+    $('.xs-popup-main-menu-wrap').fadeIn(500);
+    $('.xs-popup-main-menu-wrap').addClass('add-cls-show');
   });
 
-  $('nav.main-nav li.menu-item-has-children > a').on('click', function(e){
-    e.preventDefault();
-    $('.main-nav').toggleClass("color-changes-mobile");
-    $(this).toggleClass('menu-expend-sub');
-    $(this).parent().find('.sub-menu').slideToggle(500);
+  $('.xs-menu-popup-close-btn').on('click', function(){
+    $('.xs-popup-main-menu-wrap').fadeOut(500);
+    $('.xs-popup-main-menu-wrap').removeClass('add-cls-show');
+  });
+
+  $('nav.main-nav > ul > li.menu-item-has-children > a').on('click', function(){
+    $(this).parent().find('ul.sub-menu').slideToggle(500);
+    $(this).toggleClass('sub-menu-expend')
   });
 }
-
 
 // http://codepen.io/norman_pixelkings/pen/NNbqgG
 // https://stackoverflow.com/questions/38686650/slick-slides-on-pagination-hover
