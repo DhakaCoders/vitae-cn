@@ -135,8 +135,6 @@ $(window).resize(function(){
   hasPaddings();
 });
 
-draw();
-
 })(jQuery);
 
 function draw(){

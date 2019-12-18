@@ -92,7 +92,7 @@
 
 .our-community-sec{
 	padding: 65px 0 0 0;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 .our-community-des{
 	padding: 70px 95px 65px 0;
