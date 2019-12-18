@@ -217,6 +217,11 @@
 .dfp-grd-slider-ctlr.dfp-grd-slider-ctlr-2{
 	margin-top: -30px;
 }
+.dfp-grd-slider-ctlr .slide-prev-btn,
+.dfp-grd-slider-ctlr .slide-next-btn{
+	display: none;
+}
+
 .dfp-grd-slider-ctlr.dfp-grd-slider-ctlr-2 .dfp-grd-slide-item-img{
 	min-height: 65px;
 	display: flex;
@@ -758,6 +763,10 @@ Gallery design
 	.dft-join-the-community-inner div a{
 		display: inline-block;
 		vertical-align: baseline;
+	}
+	.dfp-grd-slide-item-inner{
+		padding-left: 60px;
+		padding-right: 60px;
 	}
 }
 @media(max-width: 850px){

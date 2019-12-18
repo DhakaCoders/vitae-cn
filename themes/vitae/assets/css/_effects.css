@@ -2,7 +2,7 @@
 All Transitions
 */
 a,input,img,textarea,button,
-.partnersSlideItemInner,svg{
+.partnersSlideItemInner,svg,.esSlideItemInner strong,.partnersSlideItemInner strong{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -28,3 +28,7 @@ nav.main-nav ul li.current-menu-item a{
 	color:#fff;
 }
 
+.esSlideItemInner:hover strong,
+.partnersSlideItemInner:hover strong{
+	color: #47A348;
+}
