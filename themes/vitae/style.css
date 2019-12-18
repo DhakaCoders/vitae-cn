@@ -12,3 +12,64 @@ Text Domain: clipfresh
 */
 
 @import url('assets/css/main.css');
+
+.vt-about-the-token-btn a:hover,
+.vt-faq-grd-item > a:hover,
+.ftr-socail-btn a:hover,
+.lm-social-platform-tab-trg a:hover,
+.wallet-dark-main-top-rgt li a:hover,
+.wallet-dark-main-top-lft a:hover{
+	background: #47A348;
+	border-color: #47A348;
+	color: #fff;
+}
+.footer-top-dsc a:hover{
+	background-color: #fff;
+	color: #47a348;
+}
+.ftr-socail-btn a:hover:after{
+	content: "";
+    position: absolute;
+    left: 35px;
+    top: 10px;
+    background: url(assets/images/ftr-socail-btn-icon-white.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+}
+a.fl-fade-effect,
+.wpforms-submit{
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+	transition: initial;
+}
+a.fl-fade-effect span,
+.wpforms-submit span{
+	position: relative;
+	z-index: 3;
+	display: block;
+}
+a.fl-fade-effect:hover,
+.wpforms-submit:hover{
+	color: #fff!important;
+}
+a.fl-fade-effect:after,
+.wpforms-submit:after{
+	content: "";
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+    background-color: #3d8d3e;
+}
+
+a.fl-fade-effect:hover:after,
+.wpforms-submit:hover:after{
+	opacity: 1;
+}

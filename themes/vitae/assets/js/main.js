@@ -78,8 +78,8 @@ if (windowWidth <= 767) {
 /*Prashanto*/
 if (windowWidth <= 767) {
 
-  if( $('.lmSocialSilder').length ){
-      $('.lmSocialSilder').slick({
+  if( $('.lmSocialSilder-1').length ){
+      $('.lmSocialSilder-1').slick({
       dots: true,
       autoplay: false,
       autoplaySpeed: 4000,
@@ -88,8 +88,8 @@ if (windowWidth <= 767) {
       arrows:true,
       slidesToShow: 2,
       slidesToScroll: 1,
-      prevArrow: $('.lmSocialSilder-arrows .slide-prev-btn'),
-      nextArrow: $('.lmSocialSilder-arrows .slide-next-btn'),
+      prevArrow: $('.lmSocialSilder-1-arrows .slide-prev-btn'),
+      nextArrow: $('.lmSocialSilder-1-arrows .slide-next-btn'),
       responsive: [
         {
           breakpoint: 576,
@@ -101,6 +101,28 @@ if (windowWidth <= 767) {
     });
   }
 
+  if( $('.lmSocialSilder-2').length ){
+      $('.lmSocialSilder-2').slick({
+      dots: true,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      infinite: true,
+      speed: 1000,
+      arrows:true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      prevArrow: $('.lmSocialSilder-2-arrows .slide-prev-btn'),
+      nextArrow: $('.lmSocialSilder-2-arrows .slide-next-btn'),
+      responsive: [
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  }
 
   if( $('.lmCommunitySlider').length ){
     $('.lmCommunitySlider').slick({
