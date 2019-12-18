@@ -233,9 +233,10 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
     box-shadow: 0px 18px 30px #F0F2F6;
     border-radius: 50px;
     padding: 16px 14px 15px;
-    position: absolute;
+    position: fixed;
     right: 20px;
-    bottom: 20%;
+    bottom: 50px;
+    z-index: 1;
 }
 .nav-opener span{
 	-webkit-transition:all .2s;	/* Chrome, Safari, Opera */
@@ -267,32 +268,6 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 	top: 20px;
 }
 
-.opener-inner.menu-expend{
-	position: relative;
-	height: 20px;
-}
-.menu-expend span:nth-child(1){
-  position: absolute;
-  top: 44%;
-  transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  margin-bottom: 0;
-  width: 100%;
-}
-.menu-expend span:nth-child(2){
-	opacity: 0;
-}
-.menu-expend span:nth-child(3) {
-  position: absolute;
-  top: 9px;
-  transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  width: 100%;
-}
 
 
 /*
@@ -356,16 +331,22 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 	    float: none;
 	    text-align: center;
 	}
-	nav.main-nav {
-	    position: absolute;
+	.xs-popup-main-menu-wrap{
+		position: fixed;
 	    top: 0;
 	    right: 0;
+	    bottom: 0;
 	    display: none;
 	    z-index: 2;
 	    background: #47a348;
 	    padding: 65px 20px 160px 20px !important;
 	    max-width: 335px;
 	    width: 100%;
+	}
+	.xs-menu-popup-close-btn {
+	    position: absolute;
+	    right: 2px;
+	    bottom: 5px;
 	}
 
 	nav.main-nav li.menu-item-has-children > ul.sub-menu{
