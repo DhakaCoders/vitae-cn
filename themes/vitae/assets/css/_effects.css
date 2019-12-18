@@ -28,3 +28,44 @@ nav.main-nav ul li.current-menu-item a{
 	color:#fff;
 }
 
+/**
+Background management
+*/
+.header,
+.home-banner{
+	position: relative;
+	z-index: 5;
+}
+.headerBanner{
+	position: relative;
+}
+
+.hb-bg-overlay{
+	position: absolute;
+	top: 0;
+	bottom: 139px;
+	left: 0;
+	right: 0;
+  	background: -webkit-linear-gradient(180deg, #FFFFFF 13.45%, rgba(255, 255, 255, 0) 38.51%), #F5F6F8;
+	background: linear-gradient(180deg, #FFFFFF 13.45%, rgba(255, 255, 255, 0) 38.51%), #F5F6F8;
+	transform: rotate(180deg);
+	z-index: 2;
+}
+.hb-bg-vector{
+	position: absolute;
+	height: 100%; 
+	width: 100%; 
+	padding: 0;
+	background: url(../images/Vector-new.png) no-repeat;
+    background-position: -360px -40px;
+    z-index: 2;
+    background-size: 100% 100%;
+}
+.hb-bg-particales{
+	position: absolute;
+	top: 0;
+	bottom: 139px;
+	left: 0;
+	right: 0;
+	z-index: 2;	
+}

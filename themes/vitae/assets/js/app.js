@@ -135,4 +135,34 @@ $(window).resize(function(){
   hasPaddings();
 });
 
+draw();
+
 })(jQuery);
+
+function draw(){
+  var canvas1 = document.getElementById('canvas1');
+  var ctx = canvas1.getContext("2d");
+  //canvas1.width  = ;
+  canvas1.height = 985;
+/*  ctx.fillStyle = "#960";
+  ctx.fillRect(0,0,150,75);
+
+  ctx.strokeStyle = "#000";
+  ctx.lineWidth = 5;
+  ctx.strokeRect(0,0,150,75);*/
+
+   //var img = document.getElementById("toCanvas");
+   //ctx.drawImage(img, 0, 0);
+
+   ctx.beginPath();
+   ctx.moveTo(0, 930);
+   ctx.bezierCurveTo(150,1050, 300,900, 500,900);
+
+   ctx.closePath();
+   ctx.lineWidth = 0;
+   ctx.fillStyle = "red";
+   ctx.fill();
+   ctx.strokeStyle = "blue";
+   ctx.stroke();
+
+}
