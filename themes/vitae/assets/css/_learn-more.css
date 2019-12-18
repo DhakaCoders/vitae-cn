@@ -55,10 +55,17 @@
 .lm-social-platform-block .lmSocialSilder-item i img{
 	width:100%;
 }
-.lm-social-platform-tag {
+.lm-social-platform-tab-trg {
 	padding-bottom: 80px;
 }
-.lm-social-platform-tag a{
+.lm-social-platform-tab-trg ul{
+	display: table;
+	margin: 0 auto;
+}
+.lm-social-platform-tab-trg li{
+	display: inline-block;
+}
+.lm-social-platform-tab-trg a{
 	display: inline-block;
 	vertical-align: baseline;
 	font-weight: 600;
@@ -71,12 +78,9 @@
 	box-sizing: border-box;
 	border-radius: 6px;
 	padding: 15px 25px;
-	margin-right: 22px;
+	margin:0 11px;
 }
-.lm-social-platform-tag a:last-child{
-	margin-right: 0;
-}
-.lm-social-platform-tag a:hover{
+.lm-social-platform-tab-trg li.active a{
 	color: #fff;
 	border-color: #47A348;
 	background: -webkit-linear-gradient(308.7deg, #3C8A3D 2.71%, #47A348 61.2%), #47A348;
@@ -344,7 +348,9 @@
 	margin-right: 15px;
 
 }
-
+#lm-footer-top-dsc-sec .footer-top-dsc-wrp {
+    margin-bottom: 75px;
+}
 
 
 
@@ -490,6 +496,7 @@
 	}
 	.lm-homework-des-main-con {
 	    padding: 50px 0;
+	    display: block;
 	}
 	.lm-homework-des-bq {
 		width: 100%;

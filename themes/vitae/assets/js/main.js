@@ -126,6 +126,14 @@ if (windowWidth <= 767) {
 }
 
 
+//for tab active btn
+$('.lm-social-platform-tab-trg li > a').on('click', function(e){
+  e.preventDefault();
+    $(this).parent().addClass('active');
+    $(this).parent().siblings().removeClass('active');
+
+});
+
 
 
 
