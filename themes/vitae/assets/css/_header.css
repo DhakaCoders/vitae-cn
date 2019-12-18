@@ -226,7 +226,6 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 /*------ responsive nav ----*/
 .nav-opener {
     cursor: pointer;
-    float: left;
     width: 56px;
     height: 56px;
     background: #2B323D;
@@ -236,7 +235,7 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
     position: fixed;
     right: 20px;
     bottom: 50px;
-    z-index: 1;
+    z-index: 99;
 }
 .nav-opener span{
 	-webkit-transition:all .2s;	/* Chrome, Safari, Opera */
@@ -333,15 +332,21 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 	}
 	.xs-popup-main-menu-wrap{
 		position: fixed;
-	    top: 0;
 	    right: 0;
 	    bottom: 0;
 	    display: none;
-	    z-index: 2;
+	    z-index: 100;
 	    background: #47a348;
-	    padding: 65px 20px 160px 20px !important;
-	    max-width: 335px;
+	    max-width: 375px;
 	    width: 100%;
+	    background: url(../images/popup-menu-bg.png);
+	    background-size: 100% 100%;
+	}
+	.xs-popup-main-menu-wrap > div{
+		position: relative;
+		height: 100%;
+		padding: 65px 20px 160px 20px !important;
+		width: 100%;
 	}
 	.xs-menu-popup-close-btn {
 	    position: absolute;
