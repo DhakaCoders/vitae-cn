@@ -131,13 +131,28 @@
 	width:50%;
 	order: 1;
 	position: relative;
-}          
-.wallet-dark-feature-img-innr{
+	padding-right: 75px;
+}  
+
+.wallet-dark-feature-leptop{
+	border:3px solid #fff;
+	border-left: 0;
+	border-radius: 0 20px 20px 0;
+	overflow: hidden;
+}
+.wallet-dark-feature-leptop-innr{
+	border:24px solid #000;
+	border-left: 0;
+	min-height: 600px;
+}
+
+/*.wallet-dark-feature-img-innr{
 	min-height: 703px;
 	background-size: 100% 100% !important;
 	background-position: center center !important;
 	background-repeat: no-repeat !important;
-}
+}*/
+
 .wallet-dark-feature-des{
 	width:50%;
 	order: 2;	
@@ -285,7 +300,9 @@
 }
 
 
-
+#wlt-dark-service-sec .about-dark-service-wrp{
+	background: linear-gradient(306.95deg, #3C8A3D 2.71%, #47A348 61.2%), #47A348;
+}
 
 
 
