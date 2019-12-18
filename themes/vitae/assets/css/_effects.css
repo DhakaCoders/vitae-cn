@@ -39,7 +39,6 @@ Background management
 .headerBanner{
 	position: relative;
 }
-
 .hb-bg-overlay{
 	position: absolute;
 	top: 0;
@@ -64,8 +63,6 @@ Background management
 }
 .hb-bg-vector svg {
     position: absolute;
-    /* right: 0; */
-    /* bottom: 0; */
     display: block;
     left: -25%;
 }
