@@ -29,19 +29,21 @@ Responsive on 767px
 ---------------------------
 */
 if (windowWidth <= 767) {
-  $('.opener-inner').on('click', function(){
-    $(this).toggleClass('menu-expend');
-    $('header nav.main-nav').slideToggle(500);
+  $('.nav-opener').on('click', function(){
+    $('.xs-popup-main-menu-wrap').fadeIn(500);
+    $('.xs-popup-main-menu-wrap').addClass('add-cls-show');
   });
 
-  $('nav.main-nav li.menu-item-has-children > a').on('click', function(e){
-    e.preventDefault();
-    $('.main-nav').toggleClass("color-changes-mobile");
-    $(this).toggleClass('menu-expend-sub');
-    $(this).parent().find('.sub-menu').slideToggle(500);
+  $('.xs-menu-popup-close-btn').on('click', function(){
+    $('.xs-popup-main-menu-wrap').fadeOut(500);
+    $('.xs-popup-main-menu-wrap').removeClass('add-cls-show');
+  });
+
+  $('nav.main-nav > ul > li.menu-item-has-children > a').on('click', function(){
+    $(this).parent().find('ul.sub-menu').slideToggle(500);
+    $(this).toggleClass('sub-menu-expend')
   });
 }
-
 
 // http://codepen.io/norman_pixelkings/pen/NNbqgG
 // https://stackoverflow.com/questions/38686650/slick-slides-on-pagination-hover
@@ -217,10 +219,11 @@ if( $('.exchangeSolutionSlider').length ){
     });
 }
 
-if( $('.dfp-grd-slider').length ){
-    $('.dfp-grd-slider').slick({
+if( $('.dfp-grd-slider-1').length ){
+    $('.dfp-grd-slider-1').slick({
       dots: true,
       infinite: false,
+      arrows: false,
       speed: 300,
       slidesToShow: 2,
       slidesToScroll: 1,
@@ -228,17 +231,56 @@ if( $('.dfp-grd-slider').length ){
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
+            slidesToShow: 2,
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            prevArrow: $('.dfp-grd-slider-ctlr-1 .slide-prev-btn'),
+            nextArrow: $('.dfp-grd-slider-ctlr-1 .slide-next-btn'),
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+}
+
+if( $('.dfp-grd-slider-2').length ){
+    $('.dfp-grd-slider-2').slick({
+      dots: true,
+      infinite: false,
+      arrows: false,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            prevArrow: $('.dfp-grd-slider-ctlr-2 .slide-prev-btn'),
+            nextArrow: $('.dfp-grd-slider-ctlr-2 .slide-next-btn'),
           }
         },
         {
