@@ -170,6 +170,7 @@ contact-form-sec-wrp
     background: linear-gradient(300.37deg, #3C8A3D 2.71%, #47A348 61.2%), #47A348;
 	border-radius: 6px;
 	margin-top: 35px;
+	cursor: pointer;
 }
 .contact-form .wpforms-submit-container button[type="submit"]:hover:after{
 	right: 25px;
