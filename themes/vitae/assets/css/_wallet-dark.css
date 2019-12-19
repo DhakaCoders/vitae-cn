@@ -147,7 +147,7 @@
 	border-bottom: none;
 	border-bottom: 10px solid #212121;
 }
-.wallet-dark-feature-img:after{
+.wallet-dark-feature-leptop-innr:after{
 	content: "";
 	background: url(../images/dark-page-leptop-btm-img.png);
 	background-repeat: repeat-x;
