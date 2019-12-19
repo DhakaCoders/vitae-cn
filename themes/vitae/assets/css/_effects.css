@@ -160,17 +160,11 @@ body{
 	right: 0;
 	overflow: hidden;
 }
-.fullpage svg {
-    position: absolute;
-    width: auto;
-    height: 100%;
-}
 
 .middleBg,
 .bottomBg{
 	position: absolute;
 	width: 100%;
-	overflow: hidden;
 }
 
 .middleBg {
@@ -178,33 +172,159 @@ body{
     height: 1245px;
     left: 51%;
 }
+.innerPage .topBg svg{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+.innerPageParticles.hb-bg-particales{
+	height: 500px;
+	bottom: auto;
+}
+.innerPage .topMbg svg,
+.homeTopBg svg,
+.mobileSVG svg{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.homeTopBg svg.desktopSVG{
+    position: absolute;
+    min-width: 100%;
+    height: auto;
+    max-height: 1600px;
+    top: -70px;
+}
+.homeTopBg svg.mobileSVG{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.middleBg svg.mobileSVG{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
 .bottomBg{
     top: 3750px;
-    height: 1557px;
     left: 0;
     right: 0;	
 }
-.fullpage .bottomBg svg {
+.bottomBg svg.desktopSVG{
     position: absolute;
-    width: auto;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-42%);
+    width: 150%;
+    height: auto;
+    transform: translateX(-2%);
 }
-/*#bodyMiddle{
-	position: absolute;
-    left: 0;
-    right: 0;
-    top: 1200px;
+.bottomBg svg.mobileSVG{
     position: absolute;
-    left: 0;
     width: 100%;
     height: auto;
-    right: -300px!important;
-    transform: translateX(900px);	
-}*/
+}
+.hide{
+	display: none!important;
+}
 
+/**
+Bg postion on diffrent pages
+*/
+.learmMore .middleBg{
+	top: 1600px;
+}
+
+.aboutUs .middleBg {
+    top: 1200px;
+    height: 1245px;
+    left: 40%;
+}
+.aboutUs .bottomBg {
+    top: 2050px;
+}
+.aboutUs .bottomBg svg.desktopSVG {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    transform: none;
+}
+.faqOverview .middleBg{
+    top: 1600px;
+    height: 1245px;
+    left: 48%;
+}
+.walletDark .wdTopBg svg.desktopSVG{
+	position: absolute;
+    min-width: 100%;
+    height: auto;	
+}
+.walletDark .wdMiddleBg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1270px;
+}
+.walletDark .wdMiddleBg svg.desktopSVG{
+	position: absolute;
+    width: 100%;
+    height: auto;
+}
+.walletDark .wdBottomBg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2080px;
+}
+.walletDark .wdBottomBg svg.desktopSVG{
+	position: absolute;
+	right: 0;
+	width: auto;
+	height: auto;
+}
+.walletDark.adExwd .wdBottomBg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1680px;
+}
+.walletDark.adExwd .wdBottomBg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1680px;
+}
+.walletDark.edExwd .wdBottomBg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 900px;
+}
+.walletDark.edExwd .wdBottomBg svg.desktopSVG {
+    position: absolute;
+    right: -100px;
+    width: auto;
+    height: auto;
+}
+.contactPage .middleBg {
+    top: 920px;
+    height: 1245px;
+}
+/**
+Sections z-index
+*/
+.innerpage-con-wrap,
+.footer-top-dsc-sec-wrp,
+.footer-wrp{
+	position: relative;
+	z-index: 9;
+}
 @media(max-width: 767px){
+.show-xs {
+    display: block!important;
+}
+.hide-xs {
+    display: none!important;
+}
 	.hb-bg-vector svg {
 	    position: absolute;
 	    display: block;
@@ -218,15 +338,19 @@ body{
 	    height: 1245px;
 	    left: 0;
 	}
-	.fullpage .bottomBg svg {
-	    position: absolute;
-	    width: 150%;
-	    height: auto;
-	    left: auto;
-	    right: 0;
-	    transform: none;
-	}
 	.bottomBg {
 	    top: 4750px;
+	}
+	.innerPage .middleBg {
+	    top: 3600px;
+	}
+	.innerPage .bottomBg{
+		top: 5700px;
+	}
+/**
+Bg postion on diffrent pages
+*/
+	.learmMore .middleBg{
+		top: 2600px;
 	}
 }
