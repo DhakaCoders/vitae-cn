@@ -226,6 +226,89 @@ body{
 .hide{
 	display: none!important;
 }
+
+/**
+Bg postion on diffrent pages
+*/
+.learmMore .middleBg{
+	top: 1600px;
+}
+
+.aboutUs .middleBg {
+    top: 1200px;
+    height: 1245px;
+    left: 40%;
+}
+.aboutUs .bottomBg {
+    top: 2050px;
+}
+.aboutUs .bottomBg svg.desktopSVG {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    transform: none;
+}
+.faqOverview .middleBg{
+    top: 1600px;
+    height: 1245px;
+    left: 48%;
+}
+.walletDark .wdTopBg svg.desktopSVG{
+	position: absolute;
+    min-width: 100%;
+    height: auto;	
+}
+.walletDark .wdMiddleBg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1270px;
+}
+.walletDark .wdMiddleBg svg.desktopSVG{
+	position: absolute;
+    width: 100%;
+    height: auto;
+}
+.walletDark .wdBottomBg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2080px;
+}
+.walletDark .wdBottomBg svg.desktopSVG{
+	position: absolute;
+	right: 0;
+	width: auto;
+	height: auto;
+}
+.walletDark.adExwd .wdBottomBg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1680px;
+}
+.walletDark.adExwd .wdBottomBg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1680px;
+}
+.walletDark.edExwd .wdBottomBg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 900px;
+}
+.walletDark.edExwd .wdBottomBg svg.desktopSVG {
+    position: absolute;
+    right: -100px;
+    width: auto;
+    height: auto;
+}
+.contactPage .middleBg {
+    top: 920px;
+    height: 1245px;
+}
 /**
 Sections z-index
 */
@@ -263,5 +346,11 @@ Sections z-index
 	}
 	.innerPage .bottomBg{
 		top: 5700px;
+	}
+/**
+Bg postion on diffrent pages
+*/
+	.learmMore .middleBg{
+		top: 2600px;
 	}
 }
