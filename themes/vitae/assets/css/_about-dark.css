@@ -491,6 +491,7 @@ about-drk-ipsum-sec-wrp
 	.about-dark-service-wrp ul li{
 	    width: 50%;
 	    padding-right: 30px;
+	    padding-bottom: 20px;
 	}
 	.about-dark-ser-btm-wrp {
 	    min-height: 350px;
@@ -538,6 +539,9 @@ about-drk-ipsum-sec-wrp
 	.gap-45 {
 	    height: 10px;
 	}
+	.about-dark-ser-btm-dsc{
+		padding-top: 0;
+	}
 }
 
 /*----- max-width 767px -----*/
@@ -555,11 +559,18 @@ about-drk-ipsum-sec-wrp
 		-webkit-transition: all 0.5s;
 		margin: 0 4px;
 	}
+	#AboutSerSlider .slick-dots li{
+		padding-bottom: 0;
+		margin-bottom: 5px;
+	}
 	#AboutSerSlider .slick-dots li,
 	#AboutSerSlider .slick-dots li button,
 	#AboutSerSlider .slick-dots li button:before{
 		width: 90px;
 		height: 4px;
+	}
+	#AboutSerSlider .slick-dots li button{
+		padding-bottom: 0;
 	}
 	#AboutSerSlider .slick-dots li button:before {
 	   content: none;
@@ -661,7 +672,12 @@ about-drk-ipsum-sec-wrp
 	.about-drk-ipsum-wrp {
 	    margin-top: 20px;
 	}
-
+	#AboutSerSlider .slick-dots li,
+	 #AboutSerSlider .slick-dots li button,
+	  #AboutSerSlider .slick-dots li button:before {
+	    width: 74px;
+	    height: 4px;
+	}
 
 }
 
