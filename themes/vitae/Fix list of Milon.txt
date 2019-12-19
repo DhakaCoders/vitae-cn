@@ -3,10 +3,10 @@ Header
 
 Desktop--->
 1. https://www.screencast.com/t/A3fcKxv6FP
-	a te padding bottom diye. a ar after a border ta use koro. last li te hover korle border ta onek left a chole ase
+	a te padding bottom diye. a ar after a border ta use koro. last li te hover korle border ta onek left a chole ase --done 
 
 2. https://www.screencast.com/t/qDowff8Puq
-	logo just .svg hobe. sprite lagbena
+	logo just .svg hobe. sprite lagbena ---done
 
 3. header responsive hoye gele sob page pest koro
 
