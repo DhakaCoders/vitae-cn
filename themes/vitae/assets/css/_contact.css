@@ -176,7 +176,6 @@ contact-form-sec-wrp
 	right: 25px;
 }
 .contact-form .wpforms-submit-container .wpforms-submit:hover{
-	background-color: #fd010b !important;
 	-ms-transition: all 0.5s;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
