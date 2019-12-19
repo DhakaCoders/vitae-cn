@@ -133,17 +133,43 @@
 	position: relative;
 	padding-right: 75px;
 }  
-
+.wallet-dark-feature-img{
+	position: relative;
+	width: 960px;
+	height: 653px;	
+	padding-bottom: 60px;
+	padding-right: 112px;
+}
 .wallet-dark-feature-leptop{
-	border:3px solid #fff;
+	border:3px solid #a9aaad;
 	border-left: 0;
 	border-radius: 0 20px 20px 0;
-	overflow: hidden;
+	border-bottom: none;
+	border-bottom: 10px solid #212121;
+}
+.wallet-dark-feature-img:after{
+	content: "";
+	background: url(../images/dark-page-leptop-btm-img.png);
+	background-repeat: repeat-x;
+	background-position: center right;
+	height: 76px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -27px;
+
 }
 .wallet-dark-feature-leptop-innr{
-	border:24px solid #000;
+	border:24px solid #0f0f0f;
 	border-left: 0;
-	min-height: 600px;
+	height: 600px;
+	border-radius: 0 20px 14px 0;
+	border-bottom: none;
+	border-bottom: 25px solid #0f0f0f;
+}
+.wallet-dark-feature-leptop-innr iframe{
+	width: 100%!important;
+	height: 100%!important;
 }
 
 /*.wallet-dark-feature-img-innr{
