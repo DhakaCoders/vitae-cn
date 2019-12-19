@@ -52,7 +52,8 @@ faq-overview-sec-wrp
 	line-height: 18px;
 	font-weight: 600;
 }
-.faq-pagination-wrp ul li a{
+.faq-pagination-wrp ul li a,
+.faq-pagination-wrp ul li span{
 	display: inline-block;
 	vertical-align: baseline;
 	text-decoration: none;
@@ -64,7 +65,8 @@ faq-overview-sec-wrp
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.faq-pagination-wrp ul li a:after{
+.faq-pagination-wrp ul li a:after,
+.faq-pagination-wrp ul li span:after{
 	content: "";
 	position: absolute;
 	left: 50%;
@@ -82,12 +84,13 @@ faq-overview-sec-wrp
 	-webkit-transition: all 0.5s;
 }
 .faq-pagination-wrp ul li a:hover:after,
-.faq-pagination-wrp ul li a.active:after{
+.faq-pagination-wrp ul li a.current:after,
+.faq-pagination-wrp ul li span.current:after{
 	opacity: 1;
 	visibility: visible;
 }
 .faq-pagination-wrp ul li a:hover,
-.faq-pagination-wrp ul li a.active{
+.faq-pagination-wrp ul li a.current{
 	color: #47a348;
 }
 

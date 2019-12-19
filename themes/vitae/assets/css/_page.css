@@ -35,6 +35,13 @@ body.vt-drk-page-ctlr .hdr-btm-menu ul li.current-menu-item a,
 body.vt-drk-page-ctlr .hdr-btm-menu ul li a:hover {
     color: #47a348;
 }
+body.vt-drk-page-ctlr .ftr-menu-item ul li a:hover, 
+body.vt-drk-page-ctlr .hdr-btm-menu ul li a:hover,
+body.vt-drk-page-ctlr nav.main-nav ul li a:hover,
+body.vt-drk-page-ctlr .ftr-btm-menu ul li a:hover,
+body.vt-drk-page-ctlr .ftr-btm-rgt a:hover{
+	color: #3C8B3D!important;
+}
 
 body.vt-drk-page-ctlr .footer-top{
 	padding-top: 0;
@@ -42,4 +49,8 @@ body.vt-drk-page-ctlr .footer-top{
 
 body.vt-drk-page-ctlr .header{
 	background: transparent;
+}
+
+body.vt-drk-page-ctlr  .ftr-btm-menu ul li a:after{
+	background: #66697A;
 }
