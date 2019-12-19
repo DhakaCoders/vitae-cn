@@ -59,19 +59,27 @@ about-us-secvice-sec-wrp
 .about-service-dsc{
 	text-align: center;
 }
+.about-service-dsc i{
+	display: inline-block;
+	vertical-align: baseline;
+}
 .about-service-dsc h6{
 	margin: 0;
 	font-size: 22px;
 	line-height: 24px;
-	color: #10303c;
 	font-weight: 600;
 	margin-top: 20px;
 	margin-bottom: 8px;
 }
+.about-service-dsc h6 a{
+	color: #10303c;
+	display: inline-block;
+	vertical-align: baseline;
+}
 .about-service-dsc p{
 	margin-bottom: 25px;
 }
-.about-service-dsc a{
+.about-service-dsc > a{
 	display: inline-block;
 	vertical-align: baseline;
 	text-decoration: none;
@@ -110,7 +118,7 @@ about-our-team-sec-wrp
 	max-width: 100%;
 }
 .about-our-team-dsc{
-	padding: 120px 140px 60px 120px;
+	padding: 120px 139px 60px 120px;
 }
 .about-our-team-dsc h3{
 	margin: 0;
@@ -195,7 +203,7 @@ about-new-life-sec-wrp
 	position: absolute;
 	left: 50px;
 	top: 45px;
-	background: url(../images/quote-icon.png);
+	background: url(../images/quote-icon.svg);
 	background-repeat: no-repeat;
 	background-size: 71px 71px;
 	width: 71px;

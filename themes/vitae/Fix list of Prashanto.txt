@@ -53,3 +53,7 @@ Desktop---->
 Fix ses hole overall check diba. responsive thik ache kina
 
 
+
+Cookie 
+-------------
+figma ar ager site gulo thake cookie  ar markup niye cookie ar design ta koro
