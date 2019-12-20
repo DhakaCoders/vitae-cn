@@ -362,7 +362,7 @@ if( $('#hbbgparticales').length ){
     particlesJS("hbbgparticales", {
   "particles": {
     "number": {
-      "value": 30,
+      "value": 40,
       "density": {
         "enable": true,
         "value_area": 800
@@ -475,7 +475,7 @@ if( $('#vtabout-gridiant').length ){
     particlesJS("vtabout-gridiant", {
   "particles": {
     "number": {
-      "value": 10,
+      "value": 15,
       "density": {
         "enable": true,
         "value_area": 800
@@ -588,7 +588,7 @@ if( $('#faqParticles').length ){
     particlesJS("faqParticles", {
   "particles": {
     "number": {
-      "value": 10,
+      "value": 15,
       "density": {
         "enable": true,
         "value_area": 800
@@ -701,7 +701,7 @@ if( $('#wdparticales').length ){
     particlesJS("wdparticales", {
   "particles": {
     "number": {
-      "value": 30,
+      "value": 40,
       "density": {
         "enable": true,
         "value_area": 800
