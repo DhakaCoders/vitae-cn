@@ -50,46 +50,6 @@ $shortcode = get_field('shortcode', $thisID);
                 </div>
               </li>
               <?php endwhile; ?>
-              <li>
-                <div class="vt-faq-grd-item matchHeightCol">
-                  <i><img src="assets/images/faq-grd-icon.svg"></i>
-                  <h6><a href="#">Quisque ac risus vitae?</a></h6>
-                  <p>Aenean ante erat, posuere quis nibh id, sollicitudin feugiat lectus. Sed nec iaculis diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                  <a href="#">Read More</a>                
-                </div>
-              </li>
-              <li>
-                <div class="vt-faq-grd-item matchHeightCol">
-                  <i><img src="assets/images/faq-grd-icon.svg"></i>
-                  <h6><a href="#">Quisque ac risus vitae?</a></h6>
-                  <p>Aenean ante erat, posuere quis nibh id, sollicitudin feugiat lectus. Sed nec iaculis diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                  <a href="#">Read More</a>                
-                </div>
-              </li>
-              <li>
-                <div class="vt-faq-grd-item matchHeightCol">
-                  <i><img src="assets/images/faq-grd-icon.svg"></i>
-                  <h6><a href="#">Quisque ac risus vitae?</a></h6>
-                  <p>Aenean ante erat, posuere quis nibh id, sollicitudin feugiat lectus. Sed nec iaculis diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                  <a href="#">Read More</a>                
-                </div>
-              </li>
-              <li>
-                <div class="vt-faq-grd-item matchHeightCol">
-                  <i><img src="assets/images/faq-grd-icon.svg"></i>
-                  <h6><a href="#">Quisque ac risus vitae?</a></h6>
-                  <p>Aenean ante erat, posuere quis nibh id, sollicitudin feugiat lectus. Sed nec iaculis diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                  <a href="#">Read More</a>                
-                </div>
-              </li>
-              <li>
-                <div class="vt-faq-grd-item matchHeightCol">
-                  <i><img src="assets/images/faq-grd-icon.svg"></i>
-                  <h6><a href="#">Quisque ac risus vitae?</a></h6>
-                  <p>Aenean ante erat, posuere quis nibh id, sollicitudin feugiat lectus. Sed nec iaculis diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                  <a href="#">Read More</a>                
-                </div>
-              </li>
             </ul>
           </div>
         </div>
