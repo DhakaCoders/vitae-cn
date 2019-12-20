@@ -21,7 +21,6 @@
       </div>
   </div>    
 </section>
-</div>
 
 
 <div class="home-con-bg-ctlr">

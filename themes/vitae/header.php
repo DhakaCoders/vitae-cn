@@ -92,7 +92,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-  <?php if(is_front_page()): ?><div class="fullpage">
+<div class="fullpage">
   <div class="middleBg">
     <svg id="bodyMiddle" xmlns="http://www.w3.org/2000/svg" width="1416" height="1245" viewBox="0 0 1416 1245" fill="none" style="&#10;position: absolute;&#10;left: 0;&#10;right: 0;&#10;">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M686.964 1174.21C598.704 1156.62 502.674 1169.81 425.104 1124.22C348.574 1079.24 315.624 988.729 257.404 921.739C195.414 850.399 111.314 799.079 69.0943 714.539C22.0943 620.449 -8.21968 514.989 1.97433 410.319C12.6343 300.889 29.0033 157.959 127.984 109.919C244.394 53.4186 380.204 188.949 507.384 165.009C594.304 148.649 622.684 5.59865 710.974 0.178653C796.964 -5.11135 844.364 108.599 924.824 139.369C1017.06 174.649 1128.16 140.839 1212.61 192.019C1304.24 247.549 1405.13 329.789 1414.98 436.419C1425.13 546.179 1294.17 619.498 1261.84 724.888C1231.67 823.268 1280.48 936.849 1233.44 1028.38C1184.76 1123.1 1100.87 1210.94 997.924 1238.41C894.364 1266.04 792.074 1195.17 686.964 1174.21Z" fill="#F5F6F8"/>
@@ -128,7 +128,7 @@
   </svg>
 </div>
 <div class="hb-bg-particales" id="hb-bg-particales"></div>
-<?php endif; 
+<?php
   $logoObj = get_field('logo_header', 'options');
   if( is_array($logoObj) ){
     $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
@@ -136,6 +136,7 @@
     $logo_tag = '';
   }
 ?>
+<div class="pageElements">
 <header class="header">
   <div class="container">
       <div class="row">
