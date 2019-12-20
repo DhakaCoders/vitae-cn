@@ -68,6 +68,7 @@ body.vt-drk-page-ctlr  .ftr-btm-menu ul li a:after{
 	z-index: 102;
 	width: 440px;
 	color: #fff;
+	display: none;
 }
 .cookie-policy-dsc{
 	padding: 30px 30px;
