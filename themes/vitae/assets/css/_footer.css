@@ -140,11 +140,15 @@ ul.ftr-main-menu li{
 	display: inline-block;
 	vertical-align: baseline;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 20px;
+	color: #66697A;
 }
 .ftr-socail-icon ul li a:hover svg{
 	fill: #47a348 !important;
+}
+.ftr-socail-icon ul li a:hover{
+	color: #47a348;
 }
 .ftr-socail-btn{
 	padding-top: 25px;
