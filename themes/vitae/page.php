@@ -53,7 +53,7 @@ $thisID = get_the_ID();
                             echo '</div></div>';
                     echo '</div>';      
                   }elseif( get_row_layout() == 'galerij' ){
-                    $gallery_cn = get_sub_field('afbeeldingen');
+                    $gallery_cn = get_sub_field('galerij_afbeelding');
                     $lightbox = get_sub_field('lightbox');
                     $kolom = get_sub_field('kolom');
                     if( $gallery_cn ):
@@ -85,7 +85,7 @@ $thisID = get_the_ID();
                   }elseif( get_row_layout() == 'quote' ){
                     $fc_naam = get_sub_field('fc_naam');
                     $fc_diensten = get_sub_field('fc_quote');
-                    echo "<div class='dft-blockquote'><div class='dfp-blockquote-inner'>";
+                    echo "<div class='dfp-blockquote'><div class='dfp-blockquote-inner'>";
                     printf('<blockquote>%s</blockquote>', $fc_diensten);
                     printf('<strong>- %s</strong>', $fc_naam);
                     echo "</div></div>";

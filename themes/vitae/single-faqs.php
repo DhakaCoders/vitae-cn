@@ -14,20 +14,15 @@ $thisID = get_the_ID();
           <div class="vt-faq-details-con-block default-page-con">
             <?php 
               if(have_rows('inhoud')){ 
-              echo '<div class="container-sm"><div class="row"><div class="col-sm-12"><article class="default-page-con">';
               while ( have_rows('inhoud') ) : the_row(); 
                 if( get_row_layout() == 'introductietekst' ){
                     $title = get_sub_field('titel');
-                    $subtitel = get_sub_field('subtitel');
                     $afbeelding = get_sub_field('afbeelding');
                     echo '<div class="dfp-promo-module clearfix">';
                       if( !empty($title) ) printf('<h1>%s</h1>', $title);
                       if( !empty($afbeelding) ){
                         echo '<div class="dfp-plate-one-img-bx">', cbv_get_image_tag($afbeelding), '</div>';
                       }
-                      if( !empty($subtitel) ) printf('<strong>%s</strong>', $subtitel);
-                  echo '<div class="hide-xs"><img src="'.THEME_URI.'/assets/images/title-separetor.svg"></div>';
-                  echo '<div class="show-xs"><img src="'.THEME_URI.'/assets/images/xs-line-hdr.png"></div>';
                     echo '</div>';    
                 }elseif( get_row_layout() == 'teksteditor' ){
                     $beschrijving = get_sub_field('fc_teksteditor');
@@ -38,17 +33,31 @@ $thisID = get_the_ID();
                     $fc_afbeelding = get_sub_field('fc_afbeelding');
                     $imgsrc = cbv_get_image_src($fc_afbeelding, 'dfpageg1');
                     $fc_tekst = get_sub_field('fc_tekst');
+                    $fc_cirkel = get_sub_field('cirkel');
                     $positie_afbeelding = get_sub_field('positie_afbeelding');
                     $imgposcls = ( $positie_afbeelding == 'right' ) ? 'fl-dft-rgtimg-lftdes' : '';
                     echo '<div class="fl-dft-overflow-controller">
                       <div class="fl-dft-lftimg-rgtdes clearfix equalHeight '.$imgposcls.'">';
+                           echo ($positie_afbeelding == 'right' && $fc_cirkel == true)? '<span class="fl-dft-circle-rgt"></span>': '';
+                           echo ($positie_afbeelding == 'left' && $fc_cirkel == true)? '<span class="fl-dft-circle-lft"></span>': '';
+
                             echo '<div class="fl-dft-lftimg-rgtdes-lft matchHeightCol" style="background: url('.$imgsrc.');"></div>';
                             echo '<div class="fl-dft-lftimg-rgtdes-rgt matchHeightCol">';
                               echo wpautop($fc_tekst);
                             echo '</div>';
                     echo '</div></div>';      
+                  }elseif( get_row_layout() == 'afbeelding_beschrijving' ){
+                    $fc_afbeelding = get_sub_field('afbeelding');
+                    $imgsrc = cbv_get_image_src($fc_afbeelding, 'dfpageg1');
+                    $fc_tekst = get_sub_field('beschrijving');
+                    echo '<div class="dft-img-des-grd-cols clearfix">';
+                            echo '<div class="dft-img-grd"><div class="dft-img-grd-inner-img matchHeightCol" style="background: url('.$imgsrc.');"></div></div>';
+                            echo '<div class="dft-img-grd"><div class="dft-img-grd-inner-des matchHeightCol">';
+                              echo wpautop($fc_tekst);
+                            echo '</div></div>';
+                    echo '</div>';      
                   }elseif( get_row_layout() == 'galerij' ){
-                    $gallery_cn = get_sub_field('afbeeldingen');
+                    $gallery_cn = get_sub_field('galerij_afbeelding');
                     $lightbox = get_sub_field('lightbox');
                     $kolom = get_sub_field('kolom');
                     if( $gallery_cn ):
@@ -57,7 +66,6 @@ $thisID = get_the_ID();
                       $imgsrc = cbv_get_image_src($image['ID'], 'dfpageg1');  
                       echo "<figure class='gallery-item'><div class='gallery-icon portrait'>";
                       if( $lightbox ) echo "<a data-fancybox='gallery' href='{$image['url']}'>";
-                          //echo '<div class="dfpagegalleryitem" style="background: url('.$imgsrc.');"></div>';
                           echo wp_get_attachment_image( $image['ID'], 'dfpageg1' );
                       if( $lightbox ) echo "</a>";
                       echo "</div></figure>";
@@ -65,32 +73,48 @@ $thisID = get_the_ID();
                     echo "</div></div>";
                     endif;      
                   }elseif( get_row_layout() == 'usps' ){
-                    $fc_usps = get_sub_field('fc_usps');
-                    echo "<div class='dft-img-title-grd-controller clearfix'>";
+                    $fc_usps = get_sub_field('upssec');
+                    echo "<div class='dfp-grd-slider-ctlr dfp-grd-slider-ctlr-1'>";
+                    echo '<span class="slide-prev-btn"></span><span class="slide-next-btn"></span>';
+                    echo '<div class="dfp-grd-slider dfp-grd-slider-1 xs-pagi-ctrl">';
                       foreach( $fc_usps as $usp ):
-                        echo "<div class='dft-img-title-grd-col'><div class='dft-img-title-grd-col-inner'>";
-                          echo "<span>";
-                          echo wp_get_attachment_image( $usp['icon'] );
-                          echo "</span>";
-                          printf('<h4>%s</h4>', $usp['titel']);
+                        echo '<div class="dfp-grd-slide-item"><div class="dfp-grd-slide-item-inner matchHeightCol">';
+                          echo '<div class="dfp-grd-slide-item-img">';
+                          echo wp_get_attachment_image( $usp['afbeelding'] );
+                          echo "</div>";
+                          if(!empty($usp['beschrijving'])) echo wpautop( $usp['beschrijving'] );
                         echo "</div></div>";
                       endforeach;
-                    echo "</div>";
+                    echo "</div></div>";
                   }elseif( get_row_layout() == 'quote' ){
+                    $fc_naam = get_sub_field('fc_naam');
                     $fc_diensten = get_sub_field('fc_quote');
-                    echo "<div class='dft-blockquote'>";
+                    echo "<div class='dfp-blockquote'><div class='dfp-blockquote-inner'>";
                     printf('<blockquote>%s</blockquote>', $fc_diensten);
-                    echo "</div>";
-                  }elseif( get_row_layout() == 'promo' ){
-                    $fc_title = get_sub_field('fc_title');
-                    $fc_beschrijving = get_sub_field('fc_beschrijving');
-                    $fc_knop = get_sub_field('fc_knop');
-                    $achtergrond = get_sub_field('achtergrond');
-                    echo "<div class='dft-bnr-con' style='background-image: url({$achtergrond});'>";
+                    printf('<strong>- %s</strong>', $fc_naam);
+                    echo "</div></div>";
+                  }elseif( get_row_layout() == 'video' ){
+                    $icon = '<i><img src="'.THEME_URI.'/assets/images/play-btn-icon-white-lg.svg"></i>';
+                    $fc_videolink = get_sub_field('video_url');
+                    $fc_videoposter = '';
+                    if(get_sub_field('video_afbeelding')){
+                      $fc_videoposter = cbv_get_image_tag(get_sub_field('video_afbeelding'));
+                    }
+                    echo "<div class='dfp-fancy-bx'><div class='video-play'>";
+                    printf('<a data-fancybox="" href="%s">%s%s</a>', $fc_videolink, $icon, $fc_videoposter );
+                    echo "</div></div>";
+                  }elseif( get_row_layout() == 'ourcommunity' ){
+                    $fc_title = get_sub_field('titel');
+                    $fc_knop = get_sub_field('knop');
+                    echo "<div class='dft-join-the-community'><div class='dft-join-the-community-inner clearfix'>";
                     printf('<h3>%s</h3>', $fc_title);
-                    echo wpautop( $beschrijving );
-                    printf('<a target="%s" href="%s">%s</a>', $fc_knop['target'], $fc_knop['url'], $fc_knop['title']);
-                    echo "</div>";
+                    printf('<div><a target="%s" href="%s">%s</a></div>', $fc_knop['target'], $fc_knop['url'], $fc_knop['title']);
+                    echo "</div></div>";
+                  }elseif( get_row_layout() == 'map' ){
+                    echo '<div class="dft-map-module"><div class="dft-map-module-inner">';
+                    echo '<strong>200.000 Users <span>in Europe</span></strong>';
+                    echo '<div><img src="'.THEME_URI.'/assets/images/dft-map-img.jpg"></div>';
+                    echo '</div></div>';
                   }elseif( get_row_layout() == 'tabel' ){
                     $fc_table = get_sub_field('fc_table');
                     cbv_table($fc_table);
@@ -128,30 +152,17 @@ $thisID = get_the_ID();
 
                       echo '</div></div> <div class="dft-2grd-img-content-separetor"></div>';
                     endif; wp_reset_postdata();
-                  }elseif( get_row_layout() == 'horizontal_rule' ){
-                    $fc_horizontal_rule = get_sub_field('fc_horizontal_rule');
-                    echo '<div class="dft-2grd-img-content-separetor" style="height:'.$fc_horizontal_rule.'px"></div>';
                   }elseif( get_row_layout() == 'afbeelding' ){
                     $fc_afbeelding = get_sub_field('fc_afbeelding');
                     if( !empty( $fc_afbeelding ) ){
                       printf('<div class="df-page-simage">%s</div>', cbv_get_image_tag($fc_afbeelding));
                     }
-                  }elseif( get_row_layout() == 'horizontal_rule' ){
-                    $rheight = get_sub_field('fc_horizontal_rule');
-                    printf('<div class="dfhrule clearfix" style="height: %spx;"></div>', $rheight);
-                
                   }elseif( get_row_layout() == 'gap' ){
-                   $gap = get_sub_field('fc_gap');
-                   printf('<div class="dfgap clearfix" style="height: %spx;"></div>', $rheight);
+                   $gap = get_sub_field('aantal_pixels');
+                   printf('<div class="gap clearfix" data-value="'.$gap.'" data-md="10" data-xs="10" data-sm="10" data-xxs="10"></div>', $gap);
                   }
               endwhile;
-              echo '</article></div></div></div>';
-              }else{
-              echo '<div class="container"><div class="row"><div class="col-sm-12"><article class="wcpage-default-con" id="'.$addId .'">';
-              the_content();
-              echo '</article></div></div></div>';
               }
-
             ?>
           </div>
         </div>
