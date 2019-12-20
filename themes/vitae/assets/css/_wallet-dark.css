@@ -106,7 +106,7 @@
 .wallet-dark-main-top-rgt li a span{
 	display: inline-block;
 	vertical-align: baseline;
-	padding-left: 35px;
+	padding-left: 30px;
 	position: relative;
 }
 .wallet-dark-main-top-rgt li a span i{
@@ -121,6 +121,7 @@
 	    -ms-transform: translateY(-50%);
 	     -o-transform: translateY(-50%);
 	        transform: translateY(-50%);
+	font-size: 22px;
 }
 .wallet-dark-feature-two-part > ul > li{
 	display:flex;
