@@ -144,42 +144,15 @@ function cbv_table( $table){
     foreach ( $table['body'] as $tr ) {
       echo '<tr>';
       foreach ( $tr as $td ) {
-        echo '<td>';
+        echo '<td><span class="mHc">';
         echo $td['c'];
-        echo '</td>';
+        echo '</span></td>';
       }
       echo '</tr>';
     }
     echo '</tbody>';
     echo '</table></div>';
-
-    echo '<div class="hide"><div class="table-xs">';
-      echo '<div class="fl-tabs clearfix">';
-      $hmany = count($table['header']);
-      $i = 0;
-      foreach ( $table['header'] as $th ) {
-        if( $i == 0 ) $cls = 'current'; else $cls = '';
-        echo "<button class='tab-link {$cls}' data-tab='tab-{$i}'>
-            <span>{$th['c']}</span>
-          </button>";
-      $i++;
-      }
-      echo '</div>';
-      $j = 0;
-      foreach ( $table['header'] as $th ) {
-        if( $j == 0 ) $cls = 'current'; else $cls = '';
-        echo "<div id='tab-{$j}' class='fl-tab-content {$cls}'>
-          <ul class='clearfix'>";
-          foreach ( $table['body'] as $tr ) {  
-            //foreach ( $tr as $td ) {
-              echo "<li>{$tr[$j]['c']}</li>";
-            //}
-          }
-          echo "</ul>
-        </div>";
-      $j++; }
-
-    echo '</div></div></div>';
+    echo '</div>';
   }  
 }
 
