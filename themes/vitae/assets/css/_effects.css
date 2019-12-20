@@ -35,7 +35,10 @@ nav.main-nav ul li.current-menu-item a{
 /**
 Background management
 */
-.header,
+.header{
+    position: relative;
+    z-index: 6;    
+}
 .home-banner{
 	position: relative;
 	z-index: 5;
@@ -78,10 +81,8 @@ Background management
 	right: 0;
 	z-index: 2;
 	width: 75%;
+    height: 500px;
 }
-
-
-
 .home-con-bg-ctlr{
 	position: relative;
 	overflow: hidden;
@@ -317,6 +318,10 @@ Sections z-index
 .footer-wrp{
 	position: relative;
 	z-index: 9;
+}
+.pageElements{
+    position: relative;
+    z-index: 9;    
 }
 @media(max-width: 767px){
 .show-xs {
