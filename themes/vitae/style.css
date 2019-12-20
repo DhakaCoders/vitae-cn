@@ -15,7 +15,6 @@ Text Domain: vitae
 
 .vt-about-the-token-btn a:hover,
 .vt-faq-grd-item > a:hover,
-.ftr-socail-btn span:hover,
 .lm-social-platform-tab-trg a:hover,
 .wallet-dark-main-top-rgt li a:hover,
 .wallet-dark-main-top-lft a:hover{
@@ -27,7 +26,7 @@ Text Domain: vitae
 	background-color: #fff;
 	color: #47a348;
 }
-.ftr-socail-btn span:hover:after{
+/*.ftr-socail-btn span:hover:after{
 	content: "";
     position: absolute;
     left: 35px;
@@ -37,7 +36,7 @@ Text Domain: vitae
     background-size: 30px 30px;
     width: 30px;
     height: 30px;
-}
+}*/
 a.fl-fade-effect,
 .wpforms-submit{
 	position: relative!important;
@@ -64,8 +63,6 @@ a.fl-fade-effect:after,
     right: 0;
     top: 0;
     bottom: 0;
-	width: 100%;
-	height: 100%;
 	z-index: 0;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;

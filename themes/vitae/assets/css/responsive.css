@@ -25,6 +25,7 @@
 		line-height: 48px;
 	}
 
+
 }
 
 @media(max-width: 991px){
@@ -106,7 +107,7 @@
 		font-size: 40px;
 	}
 	h2{
-		font-size: 35px ;
+		font-size: 34px ;
 	}
 	h3{
 		font-size: 30px;

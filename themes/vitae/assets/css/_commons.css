@@ -112,7 +112,12 @@ img{
 	max-width: 100%;
 	height: auto;
 }
-
+.hide-lg{
+	display: block!important;
+}
+.show-lg{
+	display: none!important;
+}
 .hide-md{
 	display: block!important;
 }

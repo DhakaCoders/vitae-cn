@@ -140,6 +140,9 @@
 	padding-bottom: 60px;
 	padding-right: 112px;
 }
+.wallet-dark-feature-img.wallet-dark-feature-img-laptop{
+	width: 958px;
+}
 .wallet-dark-feature-leptop{
 	border:3px solid #a9aaad;
 	border-left: 0;
@@ -377,7 +380,7 @@
 }
 
 
-@media(max-width: 1199px){
+@media(max-width:1199px){
 	.wallet-dark-main-top-lft h1 {
 	    line-height: 60px;
 	}
@@ -417,8 +420,67 @@
 	    right: -40px;
 	}
 
-}
+	li.vt-laptop-sec{
+		display: block!important;
+	}
+	.wallet-dark-feature-des{
+		width: 100%;
+	}
+	.wallet-dark-feature-des li{
+		margin-bottom: 20px;
+	}
+	.vt-wallet-mobile-feature-img .wallet-dark-feature-img-innr {
+	    min-height: 616px;
+	    max-width: 360px;
+	    margin: 0 auto;
+	    background-size: 100% 100% !important;
+	    background-position: center center !important;
+	    background-repeat: no-repeat !important;
+	    position: relative;
+	}
+	.wallet-dark-feature-img.vt-wallet-mobile-feature-img{
+		padding-right: 0;
+		width: auto;
+		margin-bottom: 50px;
+	}
+	.wallet-dark-feature-two-part > ul > li:nth-child(2n+2) .wallet-dark-feature-des-innr {
+	    float: left;
+	}
+	#wlt-dark-service-sec .about-dark-service-wrp{
+		margin-top: 0;
+	}
+	.vt-wallet-mobile-feature-img{
+		margin-bottom: 0!important;
+	}
+	#vt-wallet-grd-item-ctlr{
+		width: 100%;
+		max-width: 100%;
+	}
+	#vt-wallet-grd-item-ctlr ul{
+		max-width: 550px;
+		width: 100%;
+		text-align: center;
+		margin: 0 auto;
+	}
 
+	#vt-wallet-grd-item-ctlr ul li{
+		padding-top: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#vt-wallet-grd-item-ctlr ul li i{
+		position: static;
+		padding-bottom: 20px;
+	}
+	.wallet-dark-feature-two-part > ul > li:nth-child(2){
+		padding-bottom: 0!important;
+		padding-top: 30px!important;
+	}
+	li.vt-laptop-sec{
+		padding-right: 20px;
+	}
+
+}
 
 @media(max-width: 991px){
 	.wallet-dark-main-top-lft h1 {
@@ -468,6 +530,19 @@
 	.wallet-dark-main-sec {
 		padding-top: 30px;
 	}
+	.wallet-dark-main-top-lft{
+		padding-right: 100px;
+	}
+	.wallet-dark-feature-img.wallet-dark-feature-img-laptop{
+		padding-right: 120px;
+	}
+	.wallet-dark-feature-img.wallet-dark-feature-img-laptop{
+		max-width: 850px;
+	}
+	.wallet-dark-feature-img.wallet-dark-feature-img-laptop {
+	    width: 100%;
+	}
+
 }
 
 
@@ -483,7 +558,23 @@
 	    min-height: 550px;
 	}
 	.wallet-dark-main-top {
-	    padding: 35px 0 20px;
+	    padding: 35px 0 50px;
+	}
+	.wallet-dark-main-top-lft{
+		padding-right: 0;
+	}
+	#wlt-dark-service-sec .about-dark-service-wrp{
+		margin-left: -15px;
+		margin-right: -15px;
+		border-radius: 0;
+	}
+	#wlt-dark-service-sec #AboutSerSlider .slick-dots li.slick-active,
+	#wlt-dark-service-sec #AboutSerSlider .slick-dots li:hover {
+	    opacity: 1;
+	    background-color: #fff;
+	}
+	li.vt-laptop-sec {
+	    padding-right: 15px;
 	}
 }
 
@@ -513,6 +604,44 @@
 	.wallet-dark-main-top-lft h1 {
 	    line-height: 45px;
 	}
+	.wallet-dark-feature-des{
+		padding-top: 0;
+	}
+	.wallet-dark-feature-img.wallet-dark-feature-img-laptop {
+	    padding-right: 54px;
+	}
+	.wallet-dark-feature-leptop-innr{
+		height: 470px;
+	}
+	.wallet-dark-feature-img{
+		height: 523px;
+	}
+	.wallet-dark-feature-leptop-innr{
+		border-width: 10px;
+		border-bottom-width: 15px;
+		border-radius: 0 20px 24px 0;
+	}
+	.wallet-dark-feature-leptop{
+		border-bottom: 5px;
+		border-width: 2px;
+	}
+	.wallet-dark-feature-img {
+	    height: 480px;
+	}
+	.wallet-dark-feature-leptop-innr:after{
+		height: 38px;
+	}
+	#wlt-dark-service-sec #AboutSerSlider .slick-dots li, 
+	#wlt-dark-service-sec #AboutSerSlider .slick-dots li button, 
+	#wlt-dark-service-sec #AboutSerSlider .slick-dots li button:before {
+	    width: 65px;
+	}
+	#wlt-dark-service-sec #AboutSerSlider .slick-dots li{
+		margin-bottom: 10px;
+	}
+	#wlt-dark-service-sec #AboutSerSlider .slick-dots li button{
+		padding-bottom: 0;
+	}
 }
 
 
@@ -531,6 +660,18 @@
 	.mobile-img-feature-2,
 	.mobile-img-feature-4 {
 	    right: -15px;
+	}
+}
+@media(max-width: 419px){
+	.mobile-img-feature-innr {
+	    padding: 20px 0 20px 81px;
+	}
+	.vt-wallet-mobile-feature-img.vt-wallet-mobile-feature-img .wallet-dark-feature-img-innr{
+		max-width: 270px;
+		width: 100%;
+	}
+	.vt-wallet-mobile-feature-img.vt-wallet-mobile-feature-img .mobile-img-feature {
+	    width: 290px;
 	}
 }
 
