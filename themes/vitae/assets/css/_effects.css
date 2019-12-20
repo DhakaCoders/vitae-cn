@@ -197,7 +197,9 @@ body{
     max-height: 1600px;
     top: -70px;
 }
-.homeTopBg svg.mobileSVG{
+.homeTopBg svg.mobileSVG,
+.walletDark svg.mobileSVG,
+.contactPage svg.mobileSVG{
     position: absolute;
     width: 100%;
     height: auto;
@@ -257,7 +259,8 @@ Bg postion on diffrent pages
 .walletDark .wdTopBg svg.desktopSVG{
 	position: absolute;
     min-width: 100%;
-    height: auto;	
+    height: auto;
+    right: 0;	
 }
 .walletDark .wdMiddleBg{
     position: absolute;
@@ -323,13 +326,16 @@ Sections z-index
     position: relative;
     z-index: 9;    
 }
-@media(max-width: 767px){
-.show-xs {
-    display: block!important;
-}
-.hide-xs {
+#faqParticles.walletDarkMiddleParticles{
     display: none!important;
 }
+@media(max-width: 767px){
+    .show-xs {
+        display: block!important;
+    }
+    .hide-xs {
+        display: none!important;
+    }
 	.hb-bg-vector svg {
 	    position: absolute;
 	    display: block;
@@ -358,4 +364,32 @@ Bg postion on diffrent pages
 	.learmMore .middleBg{
 		top: 2600px;
 	}
+    .wallet-dark-feature-two-part{
+        position: relative;
+    }
+    #faqParticles.walletDarkMiddleParticles{
+        display: block!important;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+    .wallet-dark-feature-two-part ul{
+        position: relative;
+        z-index: 9;
+    }
+    .aboutUs .middleBg,
+    .faqOverview .middleBg{
+        height: auto;
+        left: 0;
+        right: 0;
+    }
+    .aboutUs .middleBg{
+        top: 2400px;
+    }
+    .faqOverview .middleBg{
+        top: 1800px;
+    }
 }
