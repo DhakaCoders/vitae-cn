@@ -54,3 +54,110 @@ body.vt-drk-page-ctlr .header{
 body.vt-drk-page-ctlr  .ftr-btm-menu ul li a:after{
 	background: #66697A;
 }
+
+
+/*
+---------------------
+ Cookie Css
+---------------------
+*/
+.cookie-policy-wrp{
+	position: fixed;
+	right: 25px;
+	top: 30%;
+	z-index: 102;
+	width: 440px;
+	color: #fff;
+}
+.cookie-policy-dsc{
+	padding: 30px 30px;
+	color: #fff;
+	width: 440px;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	background: url(../images/cookie-bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 120px 70px 80px 60px;
+	position: relative;
+}
+.cookie-policy-dsc h4{
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 30px;
+	color: #fff;
+	margin-bottom: 10px;
+}
+.cookie-policy-dsc > a {
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 0 25px 0;
+	color: #fff;
+	margin-bottom: 25px;
+	position: relative;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 20px;
+}
+.cookie-policy-dsc > a:after{
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 6px;
+	background-image: url(../images/cookie-more-btn-icon.svg);
+	background-repeat: no-repeat;
+	width: 12px;
+	height: 10px;
+	background-size: 100% auto;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.cookie-policy-dsc > a:hover:after{
+	right: -5px;
+}
+.cookie-btn {
+	
+}
+.cookie-btn a {
+    display: inline-block;
+    vertical-align: baseline;
+    border: 2px solid #F5F6F8;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    height: 48px;
+    padding: 11px 30px;
+}
+.cookie-btn a:hover{
+	background-color: #fff;
+	border-color: #fff;
+	color: #10303C;
+}
+
+.cross-white {
+    position: absolute;
+    right: 28px;
+    top: 69px;
+    width: 49px;
+    height: 49px;
+    background-color: #10303C;
+    border-radius: 100% 100%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: baseline;
+    cursor: pointer;
+    background-image: url(../images/x.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 11px 14px;
+   	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+}
+.cross-white:hover{
+	background-color: #47A348;
+}

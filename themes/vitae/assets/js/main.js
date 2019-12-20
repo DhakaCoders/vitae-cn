@@ -21,6 +21,12 @@ Responsive on 767px
 // }
 
 
+if ($('.cookie-btn').length) {
+  $('.cookie-btn, .cross-white').on('click', function(){
+    $('.cookie-policy-wrp').hide('slow');
+  });
+}
+
  /*
 ---------------------------
  Xs Menu js
