@@ -643,6 +643,9 @@
 	#wlt-dark-service-sec #AboutSerSlider .slick-dots li button{
 		padding-bottom: 0;
 	}
+	.wallet-dark-feature-img.vt-wallet-mobile-feature-img{
+		margin-bottom: 160px!important;
+	}
 }
 
 
@@ -661,6 +664,9 @@
 	.mobile-img-feature-2,
 	.mobile-img-feature-4 {
 	    right: -15px;
+	}
+	.wallet-dark-main-top-rgt li{
+		width: 100%;
 	}
 }
 @media(max-width: 419px){
