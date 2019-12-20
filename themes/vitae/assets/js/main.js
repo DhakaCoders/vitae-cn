@@ -18,8 +18,6 @@ Responsive on 767px
     $(this).toggleClass('menu-expend');
     $('.toggle-bar ul').slideToggle(500);
   });
-
-
 // }
 
 
