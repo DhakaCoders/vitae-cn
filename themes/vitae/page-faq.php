@@ -38,9 +38,7 @@ $shortcode = get_field('shortcode', $thisID);
         <div class="col-sm-12">
           <div class="vt-faq-grds">
             <ul class="clearfix ulc">
-            <?php
-              while($Query->have_posts()): $Query->the_post();         
-            ?>
+            <?php while($Query->have_posts()): $Query->the_post(); ?>
               <li>
                 <div class="vt-faq-grd-item matchHeightCol">
                   <i><img src="<?php echo THEME_URI; ?>/assets/images/faq-grd-icon.svg"></i>

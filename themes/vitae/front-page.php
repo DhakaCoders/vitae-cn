@@ -1,25 +1,35 @@
-<?php get_header(); ?>
+<?php get_header(); 
+$intro = get_field('intro', HOMEID);
+if($intro):
+  $introlinks = $intro['links'];
+  $introsrc = '';
+  if(!empty($intro['afbeelding'])) $introsrc = $intro['afbeelding'];
+
+?>
 <section class="home-banner">
   <div class="container">
       <div class="row">
         <div class="col-lg-12 col-xl-6 order-md-1 order-xl-2">
           <div class="home-bnr-img" style="margin-right: -185px">
-            <img src="<?php echo THEME_URI; ?>/assets/images/home-banner.png">
+            <img src="<?php echo $introsrc; ?>" alt="intro">
           </div>
         </div>
         <div class="col-lg-12 col-xl-6 order-md-2 order-xl-1">
           <div class="home-bnr-des">
-            <h1>Empowering <br>you to a new life!</h1>
-            <p><strong>Developed with a purpose to change the world and bring freedom back to you! Providing a NEW AGE social rewards network to give opportunity for financial freedom.</strong></p>
-            <p>Vitae is not just a token. Much like life, it has a purpose. This purpose is to provide prosperity through POS (Proof Of Stake), Master Node, Super Node and our own Social Rewards Website.</p>
-            <p><em>Available around the world, Vitae can make a difference to everyone.</em></p>
-            <a class="fl-fade-effect" href="#"><span>More About Vitae</span></a>
+            <?php 
+              if( !empty( $introlinks['titel'] ) ) printf( '<h1>%s</h1>', $introlinks['titel']);  
+              if( !empty( $introlinks['beschrijving'] ) ) echo wpautop($introlinks['beschrijving']);
+              $knop1 = $introlinks['knop'];
+              if( is_array( $knop1 ) &&  !empty( $knop1['url'] ) ){
+                printf('<a class="fl-fade-effect" href="%s" target="%s"><span>%s</span></a>', $knop1['url'], $knop1['target'], $knop1['title']); 
+              }
+            ?>
           </div>
         </div>
       </div>
   </div>    
 </section>
-
+<?php endif; ?>
 <div class="cookie-policy-wrp">
    <div class="cookie-policy-dsc">
     <span class="cross-white"></span>
@@ -45,18 +55,45 @@
         </div>
       </div>
       <div class="col-sm-12 col-lg-5">
+        <?php 
+          $mplatform = get_field('media_platform', HOMEID);
+          if($mplatform):
+        ?>
         <div class="map-img-grd-col-des">
-          <h2>Social Media Platform</h2>
-          <p>Duis in dignissim nulla. Aliquam lacus ipsum, ullamcorper nec nulla tristique, cursus ultrices magna. Nullam tellus est, egestas a dictum at, luctus quis libero. Nulla massa enim, tincidunt vitae diam at, tincidunt sollicitudin magna.</p>
-          <p> Donec quis magna sem. Aenean imperdiet mauris non arcu consequat, sollicitudin viverra ex laoreet. Cras imperdiet nisi a eros imperdiet finibus. </p>
-          <a class="fl-fade-effect" href="#"><span>more about our Social media platform</span></a>
+          <?php 
+            if( !empty( $mplatform['titel'] ) ) printf( '<h2>%s</h2>', $mplatform['titel']);  
+            if( !empty( $mplatform['beschrijving'] ) ) echo wpautop($mplatform['beschrijving']);
+            $knop2 = $mplatform['knop'];
+            if( is_array( $knop2 ) &&  !empty( $knop2['url'] ) ){
+              printf('<a class="fl-fade-effect" href="%s" target="%s"><span>%s</span></a>', $knop2['url'], $knop2['target'], $knop2['title']); 
+            }
+          ?>
         </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>    
   </section>
 
-
+<?php 
+  $ocommunity = get_field('our_community', HOMEID);
+  if($ocommunity):
+    $comlinks = $ocommunity['links'];
+    $comvideo = $ocommunity['video'];
+    $vurl = $comvideo['video_url'];
+    $cpostertag = '';
+    if(!empty($comvideo['poster'])){
+        $cpostertag = cbv_get_image_tag($comvideo['poster'], 'hmbbox');
+    }
+    if(!empty($vurl)){
+      $vposertag = '<a data-fancybox href="'.$vurl.'">
+        <i><img src="'.THEME_URI.'/assets/images/play-btn-icon-white.svg"></i>
+        '.$cpostertag.'
+      </a>';
+    }else{
+      $vposertag = $cpostertag;
+    }
+?>
   <section class="our-community-sec position-rltv-10">
     <div class="container">
         <div class="row">
@@ -64,42 +101,56 @@
             <div class="our-community-vdo">
               <span class="radius-gren"></span>
               <div class="video-play">
-                <a data-fancybox href="https://www.youtube.com/watch?v=avP5d16wEp0">
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/play-btn-icon-white.svg"></i>
-                  <img alt="" src="<?php echo THEME_URI; ?>/assets/images/community-img.jpg">
-                </a>
+                <?php echo $vposertag; ?>
               </div>
             </div>
           </div>
           <div class="col-sm-12 col-md-6 order-sm-2 order-md-1">
             <div class="our-community-des">
-              <h2>We <span>our</span> <br>community</h2>
-              <p>Duis in dignissim nulla. Aliquam lacus ipsum, ullamcorper nec nulla tristique, cursus ultrices magna. Nullam tellus est, egestas a dictum at, luctus quis libero. Nulla massa enim, tincidunt vitae diam at, tincidunt sollicitudin magna.</p>
-              <p>Donec quis magna sem. Aenean imperdiet mauris non arcu consequat, sollicitudin viverra ex laoreet. Cras imperdiet nisi a eros imperdiet finibus. </p>
-              <a class="fl-fade-effect" href="#"><span>More about the community</span></a>
+            <?php 
+              if( !empty( $comlinks['titel'] ) ) printf( '<h2>%s</h2>', $comlinks['titel']);  
+              if( !empty( $comlinks['beschrijving'] ) ) echo wpautop($comlinks['beschrijving']);
+              $knop3 = $comlinks['knop'];
+              if( is_array( $knop3 ) &&  !empty( $knop3['url'] ) ){
+                printf('<a class="fl-fade-effect" href="%s" target="%s"><span>%s</span></a>', $knop3['url'], $knop3['target'], $knop3['title']); 
+              }
+            ?>
             </div>
           </div>
         </div>
     </div>    
   </section>
-
+<?php endif; 
+?>
   <section class="vt-about-the-token-sec position-rltv-10">
     <div id="vtabout-gridiant"></div>
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-lg-5 order-md-1 order-lg-2">
+          <?php 
+            $abtoken = get_field('about_the_token', HOMEID);
+            if($abtoken):
+          ?>
           <div class="vt-about-the-token-des">
-            <h2>About the token </h2>
-            <p>Integer vel dignissim dolor. Pellentesque eu felis nisl. Praesent nec ex ut massa pellentesque.</p>
-            <p>Maecenas porta, dolor quis consectetur auctor, ante turpis ultricies lacus, non interdum massa orci egestas ex. Maecenas ut urna sed metus porta semper a non ipsum. Pellentesque purus lectus, dictum a mi sit amet, congue placerat velit. Pellentesque semper varius lorem et facilisis. </p>
+            <?php 
+              if( !empty( $abtoken['titel'] ) ) printf( '<h2>%s</h2>', $abtoken['titel']);  
+              if( !empty( $abtoken['Beschrijving'] ) ) echo wpautop($abtoken['Beschrijving']);
+              $knops = $abtoken['knops'];
+              if($knops):
+            ?>
             <div class="vt-about-the-token-btns clearfix">
-              <div class="vt-about-the-token-btn"><a class="fl-fade-effect" href="#"><span>More about the token</span></a></div>
-              <div class="vt-about-the-token-btn"><a href="#">Whitepaper</a></div>
-              <div class="vt-about-the-token-btn"><a href="#">explorer</a></div>
-              <div class="vt-about-the-token-btn"><a href="#">Exchange now</a></div>
-              <div class="vt-about-the-token-btn"><a href="#">Our Wallet</a></div>
+            <?php 
+            foreach ($knops as $key => $knopr) {
+              $knop_row = $knopr['knop'];
+              if( is_array( $knop_row ) &&  !empty( $knop_row['url'] ) ){
+                printf(' <div class="vt-about-the-token-btn"><a href="%s" target="%s"><span>%s</span></a></div>', $knop_row['url'], $knop_row['target'], $knop_row['title']); 
+              }
+            }
+            ?>
             </div>
+            <?php endif; ?>
           </div>
+        <?php endif; ?>
         </div>
         <div class="ol-md-12 col-lg-7 order-md-2 order-lg-1">
           <div class="vt-about-tokens">
@@ -165,12 +216,19 @@
   <section class="partners-4-prosperity-sec position-rltv-10">
     <div class="container-lg">
         <div class="row">
+          <?php 
+            $partners = get_field('partners', HOMEID);
+            if($partners):
+          ?>
           <div class="col-sm-12">
             <div class="vt-sec-hdr">
-              <h3>Partners 4 Prosperity</h3>
-              <p>Nulla in mauris in enim cursus volutpat. Quisque egestas auctor dui, nec rutrum nibh pretium at. Fusce commodo fringilla erat, ac tempus urna vehicula nec.</p>
+            <?php 
+              if( !empty( $partners['titel'] ) ) printf( '<h3>%s</h3>', $partners['titel']);  
+              if( !empty( $partners['beschrijving'] ) ) echo wpautop($partners['beschrijving']);
+            ?>
             </div>
           </div>
+          <?php endif; ?>
           <div class="col-sm-12">
             <div class="partners-slider-ctlr">
               <span class="slide-prev-btn"></span>
@@ -261,53 +319,54 @@
     <div id="faqParticles"></div>
     <div class="container">
         <div class="row">
+          <?php 
+            $faq = get_field('faq', HOMEID);
+            if($faq):
+          ?>
           <div class="col-sm-12">
             <div class="vt-sec-hdr">
-              <h2>Frequently Asked Questions</h2>
-              <p> Nunc vel vehicula ligula, at consequat libero. Aenean ultricies sagittis urna a gravida. Quisque aliquet ante ac ullamcorper rutrum. Nullam a ligula quis risus interdum faucibus. Sed facilisis convallis nunc, et ullamcorper erat. Cras non blandit diam, bibendum tristique diam. Pellentesque facilisis justo sit amet dui semper elementum.</p>
+            <?php 
+              if( !empty( $faq['titel'] ) ) printf( '<h2>%s</h2>', $faq['titel']);  
+              if( !empty( $faq['beschrijving'] ) ) echo wpautop($faq['beschrijving']);
+            ?>
             </div>
           </div>
+          <?php endif; 
+
+            $Query = new WP_Query(array( 
+                    'post_type'=> 'faqs',
+                    'post_status' => 'publish',
+                    'posts_per_page' => 4,
+                    'order'=> 'DESC'
+                  ) 
+                );
+
+            if( $Query->have_posts() ):
+          ?>
           <div class="col-sm-12">
             <div class="vt-faq-grds">
               <ul class="clearfix ulc">
+              <?php while($Query->have_posts()): $Query->the_post();  ?>
                 <li>
                   <div class="vt-faq-grd-item matchHeightCol">
                     <i><img src="<?php echo THEME_URI; ?>/assets/images/faq-grd-icon.svg"></i>
-                    <h6><a href="#">Quisque ac risus vitae?</a></h6>
-                    <p>Aenean ante erat, posuere quis nibh id, sollicitudin feugiat lectus. Sed nec iaculis diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                    <a href="#">Read More</a>                
+                    <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+                    <?php the_excerpt(); ?>
+                    <a href="<?php the_permalink(); ?>">Read More</a>                
                   </div>
                 </li>
-                <li>
-                  <div class="vt-faq-grd-item matchHeightCol">
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/faq-grd-icon.svg"></i>
-                    <h6><a href="#">Quisque ac risus vitae?</a></h6>
-                    <p>Aenean ante erat, posuere quis nibh id, sollicitudin feugiat lectus. Sed nec iaculis diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                    <a href="#">Read More</a>                
-                  </div>
-                </li>
-                <li>
-                  <div class="vt-faq-grd-item matchHeightCol">
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/faq-grd-icon.svg"></i>
-                    <h6><a href="#">Quisque ac risus vitae?</a></h6>
-                    <p>Aenean ante erat, posuere quis nibh id, sollicitudin feugiat lectus. Sed nec iaculis diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                    <a href="#">Read More</a>                
-                  </div>
-                </li>
-                <li>
-                  <div class="vt-faq-grd-item matchHeightCol">
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/faq-grd-icon.svg"></i>
-                    <h6><a href="#">Quisque ac risus vitae?</a></h6>
-                    <p>Aenean ante erat, posuere quis nibh id, sollicitudin feugiat lectus. Sed nec iaculis diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                    <a href="#">Read More</a>                
-                  </div>
-                </li>
+                <?php endwhile; ?>
               </ul>
-              <div class="more-faq-btn">
-                <a class="fl-fade-effect" href="#"><span>more FAQ</span></a>
-              </div>
+              <?php 
+              $faqknop = $faq['knop'];
+                if( is_array( $faqknop ) &&  !empty( $faqknop['url'] ) ){
+                  printf('<div class="more-faq-btn"><a class="fl-fade-effect" href="%s" target="%s">%s</a></div>', $faqknop['url'], $faqknop['target'], $faqknop['title']); 
+                }
+
+              ?>
             </div>
           </div>
+          <?php endif;wp_reset_postdata(); ?>
         </div>
     </div>    
   </section>
@@ -316,9 +375,15 @@
     <div class="container">
         <div class="row">
           <div class="col-sm-12">
+            <?php 
+              $newsletter = get_field('newsletter', HOMEID);
+              if($newsletter):
+            ?>
             <div class="community-we-hdr">
-              <h3><span>The community we</span></h3>
-              <p>Subscribe to our mailing list, get the latest news. </p>
+            <?php 
+              if( !empty( $newsletter['titel'] ) ) printf( '<h3><span>%s</span></h3>', $newsletter['titel']);  
+              if( !empty( $newsletter['beschrijving'] ) ) echo wpautop($newsletter['beschrijving']);
+            ?>
             </div>
             <div class="newsletter-form" id="newsletter-form">
               <div id="wp-form">
@@ -338,6 +403,7 @@
                 </form>
               </div>
             </div>
+            <?php endif; ?>
             <div class="subscribe-cmnt text-center">
               <img src="<?php echo THEME_URI; ?>/assets/images/Subscribe.png">
             </div>
@@ -345,4 +411,4 @@
         </div>
     </div>    
   </section>
-<?php get_footer(); ?>
+<?php  get_footer(); ?>
