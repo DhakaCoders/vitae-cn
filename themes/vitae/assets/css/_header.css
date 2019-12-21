@@ -267,6 +267,18 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 .xs-popup-main-menu-wrap{
 	display: none;
 }
+.menuSvg{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+.menuSvg svg {
+    position: absolute;
+    min-width: 110%;
+    min-height: 100%;
+    left: -10%;
+}
 /*
 ----------------------
  Responsive Css
@@ -332,15 +344,17 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 		position: fixed;
 	    right: 0;
 	    bottom: 0;
+	    top: 0;
+	    bottom: 0;
 	    display: none;
 	    z-index: 100;
 	    padding-left: 20px;
 	    width: 100%;
-	    max-width: 375px;
+	    height: 100%;
+	    max-width: 575px;
 	    padding-bottom: 185px;
 	    top: 0;
-	    max-height: 670px;
-	    background: url(../images/popup-menu-bg.png);
+	    /*background: url(../images/popup-menu-bg.png);*/
 	    background-repeat: no-repeat;
 	    background-size: 100% 100%;
 	}
@@ -348,6 +362,7 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 
 	}
 	.xs-popup-main-menu-con{
+		z-index: 5;
 		position: relative;
 		height: 100%;
 		padding: 65px 20px 0 20px !important;
@@ -361,7 +376,7 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 	.xs-menu-popup-close-btn {
 	    position: absolute;
 	    right: 20px;
-	    bottom: 30px;
+	    bottom: 0;
 	    z-index: 20;
 	}
 	.xs-menu-popup-close-btn span{
@@ -524,9 +539,13 @@ nav.main-nav li:not(.menu-item-has-children) a:hover {
 
 
 /*----- max-width 439 -----*/
-@media(max-width: 479px){
-
-
+@media(max-width: 370px){
+.menuSvg svg {
+    position: absolute;
+    min-width: 130%;
+    min-height: 100%;
+    left: -30%;
+}
 }
 
 
