@@ -106,7 +106,7 @@
 .wallet-dark-main-top-rgt li a span{
 	display: inline-block;
 	vertical-align: baseline;
-	padding-left: 35px;
+	padding-left: 30px;
 	position: relative;
 }
 .wallet-dark-main-top-rgt li a span i{
@@ -121,6 +121,7 @@
 	    -ms-transform: translateY(-50%);
 	     -o-transform: translateY(-50%);
 	        transform: translateY(-50%);
+	font-size: 22px;
 }
 .wallet-dark-feature-two-part > ul > li{
 	display:flex;
@@ -642,6 +643,9 @@
 	#wlt-dark-service-sec #AboutSerSlider .slick-dots li button{
 		padding-bottom: 0;
 	}
+	.wallet-dark-feature-img.vt-wallet-mobile-feature-img{
+		margin-bottom: 160px!important;
+	}
 }
 
 
@@ -660,6 +664,9 @@
 	.mobile-img-feature-2,
 	.mobile-img-feature-4 {
 	    right: -15px;
+	}
+	.wallet-dark-main-top-rgt li{
+		width: 100%;
 	}
 }
 @media(max-width: 419px){
