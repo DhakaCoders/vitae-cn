@@ -69,16 +69,16 @@ $thisID = get_the_ID();
             $knops = $comlinks['knops'];
             if($knops):
           ?>
-          <div class="vt-about-the-token-btns clearfix">
+          <ul class="clearfix">
             <?php 
             foreach ($knops as $key => $knopr) {
               $knop_row = $knopr['knop'];
               if( is_array( $knop_row ) &&  !empty( $knop_row['url'] ) ){
-                printf(' <div class="vt-about-the-token-btn"><a href="%s" target="%s"><span>%s</span></a></div>', $knop_row['url'], $knop_row['target'], $knop_row['title']); 
+                printf(' <li><a href="%s" target="%s">%s</a></li>', $knop_row['url'], $knop_row['target'], $knop_row['title']); 
               }
             }
             ?>
-            </div>
+            </ul>
             <?php endif; ?>
           </div>
         </div>
@@ -225,7 +225,7 @@ $thisID = get_the_ID();
     <?php
     $intro2 = get_field('intro_2', $thisID);
     if($intro2):
-      $introlinks = $intro2['links'];
+      $intro2links = $intro2['links'];
       $intro2src = '';
       if(!empty($intro2['afbeelding'])) $intro2src = $intro2['afbeelding'];
 
@@ -233,15 +233,15 @@ $thisID = get_the_ID();
     <div class="row">
       <div class="col-lg-6 col-md-12">
         <div class="about-drk-ipsum-btm-img">
-          <img src="<?php echo $introsrc; ?>" alt="intro2">
+          <img src="<?php echo $intro2src; ?>" alt="intro2">
         </div>
       </div>
       <div class="col-lg-6 col-md-12">
         <div class="about-drk-ipsum-btm-dsc">
           <?php 
-            if( !empty( $intro2['titel'] ) ) printf( '<h2>%s</h2>', $intro2['titel']);  
-            if( !empty( $intro2['subtitel'] ) ) printf( '<span>%s</span>', $intro2['subtitel']);  
-            if( !empty( $intro2['beschrijving'] ) ) echo wpautop($intro2['beschrijving']);
+            if( !empty( $intro2links['titel'] ) ) printf( '<h2>%s</h2>', $intro2links['titel']);  
+            if( !empty( $intro2links['subtitel'] ) ) printf( '<span>%s</span>', $intro2links['subtitel']);  
+            if( !empty( $intro2links['beschrijving'] ) ) echo wpautop($intro2links['beschrijving']);
           ?>
         </div>
       </div>
