@@ -154,7 +154,8 @@ ul.ftr-main-menu li{
 	padding-top: 25px;
 	float: left;
 }
-.ftr-socail-btn span{
+.ftr-socail-btn span,
+.ftr-socail-btn a{
 	display: inline-block;
 	vertical-align: baseline;
 	text-decoration: none;
@@ -173,7 +174,8 @@ ul.ftr-main-menu li{
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.ftr-socail-btn span:after{
+.ftr-socail-btn span:after,
+.ftr-socail-btn a:after{
 	content: "";
 	position: absolute;
 	left: 35px;
@@ -183,6 +185,16 @@ ul.ftr-main-menu li{
 	background-size: 30px 30px;
 	width: 30px;
 	height: 30px;
+}
+.ftr-socail-btn a:hover{
+	background-color: #47A348;
+	border-color: #47A348;
+	color: #fff;
+}
+.ftr-socail-btn a:hover:after{
+	background: url(../images/ftr-socail-btn-icon-white.png);
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
 }
 
 
