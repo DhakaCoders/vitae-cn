@@ -2,7 +2,7 @@
 /*
   Template Name: FAQ
 */
-get_header(); 
+get_header('page'); 
 $thisID = get_the_ID();
 
 $title = get_field('titel', $thisID);
