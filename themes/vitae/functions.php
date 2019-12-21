@@ -178,11 +178,28 @@ function custom_body_classes($classes){
     $classes[] = join(' ', array_filter($browsers, function ($browser) {
         return $GLOBALS[$browser];
     }));
+    if ( is_page_template( 'page-about-token.php' ) ) {
+        $classes[] = 'vt-drk-page-ctlr';
+    }
     return $classes;
 }
 // call the filter for the body class
 add_filter('body_class', 'custom_body_classes');
 
+
+function wrapper_class(){
+  $class = '';
+  if ( is_page_template( 'page-about-token.php' ) ) {
+    $class = 'walletDark adExwd';
+  }elseif(is_page_template( 'page-about-us.php' )){
+    $class = 'aboutUs';
+  }elseif(is_page_template( 'page-contact.php' )){
+    $class = 'contactPage';
+  }elseif(is_page_template( 'page-faq.php' )){
+    $class = 'faqOverview';
+  }
+  return $class;
+}
 
 function get_custom_excerpt() {
   $excerpt = explode(' ', get_the_content(), $limit);

@@ -218,6 +218,9 @@
 	background-size: 100% auto;
 	cursor: pointer;
 	z-index: 20;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .slide-prev-btn{
 	background: url(../images/prev-gray-icon.svg);
@@ -225,11 +228,21 @@
 	background-position: center center;
 	left: 0;
 }
+.slide-prev-btn:hover{
+	background: url(../images/prev-green-icon.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
 .slide-next-btn{
 	background: url(../images/next-gray-icon.svg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	right: 0;
+}
+.slide-next-btn:hover{
+	background: url(../images/next-green-icon.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 .partners-slider-ctlr .slick-list{
 	padding-left: 0;

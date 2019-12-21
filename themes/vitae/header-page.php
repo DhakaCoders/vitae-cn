@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html <?php language_attributes(); ?>>
 <head>
-  <title>About Dark</title>
-  <meta charset="utf-8">
+  <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-  <link rel="stylesheet" type="text/css" href="assets/fancybox3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/slick.slider/slick-theme.css">
-  <link rel="stylesheet" type="text/css" href="assets/slick.slider/slick.css">
+  <link rel="stylesheet" href="<?php echo THEME_URI; ?>/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo THEME_URI; ?>/assets/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/fonts/font-awesome/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/fancybox3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/slick.slider/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/slick.slider/slick.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" type="text/css" href="assets/fonts/custom-fonts.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/fonts/custom-fonts.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/style.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/css/responsive.css">
 
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->  
-
+  <![endif]--> 
   <svg style="display: none;">
     <!-- Footer Svg -->
     <symbol id="ftr-fb-icon-svg" width="11" height="19" viewBox="0 0 11 19" xmlns="http://www.w3.org/2000/svg">
@@ -86,13 +84,15 @@
 
 
 
-  </svg>
 
+  </svg> 
+
+<?php wp_head(); ?>
 </head>
-
-<body class="vt-drk-page-ctlr">
-
-<div class="fullpage walletDark adExwd">
+<body <?php body_class(); ?>>
+<?php $class = wrapper_class(); ?>
+<div class="fullpage <?php echo $class; ?>">
+  <?php if(is_page_template( 'page-about-token.php' )): ?>
   <div class="wdTopBg">
     <svg class="desktopSVG hide-xs" preserveAspectRatio="none" width="1920" height="1463" viewBox="0 0 1920 1463" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="1920" y="882" width="1920" height="882" transform="rotate(180 1920 882)" fill="url(#paint0_linearwd)"/>
@@ -128,9 +128,83 @@
     </linearGradient>
     </defs>
     </svg>
+  </div> 
+  <?php else: ?>
+  <div class="homeTopBg">
+    <svg class="desktopSVG hide-xs" preserveAspectRatio="none" width="1920" height="1463" viewBox="0 0 1920 1463" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="1920.01" y="870.044" width="1920" height="870" transform="rotate(180 1920.01 870.044)" fill="#F5F6F8"/>
+    <rect x="1920.01" y="870.044" width="1920" height="870" transform="rotate(180 1920.01 870.044)" fill="url(#homeTopBg1)"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M-207.996 -390.25C-111.446 -476.872 -43.6913 -599.068 75.9299 -649.172C193.948 -698.605 326.839 -658.423 454.423 -667.709C590.292 -677.597 722.163 -730.284 856.177 -705.958C1005.34 -678.884 1153.2 -622.742 1265.15 -520.553C1382.2 -413.702 1532.95 -271.331 1502.87 -115.626C1467.48 67.4947 1193.77 107.089 1111.51 274.504C1055.29 388.931 1195.81 545.264 1125.78 651.811C1057.58 755.582 885.444 712.024 780.426 778.268C660.035 854.209 603.04 1011.6 471.037 1064.81C327.807 1122.55 145.744 1167.9 14.2158 1087.15C-121.188 1004.01 -92.6282 789.573 -186.299 661.222C-273.734 541.415 -446.946 499.593 -511.902 366.239C-579.12 228.239 -607.981 55.5657 -550.726 -86.9524C-493.138 -230.302 -322.989 -287.081 -207.996 -390.25Z" fill="#F5F6F8"/>
+    <rect x="-1" width="1921" height="312" fill="url(#homeTopBg2)"/>
+    <defs>
+    <linearGradient id="homeTopBg1" x1="2880.01" y1="987.044" x2="2880.01" y2="1205.04" gradientUnits="userSpaceOnUse">
+    <stop stop-color="white"/>
+    <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="homeTopBg2" x1="1228" y1="18" x2="1219.6" y2="335.336" gradientUnits="userSpaceOnUse">
+    <stop stop-color="white" stop-opacity="0.32"/>
+    <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    </defs>
+    </svg>
+    <svg class="mobileSVG show-xs" preserveAspectRatio="none" width="375" height="1860" viewBox="0 0 375 1860" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="375" y="1104" width="375" height="1144" transform="rotate(180 375 1104)" fill="#F5F6F8"/>
+    <rect x="375" y="1104" width="375" height="1144" transform="rotate(180 375 1104)" fill="url(#paint0_linearMbg)"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M-991.583 7.49056C-895.136 -79.2453 -827.525 -201.522 -707.964 -251.767C-590.004 -301.34 -457.066 -261.315 -329.493 -270.751C-193.635 -280.8 -61.8269 -333.642 72.216 -309.476C221.408 -282.578 369.34 -226.61 481.406 -124.553C598.583 -17.8408 749.507 124.352 719.603 280.092C684.433 463.255 410.771 503.173 328.709 670.684C272.62 785.178 413.324 941.345 343.425 1047.97C275.347 1151.83 103.159 1108.47 -1.78116 1174.84C-122.082 1250.92 -178.891 1408.38 -310.831 1461.75C-453.992 1519.66 -636.002 1565.22 -767.625 1484.62C-903.128 1401.65 -874.821 1187.18 -968.643 1058.94C-1056.22 939.233 -1229.48 897.615 -1294.59 764.338C-1361.98 626.417 -1391.04 453.779 -1333.96 311.193C-1276.54 167.775 -1106.45 110.796 -991.583 7.49056Z" fill="#F5F6F8"/>
+    <defs>
+    <linearGradient id="paint0_linearMbg" x1="562.5" y1="1257.85" x2="562.499" y2="1544.51" gradientUnits="userSpaceOnUse">
+    <stop stop-color="white"/>
+    <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    </defs>
+    </svg>
+
   </div>
-</div>
-<div class="hb-bg-particales innerPageParticles" id="wdparticales"></div>
+  <div class="middleBg">
+    <svg class="desktopSVG hide-xs" xmlns="http://www.w3.org/2000/svg" width="1416" height="1245" viewBox="0 0 1416 1245" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M686.964 1174.21C598.704 1156.62 502.674 1169.81 425.104 1124.22C348.574 1079.24 315.624 988.729 257.404 921.739C195.414 850.399 111.314 799.079 69.0943 714.539C22.0943 620.449 -8.21968 514.989 1.97433 410.319C12.6343 300.889 29.0033 157.959 127.984 109.919C244.394 53.4186 380.204 188.949 507.384 165.009C594.304 148.649 622.684 5.59865 710.974 0.178653C796.964 -5.11135 844.364 108.599 924.824 139.369C1017.06 174.649 1128.16 140.839 1212.61 192.019C1304.24 247.549 1405.13 329.789 1414.98 436.419C1425.13 546.179 1294.17 619.498 1261.84 724.888C1231.67 823.268 1280.48 936.849 1233.44 1028.38C1184.76 1123.1 1100.87 1210.94 997.924 1238.41C894.364 1266.04 792.074 1195.17 686.964 1174.21Z" fill="#F5F6F8"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M686.964 1174.21C598.704 1156.62 502.674 1169.81 425.104 1124.22C348.574 1079.24 315.624 988.729 257.404 921.739C195.414 850.399 111.314 799.079 69.0943 714.539C22.0943 620.449 -8.21968 514.989 1.97433 410.319C12.6343 300.889 29.0033 157.959 127.984 109.919C244.394 53.4186 380.204 188.949 507.384 165.009C594.304 148.649 622.684 5.59865 710.974 0.178653C796.964 -5.11135 844.364 108.599 924.824 139.369C1017.06 174.649 1128.16 140.839 1212.61 192.019C1304.24 247.549 1405.13 329.789 1414.98 436.419C1425.13 546.179 1294.17 619.498 1261.84 724.888C1231.67 823.268 1280.48 936.849 1233.44 1028.38C1184.76 1123.1 1100.87 1210.94 997.924 1238.41C894.364 1266.04 792.074 1195.17 686.964 1174.21Z" fill="url(#paint0_linear1a)"/>
+    <defs>
+    <linearGradient id="paint0_linear1a" x1="691.594" y1="1239.51" x2="716.944" y2="-0.0213032" gradientUnits="userSpaceOnUse">
+    <stop stop-color="white"/>
+    <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    </defs>
+    </svg>
+    <svg class="mobileSVG show-xs" preserveAspectRatio="none" width="375" height="1269" viewBox="0 0 375 1269" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M-337.123 1188.7C-425.378 1171.11 -521.413 1184.3 -598.984 1138.71C-675.514 1093.73 -708.465 1003.22 -766.679 936.229C-828.673 864.889 -912.771 813.568 -954.994 729.031C-1001.99 634.939 -1032.3 529.478 -1022.11 424.815C-1011.45 315.378 -995.081 172.452 -896.102 124.409C-779.694 67.9072 -643.881 203.439 -516.702 179.499C-429.776 163.136 -401.397 20.0882 -313.108 14.6661C-227.119 9.3852 -179.722 123.091 -99.2619 153.862C-7.02427 189.137 104.081 155.335 188.527 206.51C280.156 262.038 381.052 344.284 390.904 450.908C401.047 560.674 270.087 633.991 237.764 739.385C207.593 837.763 256.401 951.345 209.358 1042.87C160.677 1137.59 76.7891 1225.43 -26.1648 1252.9C-129.72 1280.53 -232.009 1209.66 -337.123 1188.7Z" fill="#F5F6F8"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M-337.123 1188.7C-425.378 1171.11 -521.413 1184.3 -598.984 1138.71C-675.514 1093.73 -708.465 1003.22 -766.679 936.229C-828.673 864.889 -912.771 813.568 -954.994 729.031C-1001.99 634.939 -1032.3 529.478 -1022.11 424.815C-1011.45 315.378 -995.081 172.452 -896.102 124.409C-779.694 67.9072 -643.881 203.439 -516.702 179.499C-429.776 163.136 -401.397 20.0882 -313.108 14.6661C-227.119 9.3852 -179.722 123.091 -99.2619 153.862C-7.02427 189.137 104.081 155.335 188.527 206.51C280.156 262.038 381.052 344.284 390.904 450.908C401.047 560.674 270.087 633.991 237.764 739.385C207.593 837.763 256.401 951.345 209.358 1042.87C160.677 1137.59 76.7891 1225.43 -26.1648 1252.9C-129.72 1280.53 -232.009 1209.66 -337.123 1188.7Z" fill="url(#mobileSVG)"/>
+    <defs>
+    <linearGradient id="mobileSVG" x1="-332.493" y1="1254" x2="-307.138" y2="14.4726" gradientUnits="userSpaceOnUse">
+    <stop stop-color="white"/>
+    <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    </defs>
+    </svg>
+  </div>
+  <div class="bottomBg">
+    <svg class="desktopSVG hide-xs" preserveAspectRatio="none" width="1920" height="1231" viewBox="0 0 1920 1231" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2873 403.536C57.0879 361.612 31.1881 304.197 138.226 278.338C243.83 252.825 451.139 267.788 606.026 260.335C770.971 252.398 891.321 225.052 1085.44 232.759C1301.51 241.336 1542.72 263.197 1780.39 306.956C2028.89 352.711 2353.34 413.807 2458.4 485.546C2581.96 569.917 2267.82 594.874 2316.84 673.268C2350.35 726.85 2674.56 794.57 2683.11 844.907C2691.45 893.934 2430.75 878.422 2357.3 911.271C2273.11 948.927 2345.25 1022.11 2225.22 1049.7C2094.98 1079.64 1903.56 1104.91 1660.57 1071.41C1410.43 1036.93 1249.24 938.459 1010.86 882.313C788.344 829.904 527.865 815.211 321.656 756.059C108.264 694.847 -87.9665 616.861 -146.061 550.447C-204.496 483.646 -38.8804 453.469 13.2873 403.536Z" fill="#F5F6F8"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2873 403.536C57.0879 361.612 31.1881 304.197 138.226 278.338C243.83 252.825 451.139 267.788 606.026 260.335C770.971 252.398 891.321 225.052 1085.44 232.759C1301.51 241.336 1542.72 263.197 1780.39 306.956C2028.89 352.711 2353.34 413.807 2458.4 485.546C2581.96 569.917 2267.82 594.874 2316.84 673.268C2350.35 726.85 2674.56 794.57 2683.11 844.907C2691.45 893.934 2430.75 878.422 2357.3 911.271C2273.11 948.927 2345.25 1022.11 2225.22 1049.7C2094.98 1079.64 1903.56 1104.91 1660.57 1071.41C1410.43 1036.93 1249.24 938.459 1010.86 882.313C788.344 829.904 527.865 815.211 321.656 756.059C108.264 694.847 -87.9665 616.861 -146.061 550.447C-204.496 483.646 -38.8804 453.469 13.2873 403.536Z" fill="url(#paint0_linearaB)"/>
+    <defs>
+    <linearGradient id="paint0_linearaB" x1="-135.451" y1="382.257" x2="2683.3" y2="848.248" gradientUnits="userSpaceOnUse">
+    <stop stop-color="white"/>
+    <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    </defs>
+    </svg>
+  </div>
+  <?php endif; ?>
+</div> 
+<div class="hb-bg-particales innerPageParticles" id="hbbgparticales"></div>
+<?php
+  $logoObj = get_field('logo_header', 'options');
+  if( is_array($logoObj) ){
+    $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+  }else{
+    $logo_tag = '';
+  }
+?>
 <div class="pageElements">
 <header class="header">
   <div class="container">
@@ -138,28 +212,20 @@
         <div class="col-sm-12">
           <div class="hdr-top-inr clearfix">
             <div class="logo">
-              <a href="#">
-                <img src="assets/images/logo.svg">
+              <a href="<?php echo esc_url(home_url('/')); ?>">
+                <?php echo $logo_tag; ?>
               </a>
             </div>
             <nav class="main-nav hide-sm clearfix">
-              <ul class="clearfix ulc">
-                <li><a href="#">Home</a></li>
-                <li class="menu-item-has-children">
-                  <a href="#">Wallet</a>
-                   <ul class="sub-menu">
-                      <li><a href="#">Lorem</a></li>
-                      <li><a href="#">Lorem Ipsum</a></li>
-                      <li><a href="#">Lorem</a></li>
-                      <li><a href="#">Lorem Ipsum</a></li>
-                      <li><a href="#">Lorem</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Exchanges</a></li>
-                <li><a href="#">About Vitae</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
+              <?php 
+                $tmenuOptions = array( 
+                    'theme_location' => 'cbv_top_menu', 
+                    'menu_class' => 'clearfix ulc',
+                    'container' => 'tmnav',
+                    'container_class' => 'tmainnav'
+                  );
+                wp_nav_menu( $tmenuOptions ); 
+              ?>
             </nav>
           </div>
         </div>
@@ -171,11 +237,15 @@
         <div class="col-sm-12">
           <div class="hdr-btm-inr">
             <div class="hdr-btm-menu">
-              <ul>
-                <li class="current-menu-item"><a href="#">Social Media Platform</a></li>
-                <li><a href="#">Our community</a></li>
-                <li><a href="#">About the token</a></li>
-              </ul>
+              <?php 
+                $menuOptions = array( 
+                    'theme_location' => 'cbv_main_menu', 
+                    'menu_class' => 'clearfix ulc',
+                    'container' => 'mnav',
+                    'container_class' => 'mainnav'
+                  );
+                wp_nav_menu( $menuOptions ); 
+              ?>
             </div>
           </div>
         </div>
@@ -183,354 +253,3 @@
     </div>
   </div>
 </header><!-- end of header -->
-
-<section class="about-drk-sec-wrp">
-  <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-12 order-2">
-          <div class="about-drk-img">
-            <img src="assets/images/about-drk-img.png">
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-12 order-1">
-          <div class="about-drk-des">
-            <span>The Token</span>
-            <h1>About the token</h1>
-            <p>Vitae is not just a token. Much like life, it has a purpose. This purpose is to provide prosperity through POS (Proof Of Stake), Master Node, Super Node and our own Social Rewards Website.</p>
-
-            <p>Nunc vel vehicula ligula, at consequat libero. Aenean ultricies sagittis urna a gravida. Quisque aliquet ante ac ullamcorper rutrum. Nullam a ligula quis risus interdum faucibus. Sed facilisis convallis nunc, et ullamcorper erat. Cras non blandit diam, bibendum tristique diam. Pellentesque facilisis justo sit amet dui semper elementum.</p>
-
-            <p>Nulla facilisi. Cras volutpat lectus ut mi scelerisque, eu convallis augue dictum. Aenean erat sem, vestibulum vitae eros vitae, porta vulputate lectus. In pellentesque nisl eros, sed faucibus est tristique in. Integer at sapien nec arcu semper tincidunt sit amet nec lacus.</p>
-          </div>
-        </div>
-      </div>
-      <div class="gap-45"></div>
-      <div class="row">
-        <div class="col-lg-6 col-md-12 order-1">
-          <div class="our-community-vdo ad-utility-img">
-            <span class="about-circale"><img src="assets/images/about-circale.png"></span>
-            <div class="video-play">
-              <a data-fancybox href="https://www.youtube.com/watch?v=avP5d16wEp0">
-                <i><img src="assets/images/play-btn-icon-white.svg"></i>
-                <img alt="" src="assets/images/ad-utility-img.png">
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-12 order-2">
-          <div class="about-dark-utility-dsc">
-            <h4>Utility</h4>
-            <span>A cryptocurrency with purpose</span>
-            <p>Quisque aliquet ante ac ullamcorper rutrum. Nullam a ligula quis risus interdum faucibus. Sed facilisis convallis nunc, et ullamcorper erat. Cras non blandit diam, bibendum tristique diam. Pellentesque facilisis justo sit amet dui semper elementum. Phasellus rutrum id diam ut gravida. Sed quis elit dui.</p>
-            <ul class="clearfix">
-              <li><a href="#"> Whitepaper</a></li>
-              <li><a href="#">Explorer</a></li>
-              <li><a href="#">Exchange Now</a></li>
-              <li><a href="#">Our Wallet</a></li>
-              <li><a href="#">Social Media Platform</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  </div>    
-</section>
-
-
-<section class="about-dark-service-sec-wrp">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="about-dark-service-wrp">
-          <ul class="clearfix" id="AboutSerSlider">
-            <li>
-              <div class="about-dark-service-dsc">
-                <i><img src="assets/images/world-icon.svg"></i>
-                <h6>Confirmations Are Fast</h6>
-                <p>Nulla in mauris in enim cursus volutpat. Quisque egestas auctor dui, nec rutrum nibh pretium at. Fusce commodo fringilla erat, ac tempus urna vehicula nec.</p>
-              </div>
-            </li>
-            <li>
-              <div class="about-dark-service-dsc">
-                <i><img src="assets/images/network-icon.svg"></i>
-                <h6>Super Node Burn</h6>
-                <p>Nulla in mauris in enim cursus volutpat. Quisque egestas auctor dui, nec rutrum nibh pretium at. Fusce commodo fringilla erat, ac tempus urna vehicula nec.</p>
-              </div>
-            </li>
-            <li>
-              <div class="about-dark-service-dsc">
-                <i><img src="assets/images/pie-chart-icon.svg"></i>
-                <h6>Everyone Can Mine</h6>
-                <p>Nulla in mauris in enim cursus volutpat. Quisque egestas auctor dui, nec rutrum nibh pretium at. Fusce commodo fringilla erat, ac tempus urna vehicula nec.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-5 col-md-12 order-2">
-        <div class="about-dark-ser-btm-wrp clearfix">
-          <div class="about-dark-ser-btm-dsc">
-            <h2>Statistics</h2>
-            <span>A cryptocurrency with purpose</span>
-            <p>Pellentesque enim augue, finibus eget dignissim ac, dignissim eget purus. Phasellus scelerisque libero sed magna tincidunt hendrerit. Aliquam nisi tortor, congue nec feugiat in, euismod nec mi. Aenean mollis velit augue, eget mattis lectus vulputate id. Mauris ut dignissim mi.</p>
-
-            <p>Duis tincidunt posuere elit, eu lobortis orci fringilla non. Donec pulvinar bibendum tincidunt. Mauris tempor egestas odio, vel elementum augue. Vestibulum dictum imperdiet est at bibendum.</p>
-            <div class="about-dark-ser-btn">
-              <a href="#">Wallet</a>
-              <a href="#">Exchange Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-7 col-md-12 order-1">
-        <div class="about-dark-ser-box-wrp">
-          <div class="about-ser-box-tp">
-            <div class="about-ser-box-dsc">
-              <span data-toggle="tooltip" data-placement="top" title="simply"></span>
-              <i><img src="assets/images/statistics-black-icon-01.svg"></i>
-              <h4>1000000</h4>
-              <p>Pre Mine</p>
-            </div>
-          </div>
-          <div class="about-ser-box-lft">
-            <div class="about-ser-box-dsc">
-              <span data-toggle="tooltip" data-placement="top" title="dummy"></span>
-              <i><img src="assets/images/statistics-black-icon-02.svg"></i>
-              <h4>100000000</h4>
-              <p>Maximum Supply</p>
-            </div>
-          </div>
-          <div class="about-ser-box-middle">
-            <img src="assets/images/roundlogo-middel-icon.png">
-          </div>
-          <div class="about-ser-box-rgt">
-            <div class="about-ser-box-dsc">
-              <span data-toggle="tooltip" data-placement="top" title="Lorem"></span>
-              <i><img src="assets/images/statistics-black-icon-03.svg"></i>
-              <h4>800000</h4>
-              <p>Super Node Burn</p>
-            </div>
-          </div>
-          <div class="about-ser-box-btm">
-            <div class="about-ser-box-dsc">
-              <span data-toggle="tooltip" data-placement="top" title="Ipsum"></span>
-              <i><img src="assets/images/statistics-black-icon-04.svg"></i>
-              <h4>200000</h4>
-              <p>Remaining Pre Mine</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="about-drk-ipsum-sec-wrp">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="about-drk-ipsum-wrp">
-          <ul class="clearfix ulc">
-            <li>
-              <div class="about-drk-ipsum-dsc">
-                <h2>Lorem Ipsum</h2>
-                <span>A cryptocurrency with purpose</span>
-                <p>Quisque aliquet ante ac ullamcorper rutrum. Nullam a ligula quis risus interdum faucibus. Sed facilisis convallis nunc, et ullamcorper erat. Cras non blandit diam, bibendum tristique diam. Pellentesque facilisis justo sit amet dui semper elementum. Phasellus rutrum id diam ut gravida. Sed quis elit dui.</p>
-              </div>
-            </li>
-            <li>
-              <div class="about-drk-ipsum-dsc">
-                <h2>Lorem Ipsum</h2>
-                <span>A cryptocurrency with purpose</span>
-                <p>Quisque aliquet ante ac ullamcorper rutrum. Nullam a ligula quis risus interdum faucibus. Sed facilisis convallis nunc, et ullamcorper erat. Cras non blandit diam, bibendum tristique diam. Pellentesque facilisis justo sit amet dui semper elementum. Phasellus rutrum id diam ut gravida. Sed quis elit dui.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 col-md-12">
-        <div class="about-drk-ipsum-btm-img">
-          <img src="assets/images/about-drk-ipsum-btm-img.png">
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-12">
-        <div class="about-drk-ipsum-btm-dsc">
-          <h2>Lorem Ipsum</h2>
-          <span>A cryptocurrency with purpose</span>
-          <p>Quisque aliquet ante ac ullamcorper rutrum. Nullam a ligula quis risus interdum faucibus. Sed facilisis convallis nunc, et ullamcorper erat. Cras non blandit diam, bibendum tristique diam. Pellentesque facilisis justo sit amet dui semper elementum. Phasellus rutrum id diam ut gravida. Sed quis elit dui.</p>
-          <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            <li>Nulla a tellus et tellus efficitur convallis id semper tellus.</li>
-            <li>Sed bibendum velit quis orci suscipit, ac bibendum odio auctor.</li>
-            <li>Sed at dolor eget urna laoreet commodo.</li>
-            <li>Proin id tellus id justo faucibus tristique vitae in risus.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer-wrp">
-  <div class="footer-top">
-    <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="ftr-col-innr clearfix">
-          <div class="ftr-logo-item">
-            <div class="ftr-logo">
-              <a href="#">
-                <img src="assets/images/logo.svg">
-              </a>
-            </div>
-          </div>
-          <div class="ftr-col-dsc ftr-menu-item">
-            <ul class="clearfix ulc ftr-main-menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Vitae</a></li>
-              <li><a href="#">Wallet</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Exchanges</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-            <ul class="clearfix ulc">
-              <li><a href="#">Social Media Platform</a></li>
-              <li><a href="#">Our Community</a></li>
-              <li><a href="#">About the Token</a></li>
-            </ul>
-          </div>
-          <div class="ftr-col-dsc ftr-socail-item clearfix">
-            <div class="ftr-socail-icon">
-              <ul>
-                <li><a target="_blank" href="#">
-                  <svg class="ftr-fb-icon-svg" width="11" height="19" viewBox="0 0 11 19" fill="#66697A">
-                    <use xlink:href="#ftr-fb-icon-svg"></use>
-                  </svg>
-                </a></li>
-                <li><a target="_blank" href="#">
-                  <svg class="ftr-twiter-icon-svg" width="22" height="16" viewBox="0 0 22 16" fill="#66697A">
-                    <use xlink:href="#ftr-twiter-icon-svg"></use>
-                  </svg>
-                </a></li>
-                <li><a target="_blank" href="#">
-                  <svg class="ftr-ins-icon-svg" width="20" height="19" viewBox="0 0 20 19" fill="#66697A">
-                    <use xlink:href="#ftr-ins-icon-svg"></use>
-                  </svg>
-                </a></li>
-                <li><a target="_blank" href="#">
-                  <svg class="ftr-message-icon-svg" width="18" height="20" viewBox="0 0 18 20" fill="#66697A">
-                    <use xlink:href="#ftr-message-icon-svg"></use>
-                  </svg>
-                </a></li>
-                <li><a target="_blank" href="#">
-                  <svg class="ftr-emoj-icon-svg" width="23" height="18" viewBox="0 0 23 18" fill="#66697A">
-                    <use xlink:href="#ftr-emoj-icon-svg"></use>
-                  </svg>
-                </a></li>
-                <li><a target="_blank" href="#">
-                  <svg class="ftr-github-icon-svg" width="20" height="19" viewBox="0 0 20 19" fill="#66697A">
-                    <use xlink:href="#ftr-github-icon-svg"></use>
-                  </svg>
-                </a></li>
-              </ul>
-              <div class="ftr-socail-btn hide-sm">
-                <span href="#">VITAE.COM</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div><!-- end of ftr-top --> 
-  </div><!-- footer-top -->
-  <div class="ftr-btm">
-    <div class="container">
-     <div class="row">
-       <div class="col-sm-12">
-         <div class="ftr-btm-innr clearfix">
-          <div class="ftr-btm-copy-right">
-            <p>&copy; 2019 Vitaetoken.io</p>
-          </div>
-           <div class="ftr-btm-menu">
-             <ul class="ulc clearfix">
-               <li><a href="#">Sitemap</a></li>
-               <li><a href="#">Privacy Policy</a></li>
-               <li><a href="#">Cookie Policy</a></li>
-             </ul>
-           </div>
-           <div class="ftr-btm-rgt">
-             <a href="#">webdesign by conversal</a>
-           </div>
-         </div>
-       </div>
-     </div>
-    </div>
-  </div>
-</footer><!-- end of footer -->
-
-<div class="xs-popup-main-menu-wrap clearfix">
-  
-  <div class="clearfix xs-popup-main-menu-con">
-    <div>
-      <nav class="main-nav clearfix">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li class="menu-item-has-children">
-            <a href="#">Wallet</a>
-             <ul class="sub-menu">
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem Ipsum</a></li>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem Ipsum</a></li>
-                <li><a href="#">Lorem</a></li>
-              </ul>
-          </li>
-          <li><a href="#">Exchanges</a></li>
-          <li><a href="#">About Vitae</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="hdr-btm-menu">
-        <ul class="clearfix">
-          <li class="current-menu-item"><a href="#">Social Media Platform</a></li>
-          <li><a href="#">Our community</a></li>
-          <li><a href="#">About the token</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="xs-menu-popup-close-btn">
-    <span><img src="assets/images/close-btn.png"></span>
-  </div>
-</div>
-<div class="nav-opener show-sm">
-  <div class="opener-inner">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-
-</div>
-
-<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/bootstrap-select.min.js"></script>
-<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-<script src="assets/fancybox3/dist/jquery.fancybox.min.js"></script>
-<script src="assets/slick.slider/slick.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo2-QJ7RdCkLw3NFZEu71mEKJ_8LczG-c"></script>
-<script src="assets/js/jquery.matchHeight-min.js"></script>
-<script src="assets/js/particles.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/app.js"></script>
-<script src="assets/js/main.js"></script>
-
-</body>
-</html>
