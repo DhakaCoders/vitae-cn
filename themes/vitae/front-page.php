@@ -120,8 +120,7 @@ if($intro):
         </div>
     </div>    
   </section>
-<?php endif; 
-?>
+<?php endif; ?>
   <section class="vt-about-the-token-sec position-rltv-10">
     <div id="vtabout-gridiant"></div>
     <div class="container">
