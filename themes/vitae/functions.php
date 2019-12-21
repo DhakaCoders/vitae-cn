@@ -197,6 +197,8 @@ function wrapper_class(){
     $class = 'contactPage';
   }elseif(is_page_template( 'page-faq.php' )){
     $class = 'faqOverview';
+  }elseif(is_page_template( 'page-socialmedia-platform.php' )){
+    $class = 'learmMore';
   }
   return $class;
 }
