@@ -39,9 +39,14 @@ $thisID = get_the_ID();
                 <div class="about-service-dsc">
                   <i><img src="<?php echo $feature['icon']; ?>" alt="<?php echo $feature['titel']; ?>"></i>
                   <?php 
-                    if( !empty( $feature['titel'] ) ) printf( '<h6><a href="#">%s</a></h6>', $feature['titel']);  
+                  $knop2 = $feature['knop'];
+                  $furl = '#';
+                  if( is_array( $knop2 ) &&  !empty( $knop2['url'] ) ){
+                    $furl = $knop2['url'];
+                  }
+                    if( !empty( $feature['titel'] ) ) printf( '<h6><a href="%s">%s</a></h6>', $furl, $feature['titel']);  
                     if( !empty( $feature['tekst'] ) ) echo wpautop($feature['tekst']);
-                    $knop2 = $feature['knop'];
+                    
                     if( is_array( $knop2 ) &&  !empty( $knop2['url'] ) ){
                       printf('<a href="%s" target="%s">%s</a>', $knop2['url'], $knop2['target'], $knop2['title']); 
                     }
@@ -57,6 +62,27 @@ $thisID = get_the_ID();
     </div>
   </div>
 </section>
+<?php 
+$ourteam = get_field('our_team', $thisID);
+$galleries = $ourteam['galerij'];
+$gfirst = $gsecond = $gthird = $g1title = $g2title = $g3title ='';
+if($galleries){
+  foreach ($galleries as $key => $gallery) {
+    if($key == 0) {
+      $gfirst = $gallery['url'];
+      $g1title = $gallery['title'];
+    }
+    if($key == 1){
+      $gsecond = $gallery['url'];
+      $g2title = $gallery['title'];
+    } 
+    if($key == 2) {
+      $gthird = $gallery['url'];
+      $g3title = $gallery['title'];
+    }
+  }
+}
+?>
 
 <section class="about-our-team-sec-wrp">
   <div class="container">
@@ -65,18 +91,17 @@ $thisID = get_the_ID();
         <div class="about-our-team-wrp clearfix">
           <div class="about-our-team-lft">
             <div class="about-our-team-img-small">
-              <img src="<?php echo THEME_URI; ?>/assets/images/about-our-team-img-1.png">
+              <img src="<?php echo $gfirst; ?>" alt="<?php echo $g1title; ?>">
             </div>
             <div class="about-our-team-img">
-              <img src="<?php echo THEME_URI; ?>/assets/images/about-our-team-img-2.png">
+              <img src="<?php echo $gsecond; ?>" alt="<?php echo $g2title; ?>">
             </div>
           </div>
           <div class="about-our-team-rgt">
             <div class="about-our-team-img show-md">
-              <img src="<?php echo THEME_URI; ?>/assets/images/about-our-team-img-3.png">
+              <img src="<?php echo $gthird; ?>" alt="<?php echo $g3title; ?>">
             </div>
             <?php 
-              $ourteam = get_field('our_team', $thisID);
               if($ourteam):
             ?>
             <div class="about-our-team-dsc">
@@ -100,12 +125,19 @@ $thisID = get_the_ID();
 <section class="partners-4-prosperity-sec about-prd-tp">
   <div class="container-lg">
       <div class="row">
-        <div class="col-sm-12">
-          <div class="vt-sec-hdr">
-            <h3>Partners 4 Prosperity</h3>
-            <p>Nulla in mauris in enim cursus volutpat. Quisque egestas auctor dui, nec rutrum nibh pretium at. Fusce commodo fringilla erat, ac tempus urna vehicula nec.</p>
+        <?php 
+            $partners = get_field('partners', HOMEID);
+            if($partners):
+        ?>
+          <div class="col-sm-12">
+            <div class="vt-sec-hdr">
+            <?php 
+              if( !empty( $partners['titel'] ) ) printf( '<h3>%s</h3>', $partners['titel']);  
+              if( !empty( $partners['beschrijving'] ) ) echo wpautop($partners['beschrijving']);
+            ?>
+            </div>
           </div>
-        </div>
+          <?php endif; ?>
         <div class="col-sm-12">
           <div class="partners-slider-ctlr">
             <span class="slide-prev-btn"></span>
