@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-
-
 <section class="home-banner">
   <div class="container">
       <div class="row">
@@ -22,29 +20,40 @@
   </div>    
 </section>
 
+<div class="cookie-policy-wrp">
+   <div class="cookie-policy-dsc">
+    <span class="cross-white"></span>
+     <h4>Cookie Policy</h4>
+     <p>This site uses cookies to improve your browsing experience.</p>
+     <a href="#"> Meer Info</a>
+     <div class="cookie-btn">
+       <a href="#">Accept Cookies</a>
+     </div>
+   </div>
+ </div>
 
-<div class="home-con-bg-ctlr">
+
   <section class="social-media-platform-sec position-rltv-10">
-    <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-lg-7">
-            <div class="map-img-grd-col">
-              <strong>200.000 Users <span>in Europe</span></strong>
-              <div class="vt-sm-map-xs-ctlr">
-                <img src="<?php echo THEME_URI; ?>/assets/images/home-map-img.jpg">
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-lg-5">
-            <div class="map-img-grd-col-des">
-              <h2>Social Media Platform</h2>
-              <p>Duis in dignissim nulla. Aliquam lacus ipsum, ullamcorper nec nulla tristique, cursus ultrices magna. Nullam tellus est, egestas a dictum at, luctus quis libero. Nulla massa enim, tincidunt vitae diam at, tincidunt sollicitudin magna.</p>
-              <p> Donec quis magna sem. Aenean imperdiet mauris non arcu consequat, sollicitudin viverra ex laoreet. Cras imperdiet nisi a eros imperdiet finibus. </p>
-              <a class="fl-fade-effect" href="#"><span>more about our Social media platform</span></a>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-7">
+        <div class="map-img-grd-col">
+          <strong>200.000 Users <span>in Europe</span></strong>
+          <div class="vt-sm-map-xs-ctlr">
+            <img src="<?php echo THEME_URI; ?>/assets/images/home-map-img.jpg">
           </div>
         </div>
-    </div>    
+      </div>
+      <div class="col-sm-12 col-lg-5">
+        <div class="map-img-grd-col-des">
+          <h2>Social Media Platform</h2>
+          <p>Duis in dignissim nulla. Aliquam lacus ipsum, ullamcorper nec nulla tristique, cursus ultrices magna. Nullam tellus est, egestas a dictum at, luctus quis libero. Nulla massa enim, tincidunt vitae diam at, tincidunt sollicitudin magna.</p>
+          <p> Donec quis magna sem. Aenean imperdiet mauris non arcu consequat, sollicitudin viverra ex laoreet. Cras imperdiet nisi a eros imperdiet finibus. </p>
+          <a class="fl-fade-effect" href="#"><span>more about our Social media platform</span></a>
+        </div>
+      </div>
+    </div>
+  </div>    
   </section>
 
 
@@ -336,5 +345,4 @@
         </div>
     </div>    
   </section>
-</div>
 <?php get_footer(); ?>
