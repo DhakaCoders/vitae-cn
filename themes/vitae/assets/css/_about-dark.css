@@ -76,9 +76,14 @@ about-drk-banner-sec-wrp
 	height: 56px;
 	padding: 18px 18px 20px;
 }
-.about-dark-utility-dsc > a{
-	display: inline-block;
-	vertical-align: baseline;
+.about-dark-utility-dsc ul li:last-child{
+	width: 100%;
+}
+.about-dark-utility-dsc ul li:last-child a{
+	display: flex;
+	padding: 10px!important;
+	justify-content: center;
+	align-items: center;
 	text-decoration: none;
 	background: linear-gradient(323.07deg, #3C8A3D 2.71%, #47A348 61.2%), #47A348;
 	border-radius: 6px;
@@ -89,6 +94,14 @@ about-drk-banner-sec-wrp
 	text-transform: uppercase;
 	text-align: center;
 	padding: 20px 85px;
+	border: none;
+	max-width: 100%;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.about-dark-utility-dsc ul li:last-child a:hover{
+	background: #3C8A3D;
 }
 .about-dark-utility-dsc a:hover{
 	background: #47a348;
@@ -677,6 +690,9 @@ about-drk-ipsum-sec-wrp
 	  #AboutSerSlider .slick-dots li button:before {
 	    width: 74px;
 	    height: 4px;
+	}
+	.about-dark-utility-dsc ul li:last-child a{
+		font-size: 15px;
 	}
 
 }
