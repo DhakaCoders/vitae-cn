@@ -37,9 +37,15 @@ $shortcode = get_field('shortcode', $thisID);
     <div class="container">
         <div class="row">
           <div class="col-sm-12">
+            <?php 
+              $newsletter = get_field('newsletter', HOMEID);
+              if($newsletter):
+            ?>
             <div class="community-we-hdr">
-              <h3><span>The community we</span></h3>
-              <p>Subscribe to our mailing list, get the latest news. </p>
+            <?php 
+              if( !empty( $newsletter['titel'] ) ) printf( '<h3>%s<i class="icon-heard"></i></h3>', $newsletter['titel']);  
+              if( !empty( $newsletter['beschrijving'] ) ) echo wpautop($newsletter['beschrijving']);
+            ?>
             </div>
             <div class="newsletter-form" id="newsletter-form">
               <div id="wp-form">
@@ -59,6 +65,7 @@ $shortcode = get_field('shortcode', $thisID);
                 </form>
               </div>
             </div>
+            <?php endif; ?>
             <div class="subscribe-cmnt text-center">
               <img src="<?php echo THEME_URI; ?>/assets/images/Subscribe.png">
             </div>

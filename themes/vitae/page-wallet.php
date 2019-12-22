@@ -12,14 +12,13 @@ $thisID = get_the_ID();
         <div class="wallet-dark-main-innr">
           <div class="wallet-dark-main-top clearfix">
           	<?php 
-				$intro = get_field('intro', $thisID);
-				if($intro):
-				  $introlinks = $intro['links'];
-
+    				$intro = get_field('intro', $thisID);
+    				if($intro):
+    				  $introlinks = $intro['links'];
           	?>
             <div class="wallet-dark-main-top-lft">
             <?php 
-              if( !empty( $introlinks['titel'] ) ) printf( '<span>%s</span>', $introlinks['titel']);  
+              if( !empty( $introlinks['subtitel'] ) ) printf( '<span>%s</span>', $introlinks['subtitel']);  
               if( !empty( $introlinks['titel'] ) ) printf( '<h1>%s</h1>', $introlinks['titel']);  
               if( !empty( $introlinks['beschrijving'] ) ) echo wpautop($introlinks['beschrijving']);
               $knop1 = $introlinks['knop_1'];
@@ -55,60 +54,64 @@ $thisID = get_the_ID();
             <?php endif; endif; ?>
           </div>
         </div>
+        <?php 
+        $features2 = get_field('features2', $thisID);
+            $fe2lists = $features2['features_list'];
+            $fblock = $features2['rechten'];
+            $fe2blocks = $fblock['features_block'];
+            $feab2src = '';
+            if(!empty($fblock['afbeelding'])){
+                $feab2src = cbv_get_image_src($fblock['afbeelding'], 'hmbbox');
+            }
+              
+        ?>
         <div class="wallet-dark-feature-img show-lg clearfix vt-wallet-mobile-feature-img">
+          <?php if($fe2blocks): ?>
           <div class="wallet-dark-feature-img-innr" style="background:url(<?php echo THEME_URI; ?>/assets/images/dark-page-mob-img.png);">
-            <div class="mobile-img-feature mobile-img-feature-1">
+            <div class="mobile-screen-bg-img" style="background:url(<?php echo $feab2src; ?>);"></div>
+            <?php
+              $i = 1; 
+              foreach($fe2blocks as $fe2block):
+              $fe1icon = '';
+              if(!empty($fe2block['icon'])) $fe1icon = $fe2block['icon'];
+              ?>
+            <div class="mobile-img-feature mobile-img-feature-<?php echo $i; ?>">
               <div class="mobile-img-feature-innr">
-                <i><img src="<?php echo THEME_URI; ?>/assets/images/mobile-img-feature-icon-02.png" alt="" /></i>
-                <strong>Feature</strong>
-                <span>Nulla in mauris in enim33</span>
+              <i><img src="<?php echo $fe1icon; ?>" alt="" /></i>
+              <?php 
+              if( !empty( $fe2block['titel'] ) ) printf( '<strong>%s</strong>', $fe2block['titel']);  
+              if( !empty( $fe2block['tekst'] ) ) printf( '<span>%s</span>', $fe2block['tekst']);  
+              ?>
               </div>
             </div>
-            <div class="mobile-img-feature mobile-img-feature-2">
-              <div class="mobile-img-feature-innr">
-                <i><img src="<?php echo THEME_URI; ?>/assets/images/mobile-img-feature-icon-02.png" alt="" /></i>
-                <strong>Feature</strong>
-                <span>Nulla in mauris in enim3</span>
-              </div>              
-            </div>
-            <div class="mobile-img-feature mobile-img-feature-3">
-              <div class="mobile-img-feature-innr">
-                <i><img src="<?php echo THEME_URI; ?>/assets/images/mobile-img-feature-icon-02.png" alt="" /></i>
-                <strong>Feature</strong>
-                <span>Nulla in mauris in enim</span>
-              </div>              
-            </div>
-            <div class="mobile-img-feature mobile-img-feature-4">
-              <div class="mobile-img-feature-innr">
-                <i><img src="<?php echo THEME_URI; ?>/assets/images/mobile-img-feature-icon-02.png" alt="" /></i>
-                <strong>Feature</strong>
-                <span>Nulla in mauris in enim</span>
-              </div>              
-            </div> 
+            <?php $i++; endforeach; ?>
           </div>
+          <?php endif; ?>
         </div>
+        <?php 
+        $features1 = get_field('features1', $thisID);
+        $fe1lists = $features1['features_list'];
+        if($fe1lists): ?>
         <div class="wallet-dark-feature-des clearfix show-lg">
           <div class="wallet-dark-feature-des-innrclearfix" id="vt-wallet-grd-item-ctlr">
             <ul class="ulc clearfix">
+              <?php 
+              foreach($fe1lists as $fe1list):
+              $fe1icon = '';
+              if(!empty($fe1list['icon'])) $fe1icon = $fe1list['icon'];
+              ?>
               <li>
-                <i><img src="<?php echo THEME_URI; ?>/assets/images/wallet-dark-feature-des-icon.svg" alt="" /></i>
-                <h6>Feature56</h6>
-                <p>Nulla in mauris in enim cursus volutpat. Quisque egestas auctor dui, nec rutrum nibh pretium at. </p>
+                <i><img src="<?php echo $fe1icon; ?>" alt="" /></i>
+                <?php 
+                if( !empty( $fe1list['titel'] ) ) printf( '<h6>%s</h6>', $fe1list['titel']);  
+                if( !empty( $fe1list['tekst'] ) ) echo wpautop($fe1list['tekst']);
+                ?>
               </li>
-              <li>
-                <i><img src="<?php echo THEME_URI; ?>/assets/images/wallet-dark-feature-des-icon.svg" alt="" /></i>
-                <h6>Feature</h6>
-                <p>Nulla in mauris in enim cursus volutpat. Quisque egestas auctor dui, nec rutrum nibh pretium at. </p>
-              </li>
-              <li>
-                <i><img src="<?php echo THEME_URI; ?>/assets/images/wallet-dark-feature-des-icon.svg" alt="" /></i>
-                <h6>Feature</h6>
-                <p>Nulla in mauris in enim cursus volutpat. Quisque egestas auctor dui, nec rutrum nibh pretium at. </p>
-              </li>
+              <?php endforeach; ?>
             </ul>          
           </div>  
         </div>
-
+      <?php endif; ?>
       </div>
     </div>
   </div> 
@@ -161,18 +164,19 @@ $thisID = get_the_ID();
       <li class="">
         <div class="wallet-dark-feature-img hide-lg clearfix">
         <?php 
-		$features2 = get_field('features2', $thisID);
-		    $fe2lists = $features2['features_list'];
-		    $fblock = $features2['rechten'];
-		    $fe2blocks = $fblock['features_block'];
-		    $feablsrc = '';
-		    if(!empty($fblock['afbeelding'])){
-		        $feablsrc = cbv_get_image_src($fblock['afbeelding'], 'hmbbox');
-		    }
-		    if($fe2blocks):
-		    	
-		?>
-          <div class="wallet-dark-feature-img-innr" style="background:url(<?php echo $feablsrc; ?>);">
+    		$features2 = get_field('features2', $thisID);
+    		    $fe2lists = $features2['features_list'];
+    		    $fblock = $features2['rechten'];
+    		    $fe2blocks = $fblock['features_block'];
+    		    $feab2src = '';
+    		    if(!empty($fblock['afbeelding'])){
+    		        $feab2src = cbv_get_image_src($fblock['afbeelding'], 'hmbbox');
+    		    }
+    		    if($fe2blocks):
+    		    	
+    		?>
+          <div class="wallet-dark-feature-img-innr" style="background:url(<?php echo THEME_URI; ?>/assets/images/dark-page-mob-img.png);">
+            <div class="mobile-screen-bg-img" style="background:url(<?php echo $feab2src; ?>);"></div>
           	<?php
           	  $i = 1; 
               foreach($fe2blocks as $fe2block):
