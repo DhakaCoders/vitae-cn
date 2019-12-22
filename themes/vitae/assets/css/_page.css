@@ -121,23 +121,24 @@ body.vt-drk-page-ctlr  .ftr-btm-menu ul li a:after{
 .cookie-btn {
 	
 }
-.cookie-btn a {
-    display: inline-block;
-    vertical-align: baseline;
-    border: 2px solid #F5F6F8;
+.cookie-btn a{
+    display: inline-block!important;
+    vertical-align: baseline!important;
+    border: 2px solid #F5F6F8!important;
     border-radius: 6px;
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #FFFFFF!important;
     height: 48px;
-    padding: 11px 30px;
+    padding: 11px 30px!important;
+    background-color: transparent!important;
 }
 .cookie-btn a:hover{
-	background-color: #fff;
-	border-color: #fff;
-	color: #10303C;
+	background-color: #fff!important;
+	border-color: #fff!important;
+	color: #10303C!important;
 }
 
 .cross-white {
