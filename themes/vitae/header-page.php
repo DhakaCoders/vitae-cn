@@ -92,7 +92,7 @@
 <body <?php body_class(); ?>>
 <?php $class = wrapper_class(); ?>
 <div class="fullpage <?php echo $class; ?>">
-  <?php if(is_page_template( 'page-about-token.php' )): ?>
+  <?php if(is_page_template( 'page-about-token.php' ) OR is_page_template( 'page-wallet.php' )): ?>
   <div class="wdTopBg">
     <svg class="desktopSVG hide-xs" preserveAspectRatio="none" width="1920" height="1463" viewBox="0 0 1920 1463" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="1920" y="882" width="1920" height="882" transform="rotate(180 1920 882)" fill="url(#paint0_linearwd)"/>
