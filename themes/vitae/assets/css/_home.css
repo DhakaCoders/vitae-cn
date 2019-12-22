@@ -294,6 +294,19 @@
 .partnersSlider .partnersSlideItem.slick-active{
 	display: inline-block;
 }
+
+.partnersSlider .partnersSlideItem,
+.exchangeSolutionSlider .esSlideItem{
+	display: none;
+}
+.partnersSlider .partnersSlideItem:first-child,
+.exchangeSolutionSlider .esSlideItem:first-child{
+	display: inline-block;
+}
+.partnersSlider.slick-initialized .partnersSlideItem,
+.exchangeSolutionSlider.slick-initialized .esSlideItem{
+	display: inline-block;
+}
 .home-vt-faq-sec{
 	padding-bottom: 85px;
 	overflow: hidden;
@@ -682,6 +695,12 @@
 	    background-size: 50px auto;
 	    padding-left: 60px;
 	}
+	.our-community-des h2 i.icon-heard {
+	    width: 60px;
+	    height: 55px;
+	    top: 14px;
+	    background-size: 50px auto;
+	}
 	.our-community-des {
 	    padding-right: 25px;
 	}
@@ -832,6 +851,12 @@
 	    background-size: 45px auto;
 	    padding-left: 56px;
 	}
+	.our-community-des h2 i.icon-heard {
+	    width: 56px;
+	    height: 47px;
+	    top: 14px;
+	    background-size: 45px auto;
+	}
 	.our-community-des h2 {
 	    margin-bottom: 20px;
 	}
@@ -949,6 +974,12 @@
 	    background-size: 39px auto;
 	    padding-left: 49px;
 	}
+	.our-community-des h2 i.icon-heard {
+	    width: 49px;
+	    height: 40px;
+	    top: 9px;
+	    background-size: 39px auto;
+	}
 	.our-community-des h2 {
 	    margin-bottom: 15px;
 	}
@@ -1017,6 +1048,12 @@
 		background-size: 50px auto;
 		padding-right: 60px;
 		background-position: right 3px center;
+	}
+	.community-we-hdr h3 i {
+	    padding-right: 60px;
+	    background-size: 50px auto;
+	    height: 50px;
+	    top: 15px;
 	}
 	#newsletter-form #wp-form .wpforms-submit-container{
 		position: static;
