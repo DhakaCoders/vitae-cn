@@ -148,12 +148,24 @@ $thisID = get_the_ID();
         <?php endif; ?>
       </div>
       <div class="col-lg-7 col-md-12 order-1">
+        <?php 
+          if(function_exists('APIdata')):
+          $vitae = APIdata();
+         //var_dump($vitae);
+          $preMine = $maxSupply = $superNodeBurn = $remainingPreMine = 0;
+          if(!empty($vitae->total_supply)) $preMine = (int)$vitae->total_supply;
+          if(!empty($vitae->max_supply)) $maxSupply = (int)$vitae->max_supply;
+          if(!empty($vitae->circulating_supply)) $superNodeBurn = (int)$vitae->circulating_supply;
+          if($preMine > 0){
+            $remainingPreMine = $preMine - $superNodeBurn;
+          }
+        ?>
         <div class="about-dark-ser-box-wrp">
           <div class="about-ser-box-tp">
             <div class="about-ser-box-dsc">
               <span data-toggle="tooltip" data-placement="top" title="simply"></span>
               <i><img src="<?php echo THEME_URI; ?>/assets/images/statistics-black-icon-01.svg"></i>
-              <h4>1000000</h4>
+              <?php printf('<h4>%s</h4>', $preMine); ?>
               <p>Pre Mine</p>
             </div>
           </div>
@@ -161,7 +173,7 @@ $thisID = get_the_ID();
             <div class="about-ser-box-dsc">
               <span data-toggle="tooltip" data-placement="top" title="dummy"></span>
               <i><img src="<?php echo THEME_URI; ?>/assets/images/statistics-black-icon-02.svg"></i>
-              <h4>100000000</h4>
+              <?php printf('<h4>%s</h4>', $maxSupply); ?>
               <p>Maximum Supply</p>
             </div>
           </div>
@@ -172,7 +184,7 @@ $thisID = get_the_ID();
             <div class="about-ser-box-dsc">
               <span data-toggle="tooltip" data-placement="top" title="Lorem"></span>
               <i><img src="<?php echo THEME_URI; ?>/assets/images/statistics-black-icon-03.svg"></i>
-              <h4>800000</h4>
+              <?php printf('<h4>%s</h4>', $superNodeBurn); ?>
               <p>Super Node Burn</p>
             </div>
           </div>
@@ -180,11 +192,12 @@ $thisID = get_the_ID();
             <div class="about-ser-box-dsc">
               <span data-toggle="tooltip" data-placement="top" title="Ipsum"></span>
               <i><img src="<?php echo THEME_URI; ?>/assets/images/statistics-black-icon-04.svg"></i>
-              <h4>200000</h4>
+              <?php printf('<h4>%s</h4>', $remainingPreMine); ?>
               <p>Remaining Pre Mine</p>
             </div>
           </div>
         </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>

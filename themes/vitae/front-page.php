@@ -150,6 +150,19 @@ if($intro):
         <?php endif; ?>
         </div>
         <div class="ol-md-12 col-lg-7 order-md-2 order-lg-1">
+          <?php 
+            if(function_exists('APIdata')):
+            $vitae = APIdata();
+           //var_dump($vitae);
+            $preMine = $maxSupply = $superNodeBurn = $remainingPreMine = 0;
+            if(!empty($vitae->total_supply)) $preMine = (int)$vitae->total_supply;
+            if(!empty($vitae->max_supply)) $maxSupply = (int)$vitae->max_supply;
+            if(!empty($vitae->circulating_supply)) $superNodeBurn = (int)$vitae->circulating_supply;
+
+            if($preMine > 0){
+              $remainingPreMine = $preMine - $superNodeBurn;
+            }
+          ?>
           <div class="vt-about-tokens">
             <div class="vt-about-token vt-about-token-01">
               <div class="vt-about-token-inner">
@@ -158,7 +171,7 @@ if($intro):
                 </div>
                 <div class="vt-about-token-con">
                   <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-01.svg">
-                  <strong>1000000</strong>
+                  <?php printf('<strong>%s</strong>', $preMine); ?>
                   <span>Pre Mine</span>
                 </div>
               </div>
@@ -170,7 +183,7 @@ if($intro):
                 </div>
                 <div class="vt-about-token-con">
                   <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-02.svg">
-                  <strong>100000000</strong>
+                  <?php printf('<strong>%s</strong>', $maxSupply); ?>
                   <span>Maximum Supply</span>
                 </div>
               </div>
@@ -187,7 +200,7 @@ if($intro):
                 </div>
                 <div class="vt-about-token-con">
                   <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-03.svg">
-                  <strong>800000</strong>
+                  <?php printf('<strong>%s</strong>', $superNodeBurn); ?>
                   <span>Super Node Burn</span>
                 </div>
               </div>
@@ -199,12 +212,13 @@ if($intro):
                 </div>
                 <div class="vt-about-token-con">
                   <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-04.svg">
-                  <strong>200000</strong>
+                  <?php printf('<strong>%s</strong>', $remainingPreMine); ?>
                   <span>Remaining Pre Mine</span>
                 </div>
               </div>
             </div>
           </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>
