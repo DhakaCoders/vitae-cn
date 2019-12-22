@@ -49,25 +49,19 @@ $shortcode = get_field('shortcode', $thisID);
             </div>
             <div class="newsletter-form" id="newsletter-form">
               <div id="wp-form">
-                <form class="wpforms-validate wpforms-form">
-                  <div class="wpforms-field-container">
-                    <div id="wpforms-723-field_2-container" class="wpforms-field wpforms-field-text 1in2col" data-field-id="2">
-                    <label class="wpforms-field-label" for="wpforms-723-field_2">Your E-mailadres </label>
-                    <input id="wpforms-723-field_2" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][2]" placeholder="example: stef@vitaetoken.io" required="" type="email" />
-                    </div>
-
-                  </div>
-                  <div class="wpforms-submit-container"><input name="wpforms[id]" type="hidden" value="723" />
-                    <input name="wpforms[author]" type="hidden" value="2" />
-                    <input name="wpforms[post_id]" type="hidden" value="14" />
-                    <button id="wpforms-submit-723" class="wpforms-submit" name="wpforms[submit]" type="submit" value="wpforms-submit" data-alt-text="Sending..." data-submit-text="Verzenden"><span>Subscribe</span></button>
-                  </div>
-                </form>
+                <?php echo do_shortcode('[wpforms id="592"]'); ?>
               </div>
             </div>
             <?php endif; ?>
             <div class="subscribe-cmnt text-center">
-              <img src="<?php echo THEME_URI; ?>/assets/images/Subscribe.png">
+              <div class="feeds-wrap clearfix">
+                <div class="twitter-feed">
+                  <a class="twitter-timeline" data-height="500" href="https://twitter.com/OfficialVitae?ref_src=twsrc%5Etfw">Tweets by OfficialVitae</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="discord-feed">
+                  <iframe src="https://discordapp.com/widget?id=411142379257724929&amp;theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </div>

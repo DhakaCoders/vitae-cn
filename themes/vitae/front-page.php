@@ -361,20 +361,7 @@ if($intro):
             </div>
             <div class="newsletter-form" id="newsletter-form">
               <div id="wp-form">
-                <form class="wpforms-validate wpforms-form">
-                  <div class="wpforms-field-container">
-                    <div id="wpforms-723-field_2-container" class="wpforms-field wpforms-field-text 1in2col" data-field-id="2">
-                    <label class="wpforms-field-label" for="wpforms-723-field_2">Your E-mailadres </label>
-                    <input id="wpforms-723-field_2" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][2]" placeholder="example: stef@vitaetoken.io" required="" type="email" />
-                    </div>
-
-                  </div>
-                  <div class="wpforms-submit-container"><input name="wpforms[id]" type="hidden" value="723" />
-                    <input name="wpforms[author]" type="hidden" value="2" />
-                    <input name="wpforms[post_id]" type="hidden" value="14" />
-                    <button id="wpforms-submit-723" class="wpforms-submit" name="wpforms[submit]" type="submit" value="wpforms-submit" data-alt-text="Sending..." data-submit-text="Verzenden"><span>Subscribe</span></button>
-                  </div>
-                </form>
+                <?php echo do_shortcode('[wpforms id="592"]'); ?>
               </div>
             </div>
             <?php endif; ?>
