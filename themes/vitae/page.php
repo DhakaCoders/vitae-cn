@@ -134,12 +134,20 @@ $thisID = get_the_ID();
                               $plogosrc = $partners['logo'];
                           }
                           $pllink = $partners['knop'];
+                          $knicon = $partners['knop_icon'];
+                          $kniconhover = $partners['knop_hover_icon'];
+                          $positie_icon = $partners['positie_icon'];
                           $plurl = '#';
                           if( is_array( $pllink ) &&  !empty( $pllink['url'] ) ){
                             $plurl = $pllink['url'];
                           }
                           $content = $partners['beschrijving'];
                           
+                          if(!empty($positie_icon) && $positie_icon == 'right'){
+                            $classiposition = 'dft-two-plate-des-col-rgt';
+                          }else{
+                            $classiposition = 'dft-two-plate-des-col-lft';
+                          }
                         echo '<div class="dfp-grd-slide-item">';
 
                         echo '<div class="dfp-grd-slide-item-inner matchHeightCol">
@@ -148,9 +156,10 @@ $thisID = get_the_ID();
                           </div>
                           <a href="'.$plurl.'" target="_blank">'.get_the_title().'</a>
                         </div>
-                        <div class="dft-two-plate-des-col dft-two-plate-des-col-lft matchHeightCol">'.wpautop( $content ).'</p>';
+                        <div class="dft-two-plate-des-col '.$classiposition.' matchHeightCol">'.wpautop( $content ).'</p>';
                           if( is_array( $pllink ) &&  !empty( $pllink['url'] ) ){
-                            printf('<a href="%s" target="%s">%s</a>', $pllink['url'], $pllink['target'], $pllink['title']); 
+                            printf('<a onMouseOver="this.style.background=url('.$kniconhover.')"
+   onMouseOut="this.style.background=url('.$knicon.')" href="%s" target="%s">%s</a>', $pllink['url'], $pllink['target'], $pllink['title']); 
                           }
                         echo '</div></div>';
                           endwhile;
