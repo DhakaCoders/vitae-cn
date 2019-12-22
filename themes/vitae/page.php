@@ -97,7 +97,11 @@ $thisID = get_the_ID();
                       $fc_videoposter = cbv_get_image_tag(get_sub_field('video_afbeelding'));
                     }
                     echo "<div class='dfp-fancy-bx'><div class='video-play'>";
+                    if(!empty($fc_videolink)):
                     printf('<a data-fancybox="" href="%s">%s%s</a>', $fc_videolink, $icon, $fc_videoposter );
+                    else: 
+                      echo $fc_videoposter;
+                    endif;
                     echo "</div></div>";
                   }elseif( get_row_layout() == 'ourcommunity' ){
                     $fc_title = get_sub_field('titel');
@@ -114,39 +118,44 @@ $thisID = get_the_ID();
                   }elseif( get_row_layout() == 'tabel' ){
                     $fc_table = get_sub_field('fc_table');
                     cbv_table($fc_table);
-                  }elseif( get_row_layout() == 'product' ){
-                    $fc_product = get_sub_field('fc_product');
+                  }elseif( get_row_layout() == 'partners' ){
+                    $fc_partners = get_sub_field('fc_partners');
                     $memQuery = new WP_Query(array(
-                      'post_type' => 'product',
+                      'post_type' => 'partner',
                       'posts_per_page'=> -1,
-                      'post__in' => $fc_product
+                      'post__in' => $fc_partners
                     ));
                     if( $memQuery->have_posts() ):
-                      echo '<div class="dft-2grd-img-content clearfix"><div class="dft2grdImgConSlider">';
-                              while($memQuery->have_posts()): $memQuery->the_post();
-                              $gridImage = get_post_thumbnail_id(get_the_ID());
-                              if(!empty($gridImage)){
-                                $pimgScr = cbv_get_image_src($gridImage, 'pgprodgrid');
-                              }else{
-                                $pimgScr = '';
-                              }  
-                              $term_obj_list = get_the_terms( get_the_ID(), 'product_cat' );
-                              echo '<div class="dft-2grd-img-con-item-col">';
-                              echo '<div class="dft-img-col-hover-scale">
-                                <a class="overlay-link" href="'.get_the_permalink().'"></a>';
-                              echo '<div class="dft-2grd-img-con-item-img" style="background-image: url('.$pimgScr.');"></div></div>';
-                              echo '<div class="dft-2grd-img-con-item-des">';
-                              if ( $term_obj_list && ! is_wp_error( $term_obj_list ) ) : 
-                                printf('<strong>%s</strong>', join(', ', wp_list_pluck($term_obj_list, 'name')));
-                              endif;
-                              printf('<h4><a href="%s">%s</a></h4>', get_the_permalink(), get_the_title());
-                              echo wpautop( get_the_excerpt(), true );;
-                              echo '<a href="'.get_the_permalink().'">More Info <em><img src="'.THEME_URI.'/assets/images/list-icon.svg"></em></a>';
-                              echo '</div>';
-                              echo '</div>';
+                      echo '<div class="dfp-grd-slider-ctlr dfp-grd-slider-ctlr-2 "><span class="slide-prev-btn"></span><span class="slide-next-btn"></span><div class="dfp-grd-slider dfp-grd-slider-2 xs-pagi-ctrl">';
+                        while($memQuery->have_posts()): $memQuery->the_post();
+                          $partners = get_field('partners', get_the_ID());
+                          $plogosrc = '';
+                          if(!empty($partners['logo'])){
+                              $plogosrc = $partners['logo'];
+                          }
+                          $pllink = $partners['knop'];
+                          $plurl = '#';
+                          if( is_array( $pllink ) &&  !empty( $pllink['url'] ) ){
+                            $plurl = $pllink['url'];
+                          }
+                          $content = $partners['beschrijving'];
+                          
+                        echo '<div class="dfp-grd-slide-item">';
+
+                        echo '<div class="dfp-grd-slide-item-inner matchHeightCol">
+                          <div class="dfp-grd-slide-item-img">
+                            <a target="_blank" href="'.$plurl.'"><img src="'.$plogosrc.'" alt=""></a>
+                          </div>
+                          <a href="'.$plurl.'" target="_blank">'.get_the_title().'</a>
+                        </div>
+                        <div class="dft-two-plate-des-col dft-two-plate-des-col-lft matchHeightCol">'.wpautop( $content ).'</p>';
+                          if( is_array( $pllink ) &&  !empty( $pllink['url'] ) ){
+                            printf('<a href="%s" target="%s">%s</a>', $pllink['url'], $pllink['target'], $pllink['title']); 
+                          }
+                        echo '</div></div>';
                           endwhile;
 
-                      echo '</div></div> <div class="dft-2grd-img-content-separetor"></div>';
+                      echo '</div></div>';
                     endif; wp_reset_postdata();
                   }elseif( get_row_layout() == 'afbeelding' ){
                     $fc_afbeelding = get_sub_field('fc_afbeelding');

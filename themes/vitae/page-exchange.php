@@ -61,15 +61,15 @@ if($intro):
             <div class="exchange-solution-slider exchangeSolutionSlider xs-pagi-ctrl">
               <?php 
               foreach($prtlogos as $prtlogo): 
-              	$plogosrc = '';
-			    if(!empty($prtlogo['logo'])){
-			        $fea1src = $prtlogo['logo'];
-			    }
-			    $pllink = $prtlogo['knop'];
-			    $plurl = '';
-			    if( is_array( $pllink ) &&  !empty( $pllink['url'] ) ){
-			    	$plurl = $pllink['url'];
-			    }
+              	$fea1src = '';
+      			    if(!empty($prtlogo['logo'])){
+      			        $fea1src = $prtlogo['logo'];
+      			    }
+      			    $pllink = $prtlogo['knop'];
+      			    $plurl = '#';
+      			    if( is_array( $pllink ) &&  !empty( $pllink['url'] ) ){
+      			    	$plurl = $pllink['url'];
+      			    }
               ?>
               <div class="esSlideItem">
                 <div class="esSlideItemInner matchHeightCol">
