@@ -17,6 +17,7 @@
   <link rel="stylesheet" type="text/css" href="assets/slick.slider/slick.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" type="text/css" href="assets/fonts/custom-fonts.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/jquery-jvectormap-2.0.3.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 
@@ -280,9 +281,18 @@
     <div class="row">
       <div class="col-sm-12 col-lg-7">
         <div class="map-img-grd-col">
-          <strong>200.000 Users <span>in Europe</span></strong>
-          <div class="vt-sm-map-xs-ctlr">
-            <img src="assets/images/home-map-img.jpg">
+          <div id="continents-data" class="WW">
+            <strong class="worldwide">900.000 Users <span>Worldwide</span></strong>
+            <strong class="EU">200.000 Users <span>in Europe</span></strong>
+            <strong class="AF">100.000 Users <span>in Africa</span></strong>
+            <strong class="NA">125.000 Users <span>in North America</span></strong>
+            <strong class="OC">175.000 Users <span>in Oceania</span></strong>
+            <strong class="AS">250.000 Users <span>in Asia</span></strong>
+            <strong class="SA">150.000 Users <span>in South America</span></strong>
+          </div>
+          <div class="vt-sm-map-xs-ctlr clearfix">
+            <div id="jmaps"></div>
+            <img class="hide" src="assets/images/home-map-img.jpg">
           </div>
         </div>
       </div>
@@ -348,7 +358,7 @@
             <div class="vt-about-token vt-about-token-02">
               <div class="vt-about-token-inner">
                 <div class="text-right bt-tooltip-btn">
-                  <span data-toggle="tooltip" title="Lorem ipsum dolor"><img src="assets/images/tooltip-btn-icon.svg"></span>
+                  <span data-toggle="tooltip" title="Duis in dignissim nulla. Aliquam lacus ipsum, ullamcorper nec nulla tristique, cursus ultrices magna. Nullam tellus est, egestas a dictum at, luctus quis libero. Nulla massa enim, tincidunt vitae diam at, tincidunt sollicitudin magna."><img src="assets/images/tooltip-btn-icon.svg"></span>
                 </div>
                 <div class="vt-about-token-con">
                   <img src="assets/images/vt-token-icon-02.svg">
@@ -732,6 +742,10 @@
 <script src="assets/js/jquery.counterup.min.js"></script>
 <script src="assets/js/particles.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
+<script src="assets/js/jquery-jvectormap-2.0.3.min.js"></script>
+<script src="assets/js/jquery-jvectormap-world-mill-en.js"></script>
+<script src="assets/js/jquery-jvectormap-continents-mill.js"></script>
+<script src="assets/js/jquery-jvectormap-continents-merc.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/main.js"></script>
 

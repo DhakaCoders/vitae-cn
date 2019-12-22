@@ -819,6 +819,72 @@ if( $('#wdparticales').length ){
 });
 }
 
+/**
+1 AF  Africa
+2 NA  North America
+3 OC  Oceania
+4 AS  Asia
+5 EU  Europe
+6 SA  South America
+*/
+var unselectRegions = {"SA":false, "NA":false, "OC":false, "AF":false, "AS":false, "EU":false};
+$('#jmaps').vectorMap({
+  map: 'continents_mill',
+  zoomButtons: false,
+  zoomOnScroll: false,
+  backgroundColor: 'tranparent',
+  regionsSelectable: true,
+  regionsSelectableOne: true,
+  //selectedRegions: 'SA',
+  regionStyle: {
+    initial: {
+      fill: '#5E606B',
+      "fill-opacity": 1,
+      stroke: 'none',
+      "stroke-width": 0,
+      "stroke-opacity": 1
+    },
+    hover: {
+      fill: '#47A348',
+      "fill-opacity": 1,
+      cursor: 'pointer'
+    },
+    selected: {
+      fill: '#47A348'
+    },
+    selectedHover: {
+      fill: '#47A348',
+    }
+  },
+  onRegionOver: function(e, c){
+    $('#continents-data').removeClass().addClass(c);
+    $('#continents-data strong').hide();
+    $('#continents-data').find('.'+c).css('display', 'block');
+    jmapsObject.setSelectedRegions(unselectRegions); //to unset
+    jmapsObject.setSelectedRegions(c);
+  },
+  onRegionOut: function(e, c){
+    /*   
+    $('#continents-data').removeClass().addClass('WW');
+    $('#continents-data strong').hide();
+    $('#continents-data').find('.worldwide').css('display', 'block');
+    */
+  },
+  onRegionSelected: function(){
+    //console.log('onRegionSelected');
+  }
+});
+
+var jmapsObject = $('#jmaps').vectorMap('get', 'mapObject');
+
+$( "#jmaps" ).mouseleave(function() {
+    $('#continents-data').removeClass().addClass('WW');
+    $('#continents-data strong').hide();
+    $('#continents-data').find('.worldwide').css('display', 'block');
+    jmapsObject.setSelectedRegions(unselectRegions);
+});
+
+
 })(jQuery);
 
 
