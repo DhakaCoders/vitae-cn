@@ -27,7 +27,7 @@ $thisID = get_the_ID();
             $Query = new WP_Query(array( 
                     'post_type'=> 'faqs',
                     'post_status' => 'publish',
-                    'posts_per_page' => 1,
+                    'posts_per_page' => 8,
                     'paged' => $paged,
                     'order'=> 'DESC'
                   ) 
