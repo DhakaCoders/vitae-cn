@@ -17,7 +17,7 @@ $thisID = get_the_ID();
                 if( get_row_layout() == 'introductietekst' ){
                     $title = get_sub_field('titel');
                     $afbeelding = get_sub_field('afbeelding');
-                    echo '<div class="dfp-promo-module clearfix">';
+                    echo '<div class="dfp-faq-promo-module clearfix">';
                       if( !empty($title) ) printf('<h1>%s</h1>', $title);
                       if( !empty($afbeelding) ){
                         echo '<div class="dfp-plate-one-img-bx">', cbv_get_image_tag($afbeelding), '</div>';
@@ -25,7 +25,7 @@ $thisID = get_the_ID();
                     echo '</div>';    
                 }elseif( get_row_layout() == 'teksteditor' ){
                     $beschrijving = get_sub_field('fc_teksteditor');
-                    echo '<div class="dfp-text-module clearfix">';
+                    echo '<div class="dfp-faq-promo-module clearfix">';
                       if( !empty( $beschrijving ) ) echo wpautop($beschrijving);
                     echo '</div>';    
                   }elseif( get_row_layout() == 'afbeelding_tekst' ){
