@@ -92,7 +92,7 @@
 
 .our-community-sec{
 	padding: 65px 0 0 0;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 .our-community-des{
 	padding: 70px 95px 65px 0;
@@ -644,7 +644,7 @@
 #jmaps{
 	height: 355px;
 	left: 0;
-	padding: 0 15px;
+	padding: 0 55px;
 }
 .jvectormap-container svg{
 	position: absolute;
@@ -674,6 +674,24 @@
 }
 .tooltip .arrow{
 
+}
+.feeds-wrap{
+	max-width: 700px;
+	margin: 0 auto;
+}
+.feeds-wrap > div{
+	width: 50%;
+	float: left;
+}
+.feeds-wrap .twitter-feed{
+	padding-right: 20px;
+}
+.feeds-wrap .discord-feed{
+	text-align: right;
+}
+.feeds-wrap .discord-feed iframe,
+.feeds-wrap .twitter-feed iframe{
+	width: 100%;
 }
 @media(max-width: 1799px){
 	.home-bnr-img{
@@ -1118,6 +1136,14 @@
 	.slide-prev-btn, .slide-next-btn{
 		width: 30px;
 		bottom: 23px;
+	}
+	.feeds-wrap > div {
+	    width: 100%;
+	    float: left;
+	}
+	.feeds-wrap .twitter-feed{
+		padding-right: 0;
+		margin-bottom: 30px;
 	}
 }
 

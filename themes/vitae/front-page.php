@@ -30,14 +30,23 @@ if($intro):
   </div>    
 </section>
 <?php endif; ?>
+
   <section class="social-media-platform-sec position-rltv-10">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-7">
         <div class="map-img-grd-col">
-          <strong>200.000 Users <span>in Europe</span></strong>
+          <div id="continents-data" class="WW">
+            <strong class="worldwide">900.000 Users <span>Worldwide</span></strong>
+            <strong class="EU">200.000 Users <span>in Europe</span></strong>
+            <strong class="AF">100.000 Users <span>in Africa</span></strong>
+            <strong class="NA">125.000 Users <span>in North America</span></strong>
+            <strong class="OC">175.000 Users <span>in Oceania</span></strong>
+            <strong class="AS">250.000 Users <span>in Asia</span></strong>
+            <strong class="SA">150.000 Users <span>in South America</span></strong>
+          </div>
           <div class="vt-sm-map-xs-ctlr">
-            <img src="<?php echo THEME_URI; ?>/assets/images/home-map-img.jpg">
+            <div id="jmaps"></div>
           </div>
         </div>
       </div>
@@ -86,10 +95,12 @@ if($intro):
         <div class="row">
           <div class="col-sm-12 col-md-6 order-sm-1 order-md-2">
             <div class="our-community-vdo">
+              <?php if( !empty( $vposertag ) ){ ?>
               <span class="radius-gren"></span>
               <div class="video-play">
                 <?php echo $vposertag; ?>
               </div>
+              <?php } ?>
             </div>
           </div>
           <div class="col-sm-12 col-md-6 order-sm-2 order-md-1">
@@ -330,7 +341,7 @@ if($intro):
             ?>
             <div class="community-we-hdr">
             <?php 
-              if( !empty( $newsletter['titel'] ) ) printf( '<h3>%s<i class="icon-heard"></i></h3>', $newsletter['titel']);  
+              if( !empty( $newsletter['titel'] ) ) printf( '<h3>%s</h3>', $newsletter['titel']);  
               if( !empty( $newsletter['beschrijving'] ) ) echo wpautop($newsletter['beschrijving']);
             ?>
             </div>
@@ -354,10 +365,17 @@ if($intro):
             </div>
             <?php endif; ?>
             <div class="subscribe-cmnt text-center">
-              <img src="<?php echo THEME_URI; ?>/assets/images/Subscribe.png">
+              <div class="feeds-wrap clearfix">
+                <div class="twitter-feed">
+                  <a class="twitter-timeline" data-height="500" href="https://twitter.com/OfficialVitae?ref_src=twsrc%5Etfw">Tweets by OfficialVitae</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="discord-feed">
+                  <iframe src="https://discordapp.com/widget?id=411142379257724929&amp;theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </div>
     </div>    
   </section>
-<?php  get_footer(); ?>
+<?php get_footer(); ?>
