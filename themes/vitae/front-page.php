@@ -30,19 +30,6 @@ if($intro):
   </div>    
 </section>
 <?php endif; ?>
-<div class="cookie-policy-wrp">
-   <div class="cookie-policy-dsc">
-    <span class="cross-white"></span>
-     <h4>Cookie Policy</h4>
-     <p>This site uses cookies to improve your browsing experience.</p>
-     <a href="#"> Meer Info</a>
-     <div class="cookie-btn">
-       <a href="#">Accept Cookies</a>
-     </div>
-   </div>
- </div>
-
-
   <section class="social-media-platform-sec position-rltv-10">
   <div class="container">
     <div class="row">
