@@ -100,7 +100,11 @@ $thisID = get_the_ID();
                       $fc_videoposter = cbv_get_image_tag(get_sub_field('video_afbeelding'));
                     }
                     echo "<div class='dfp-fancy-bx'><div class='video-play'>";
+                    if(!empty($fc_videolink)):
                     printf('<a data-fancybox="" href="%s">%s%s</a>', $fc_videolink, $icon, $fc_videoposter );
+                    else: 
+                      echo $fc_videoposter;
+                    endif;
                     echo "</div></div>";
                   }elseif( get_row_layout() == 'ourcommunity' ){
                     $fc_title = get_sub_field('titel');
