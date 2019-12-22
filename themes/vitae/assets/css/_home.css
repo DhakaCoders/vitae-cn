@@ -100,13 +100,15 @@
 .our-community-des h2{
 	margin-bottom: 25px;
 }
-.our-community-des h2 span{
+.our-community-des h2 span,
+.our-community-des h2 i.icon-heard{
 	display: inline-block;
 	vertical-align: baseline;
 	padding: 0 0 0 80px;
 	background: url(../images/hrt-green.svg);
 	background-repeat: no-repeat;
 	background-size: 65px auto;
+	font-style: normal;
 
 }
 .our-community-des p{
@@ -650,7 +652,8 @@
 	.home-banner{
 		padding-bottom: 70px;
 	}
-	.our-community-des h2 span {
+	.our-community-des h2 span,
+	.our-community-des h2 i.icon-heard {
 	    background-size: 50px auto;
 	    padding-left: 60px;
 	}
@@ -800,7 +803,8 @@
 	.our-community-des{
 		padding-top: 30px;
 	}
-	.our-community-des h2 span {
+	.our-community-des h2 span,
+	.our-community-des h2 i.icon-heard {
 	    background-size: 45px auto;
 	    padding-left: 56px;
 	}
@@ -917,7 +921,8 @@
 	.video-play a i {
 	    max-width: 65px;
 	}
-	.our-community-des h2 span {
+	.our-community-des h2 span,
+	.our-community-des h2 i.icon-heard {
 	    background-size: 39px auto;
 	    padding-left: 49px;
 	}
