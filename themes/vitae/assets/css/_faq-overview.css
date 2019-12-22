@@ -62,6 +62,9 @@ faq-overview-sec-wrp
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
+.faq-pagination-wrp ul li span.current{
+	color: #47a348;
+}
 .faq-pagination-wrp ul li a:after,
 .faq-pagination-wrp ul li span:after{
 	content: "";
