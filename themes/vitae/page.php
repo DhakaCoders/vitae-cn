@@ -174,20 +174,7 @@ $thisID = get_the_ID();
     </div>
   </div>
 </section>
-
-<section class="footer-top-dsc-sec-wrp">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="footer-top-dsc-wrp">
-          <div class="footer-top-dsc">
-            <h3>More about our social media platform</h3>
-            <p>Nunc vel vehicula ligula, at consequat libero. Aenean ultricies sagittis urna a gravida. Quisque aliquet ante ac ullamcorper rutrum. Nullam a ligula quis risus interdum faucibus. Sed facilisis convallis nunc, et ullamcorper erat. Cras non blandit diam, bibendum tristique diam. Pellentesque facilisis justo sit amet dui semper elementum.</p>
-            <a href="#">More About Our Socail Media</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section><!--end of footer-top-dsc-sec-wrp  -->
-<?php get_footer(); ?>
+<?php 
+get_template_part( 'templates/more-about', 'community' );
+get_footer(); 
+?>

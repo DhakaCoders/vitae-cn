@@ -306,16 +306,10 @@ if($intro):
           <div class="col-sm-12">
             <div class="vt-faq-grds">
               <ul class="clearfix ulc">
-              <?php 
-              while($Query->have_posts()): $Query->the_post();  
-                $faqicon = get_field('icon', get_the_ID());
-                $faqicons = '';
-                if(!empty($faqicon)) $faqicons = $faqicon;
-
-              ?>
+              <?php while($Query->have_posts()): $Query->the_post(); ?>
                 <li>
                   <div class="vt-faq-grd-item matchHeightCol">
-                    <i><img src="<?php echo $faqicons; ?>" alt="faq icon"></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/faq-grd-icon.svg"></i>
                     <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
                     <?php the_excerpt(); ?>
                     <a href="<?php the_permalink(); ?>">Read More</a>                
@@ -384,4 +378,4 @@ if($intro):
         </div>
     </div>    
   </section>
-<?php  get_footer(); ?>
+<?php get_footer(); ?>

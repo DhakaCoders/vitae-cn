@@ -248,11 +248,21 @@
 	font-size: 24px;
 	line-height: 26px;
 }
+.dfp-grd-slider-ctlr.dfp-grd-slider-ctlr-2 .dfp-grd-slide-item:hover .dfp-grd-slide-item-inner > a{
+	color: #47A348;
+}
 .dfp-grd-slider-ctlr.dfp-grd-slider-ctlr-2 .dfp-grd-slide-item-inner{
 	box-shadow: 0px 18px 30px #F0F2F6;
 	border-radius: 6px;	
 	padding-bottom: 65px;
 	padding-top: 100px;
+		transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+
+.dfp-grd-slider-ctlr.dfp-grd-slider-ctlr-2 .dfp-grd-slide-item:hover .dfp-grd-slide-item-inner{
+	box-shadow: 0px 20px 20px #e9ecf1;
 }
 
 /*.dftBlockquoteSlider .slick-prev,
@@ -351,7 +361,7 @@
 	height: 56px;
 	color: #66697A;
 	text-transform: uppercase;
-	background: url(../images/dft-two-plate-des-col-lft-btn-icon.svg);
+	background: url(../images/dft-two-plate-des-col-lft-btn-icon.png);
 	background-size: 30px 30px;
 	background-repeat: no-repeat;
 	background-position: 35px center; 
@@ -359,6 +369,15 @@
 	font-size: 16px;
 	line-height: 20px;
 	padding: 10px 10px 10px 70px;
+}
+.dft-two-plate-des-col-lft a:hover{
+	background: url(../images/dft-two-plate-des-col-lft-btn-icon-white.png)!important;
+	background-size: 30px 30px!important;
+	background-repeat: no-repeat!important;
+	background-position: 35px center!important; 
+	background-color: #47A348!important;
+	border-color: #47A348!important;
+	color: #fff;
 }
 .dft-two-plate-des-col-rgt a{
 	display: flex;
@@ -379,7 +398,15 @@
 	line-height: 20px;
 	padding: 10px 10px 10px 35px;
 }
-
+.dft-two-plate-des-col-rgt a:hover{
+	background: url(../images/dft-two-plate-des-col-rgt-btn-icon-white.svg)!important;
+	background-size: 18px 16px!important;
+	background-repeat: no-repeat!important;
+	background-position: right 35px center!important; 
+	background-color: #47A348!important;
+	border-color: #47A348!important;
+	color: #fff;
+}
 
 .dft-join-the-community{
 	padding-bottom: 45px;
@@ -410,6 +437,15 @@
     background-repeat: no-repeat;
     background-size: 45px 42px;	
 }
+.dft-join-the-community-inner h3 i.icon-heard{
+	display: inline-block;
+	vertical-align: bottom;
+	width: 55px;
+	height: 42px;
+	background: url(../images/hrt-icon-white.svg);
+    background-repeat: no-repeat;
+    background-size: 45px 42px;	
+}
 .dft-join-the-community-inner div{
 	margin-left: auto;
   	order: 2;
@@ -428,6 +464,9 @@
 	height: 56px;
 	text-transform: uppercase;
 	padding: 17px 20px;
+}
+.dft-join-the-community-inner div a:hover{
+	background-color: #fff;
 }
 .dft-img-des-grd-cols{
 	margin: 0 -12px;

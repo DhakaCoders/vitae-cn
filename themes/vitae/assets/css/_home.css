@@ -296,15 +296,18 @@
 }
 
 .partnersSlider .partnersSlideItem,
-.exchangeSolutionSlider .esSlideItem{
+.exchangeSolutionSlider .esSlideItem,
+.dfp-grd-slider .dfp-grd-slide-item{
 	display: none;
 }
 .partnersSlider .partnersSlideItem:first-child,
-.exchangeSolutionSlider .esSlideItem:first-child{
+.exchangeSolutionSlider .esSlideItem:first-child,
+.dfp-grd-slider .dfp-grd-slide-item:first-child{
 	display: inline-block;
 }
 .partnersSlider.slick-initialized .partnersSlideItem,
-.exchangeSolutionSlider.slick-initialized .esSlideItem{
+.exchangeSolutionSlider.slick-initialized .esSlideItem,
+.dfp-grd-slider.slick-initialized .dfp-grd-slide-item{
 	display: inline-block;
 }
 .home-vt-faq-sec{
