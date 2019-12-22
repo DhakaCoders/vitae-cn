@@ -189,11 +189,11 @@ contact-form-sec-wrp
 }
 
 .contact-form div.wpforms-container-full .wpforms-form label.wpforms-error{
-	font-size: 16px !important;
+	font-size: 14px !important;
 	line-height: 18px !important;
 	color: #FF5C26 !important;
 	font-weight: 400 !important;
-	padding-top: 10px;
+	padding-top: 5px;
 }
 .contact-prd-btm .subscribe-cmnt {
     padding-bottom: 75px;
