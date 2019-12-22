@@ -625,7 +625,40 @@
 	-ms-transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
 }
+#jmaps{
+	height: 355px;
+	left: 0;
+	padding: 0 15px;
+}
+.jvectormap-container svg{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	left: 0;
+}
+#continents-data strong{
+	display: none;
+}
+#continents-data.WW .worldwide{
+	display: block;
+}
+.jvectormap-tip{
+	z-index: 10;
+}
+.tooltip-inner{
+	padding: 15px 10px;
+	background: #47A348;
+	box-shadow: 0px 18px 30px #F0F2F6;
+}
+.bs-tooltip-bottom .arrow::before{
+	border-bottom-color: #47A348;
+}
+.bs-tooltip-top .arrow::before{
+	border-top-color: #47A348;
+}
+.tooltip .arrow{
 
+}
 @media(max-width: 1799px){
 	.home-bnr-img{
 		margin-right: -100px!important;
