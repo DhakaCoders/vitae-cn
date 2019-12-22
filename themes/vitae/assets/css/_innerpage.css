@@ -81,6 +81,18 @@
     background-size: 79px 73px;
     background-position: 2px center;
 }
+.dfp-promo-module h1 i{
+	width: 95px;
+    height: 73px;
+    display: inline-block;
+    vertical-align: baseline;
+    background: url(../images/hrt-green-lg.svg);
+    background-repeat: no-repeat;
+    background-size: 79px auto;
+    position: relative;
+    top: 11px;
+}
+
 
 
 .default-page-con .dfp-promo-module{

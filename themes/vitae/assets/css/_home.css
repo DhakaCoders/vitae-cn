@@ -107,8 +107,21 @@
 	background: url(../images/hrt-green.svg);
 	background-repeat: no-repeat;
 	background-size: 65px auto;
+	font-style: normal;
 
 }
+.our-community-des h2 i.icon-heard{
+	width: 80px;
+	height: 60px;
+	display: inline-block;
+	vertical-align: baseline;
+	background: url(../images/hrt-green.svg);
+	background-repeat: no-repeat;
+	background-size: 65px auto;
+	position: relative;
+	top: 11px;
+}
+
 .our-community-des p{
 	margin-bottom: 30px;
 }
@@ -361,15 +374,30 @@
 }
 .community-we-hdr h3{
 	margin-bottom: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .community-we-hdr span{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 0 75px 0 0;
+    background: url(../images/hrt-green.svg);
+    background-repeat: no-repeat;
+    background-size: 58px 54px;
+    background-position: right 3px center;
+    font-style: normal;
+}
+.community-we-hdr h3 i{
 	display: inline-block;
 	vertical-align: baseline;
 	padding: 10px 75px 10px 0;
     background: url(../images/hrt-green.svg);
     background-repeat: no-repeat;
     background-size: 58px 54px;
+    height: 54px;
     background-position: right 3px center;
+    position: relative;
+    top: 10px;
 }
 .community-we-hdr p{
 	font-size: 18px;
@@ -650,7 +678,7 @@
 	.home-banner{
 		padding-bottom: 70px;
 	}
-	.our-community-des h2 span {
+	.our-community-des h2 span{
 	    background-size: 50px auto;
 	    padding-left: 60px;
 	}
@@ -800,7 +828,7 @@
 	.our-community-des{
 		padding-top: 30px;
 	}
-	.our-community-des h2 span {
+	.our-community-des h2 span{
 	    background-size: 45px auto;
 	    padding-left: 56px;
 	}
@@ -1078,7 +1106,7 @@
 	.community-we-hdr h3 {
 	    font-size: 28px;
 	}
-	.community-we-hdr span {
+	.community-we-hdr span{
 	    background-size: 40px auto;
 	    padding-right: 57px;
 	}

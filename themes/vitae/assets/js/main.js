@@ -169,6 +169,9 @@ $('.lm-social-platform-tab-trg li > a').on('click', function(e){
 /*if( $('.tooltip-btn').length ){
   $('[data-toggle="tooltip"]').tooltip();
 }*/
+if($('.counter').length){
+  $('.counter').counterUp();
+}
 if($('.mHc').length){
     $('.mHc').matchHeight();
 };

@@ -23,6 +23,18 @@
     background-repeat: no-repeat;
     background-size: 45px auto;
 }
+.footer-top-dsc h3 i{
+	width: 53px;
+    height: 42px;
+    display: inline-block;
+    vertical-align: baseline;
+    background: url(../images/hrt-icon-white.svg);
+    background-repeat: no-repeat;
+    background-size: 45px auto;
+    position: relative;
+    top: 11px;
+}
+
 .footer-top-dsc h3 {
     margin: 0;
     margin-bottom: 20px;

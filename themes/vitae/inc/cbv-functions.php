@@ -297,3 +297,37 @@ function downloadTag( $dfile ){
     else
         echo "<a>";
 }
+
+function APIdata(){
+  $url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest';
+  $parameters = [
+    'symbol' => 'VITAE'
+  ];
+
+  $headers = [
+    'Accepts: application/json',
+    'X-CMC_PRO_API_KEY: b54d3264-554c-4758-beae-f4931fce7eaf'
+  ];
+  $qs = http_build_query($parameters); // query string encode the parameters
+  $request = "{$url}?{$qs}"; // create the request URL
+
+
+  $curl = curl_init(); // Get cURL resource
+  // Set cURL options
+  curl_setopt_array($curl, array(
+    CURLOPT_URL => $request,            // set the request URL
+    CURLOPT_HTTPHEADER => $headers,     // set the headers 
+    CURLOPT_RETURNTRANSFER => 1         // ask for raw response instead of bool
+  ));
+
+  $response = curl_exec($curl); // Send the request, save the response
+  $data = json_decode($response);
+  $VITAE = $data->data->VITAE;
+
+  $preMine = $VITAE->total_supply;
+  $maxSupply = $VITAE->max_supply;
+  $superNodeBurn = $VITAE->circulating_supply;
+  $remainingPreMine = $preMine - $superNodeBurn;
+  //echo '<pre>', print_r($data), '</pre>'; // print json decoded response
+  curl_close($curl); // Close request
+}
