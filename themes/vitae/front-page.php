@@ -308,10 +308,16 @@ if($intro):
           <div class="col-sm-12">
             <div class="vt-faq-grds">
               <ul class="clearfix ulc">
-              <?php while($Query->have_posts()): $Query->the_post();  ?>
+              <?php 
+              while($Query->have_posts()): $Query->the_post();  
+                $faqicon = get_field('icon', get_the_ID());
+                $faqicons = '';
+                if(!empty($faqicon)) $faqicons = $faqicon;
+
+              ?>
                 <li>
                   <div class="vt-faq-grd-item matchHeightCol">
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/faq-grd-icon.svg"></i>
+                    <i><img src="<?php echo $faqicons; ?>" alt="faq icon"></i>
                     <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
                     <?php the_excerpt(); ?>
                     <a href="<?php the_permalink(); ?>">Read More</a>                
@@ -343,7 +349,7 @@ if($intro):
             ?>
             <div class="community-we-hdr">
             <?php 
-              if( !empty( $newsletter['titel'] ) ) printf( '<h3><span>%s</span></h3>', $newsletter['titel']);  
+              if( !empty( $newsletter['titel'] ) ) printf( '<h3>%s<i class="icon-heard"></i></h3>', $newsletter['titel']);  
               if( !empty( $newsletter['beschrijving'] ) ) echo wpautop($newsletter['beschrijving']);
             ?>
             </div>
