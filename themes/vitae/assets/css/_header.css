@@ -63,14 +63,16 @@ nav.main-nav > ul > li.menu-item-has-children > a{
 	position: relative;
 }
 nav.main-nav > ul > li.menu-item-has-children > a:before {
+	font-family: "Font Awesome 5 Free";
     content: "\f107";
-    font-family: FontAwesome;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 900;
     text-decoration: inherit;
     right: -20px;
     position: absolute;
     font-size: 16px;
+    top: 1px;
+    line-height: 18px;
 }
 nav.main-nav > ul > li.menu-item-has-children > a:hover:before,
 nav.main-nav > ul > li.menu-item-has-children:hover > a:before{
