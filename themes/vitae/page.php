@@ -149,7 +149,6 @@ $thisID = get_the_ID();
                             $classiposition = 'dft-two-plate-des-col-lft';
                           }
                         echo '<div class="dfp-grd-slide-item">';
-
                         echo '<div class="dfp-grd-slide-item-inner matchHeightCol">
                           <div class="dfp-grd-slide-item-img">
                             <a target="_blank" href="'.$plurl.'"><img src="'.$plogosrc.'" alt=""></a>
