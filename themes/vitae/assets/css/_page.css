@@ -72,14 +72,14 @@ body.vt-drk-page-ctlr  .ftr-btm-menu ul li a:after{
 .cookie-policy-dsc{
 	padding: 30px 30px;
 	color: #fff;
-	width: 440px;
+	width: 400px;
 	font-size: 16px;
 	line-height: 24px;
 	text-align: center;
 	background: url(../images/cookie-bg.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	padding: 120px 70px 80px 60px;
+	padding: 100px 78px 80px 64px;
 	position: relative;
 }
 .cookie-policy-dsc h4,
@@ -89,6 +89,7 @@ body.vt-drk-page-ctlr  .ftr-btm-menu ul li a:after{
 	line-height: 30px;
 	color: #fff;
 	margin-bottom: 10px;
+	display: block;
 }
 .cookie-policy-dsc > a {
 	display: inline-block;
@@ -128,11 +129,11 @@ body.vt-drk-page-ctlr  .ftr-btm-menu ul li a:after{
     border-radius: 6px;
     font-weight: 600;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 20px;
     text-transform: uppercase;
     color: #FFFFFF!important;
     height: 48px;
-    padding: 11px 30px!important;
+    padding: 15px 30px!important;
     background-color: transparent!important;
 }
 .cookie-btn a:hover{
@@ -143,8 +144,8 @@ body.vt-drk-page-ctlr  .ftr-btm-menu ul li a:after{
 
 .cross-white {
     position: absolute;
-    right: 28px;
-    top: 69px;
+    right: 21px;
+    top: 65px;
     width: 49px;
     height: 49px;
     background-color: #10303C;
