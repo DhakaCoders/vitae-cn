@@ -4,25 +4,25 @@
 */
 get_header('page'); 
 $thisID = get_the_ID();
-
-$title = get_field('titel', $thisID);
-if(empty($ctitle)){
-  $title = get_the_title($thisID);
-}
-$content = get_field('beschrijving', $thisID);
-$shortcode = get_field('shortcode', $thisID);
 ?>
 <section class="faq-overview-sec-wrp">
   <div class="container">
       <div class="row">
+        <?php 
+        $intro = get_field('intro', $thisID);
+        if($intro):
+        ?>
         <div class="col-sm-12">
           <div class="vt-sec-hdr">
-            <a>Learn More</a>
-            <h1>Frequently Asked Questions</h1>
-            <p>Nunc vel vehicula ligula, at consequat libero. Aenean ultricies sagittis urna a gravida. Quisque aliquet ante ac ullamcorper rutrum. Nullam a ligula quis risus interdum faucibus. Sed facilisis convallis nunc, et ullamcorper erat. Cras non blandit diam, bibendum tristique diam. Pellentesque facilisis justo sit amet dui semper elementum.</p>
+            <?php 
+              if( !empty( $intro['subtitel'] ) ) printf( '<a>%s</a>', $intro['subtitel']);  
+              if( !empty( $intro['titel'] ) ) printf( '<h1>%s</h1>', $intro['titel']);  
+              if( !empty( $intro['beschrijving'] ) ) echo wpautop($intro['beschrijving']);
+            ?>
           </div>
         </div>
-        <?php 
+        <?php
+        endif; 
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $Query = new WP_Query(array( 
                     'post_type'=> 'faqs',

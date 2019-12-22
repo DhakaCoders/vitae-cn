@@ -178,7 +178,7 @@ function custom_body_classes($classes){
     $classes[] = join(' ', array_filter($browsers, function ($browser) {
         return $GLOBALS[$browser];
     }));
-    if ( is_page_template( 'page-about-token.php' ) ) {
+    if ( is_page_template( 'page-about-token.php' ) OR is_page_template( 'page-wallet.php' ) OR is_page_template( 'page-exchange.php' ) ) {
         $classes[] = 'vt-drk-page-ctlr';
     }
     return $classes;
@@ -199,6 +199,10 @@ function wrapper_class(){
     $class = 'faqOverview';
   }elseif(is_page_template( 'page-socialmedia-platform.php' )){
     $class = 'learmMore';
+  }elseif(is_page_template( 'page-wallet.php' )){
+    $class = 'walletDark';
+  }elseif(is_page_template( 'page-exchange.php' )){
+    $class = 'walletDark edExwd';
   }
   return $class;
 }
