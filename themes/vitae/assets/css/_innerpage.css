@@ -732,12 +732,24 @@ Gallery design
 		background-size: 70px auto;
 		padding-left: 90px;
 	}
+	.dfp-promo-module h1 i {
+	    width: 86px;
+	    height: 65px;
+	    background-size: 70px auto;
+	    top: 11px;
+	}
 }
 
 @media(max-width: 1199px){
 	.dfp-promo-module h1 span {
 	    background-size: 65px auto;
 	    padding-left: 85px;
+	}
+	.dfp-promo-module h1 i {
+	    width: 80px;
+	    height: 60px;
+	    background-size: 65px auto;
+	    top: 11px;
 	}
 	.table-dsc table tr th{
 		font-size: 16px;
@@ -750,6 +762,12 @@ Gallery design
 	.dfp-promo-module h1 span {
 	    background-size: 56px auto;
 	    padding-left: 75px;
+	}
+	.dfp-promo-module h1 i {
+	    width: 70px;
+	    height: 52px;
+	    background-size: 56px auto;
+	    top: 11px;
 	}
 	.default-page-con{
 		padding-left: 0;
@@ -909,6 +927,12 @@ Gallery design
 	.dfp-promo-module h1 span {
 	    background-size: 50px auto;
 	    padding-left: 65px;
+	}
+	.dfp-promo-module h1 i {
+	    width: 60px;
+	    height: 45px;
+	    background-size: 50px auto;
+	    top: 11px;
 	}
 	.default-page-con .dfp-promo-module {
 	    padding-bottom: 30px;

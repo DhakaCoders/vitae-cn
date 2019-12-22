@@ -827,6 +827,9 @@ if( $('#wdparticales').length ){
 5 EU  Europe
 6 SA  South America
 */
+
+if( $('#jmaps').length ){
+
 var unselectRegions = {"SA":false, "NA":false, "OC":false, "AF":false, "AS":false, "EU":false};
 $('#jmaps').vectorMap({
   map: 'continents_mill',
@@ -884,6 +887,7 @@ $( "#jmaps" ).mouseleave(function() {
     jmapsObject.setSelectedRegions(unselectRegions);
 });
 
+}
 
 })(jQuery);
 

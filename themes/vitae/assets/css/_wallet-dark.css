@@ -770,6 +770,9 @@
 	    bottom: 24px;
 	    border-radius: 20px;
 	}
+	.mobile-img-feature-innr i{
+		max-width: 50px;
+	}
 
 }
 

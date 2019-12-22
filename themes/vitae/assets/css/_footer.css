@@ -441,7 +441,12 @@ Responsive css
 	.ftr-btm-menu ul li:last-child a{
 		padding-right: 0;
 	}
-
+	.footer-top-dsc h3 i {
+	    width: 49px;
+	    height: 36px;
+	    background-size: 40px auto;
+	    top: 6px;
+	}
 }
 
 
