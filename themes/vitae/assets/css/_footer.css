@@ -282,6 +282,14 @@ ul.ftr-main-menu li{
 	position: relative;
 	top: 2px;
 }
+#cookie-law-info-bar {
+    /* border: 0; */
+    padding: 0 !important;
+    width: 0 !important;
+}
+.cookie-policy-wrp br {
+    display: none;
+}
 /*
 ----------------------
 Responsive css

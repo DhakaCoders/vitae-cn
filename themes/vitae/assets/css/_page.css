@@ -82,7 +82,8 @@ body.vt-drk-page-ctlr  .ftr-btm-menu ul li a:after{
 	padding: 120px 70px 80px 60px;
 	position: relative;
 }
-.cookie-policy-dsc h4{
+.cookie-policy-dsc h4,
+.cookie-policy-dsc strong{
 	font-weight: 600;
 	font-size: 24px;
 	line-height: 30px;
