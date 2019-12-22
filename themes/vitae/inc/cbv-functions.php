@@ -330,4 +330,6 @@ function APIdata(){
   $remainingPreMine = $preMine - $superNodeBurn;
   //echo '<pre>', print_r($data), '</pre>'; // print json decoded response
   curl_close($curl); // Close request
+
+  return $VITAE;
 }
