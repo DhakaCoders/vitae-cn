@@ -443,6 +443,7 @@
     padding-top: 5px;	
 }
 #newsletter-form #wp-form input[type="email"]{
+	max-width: initial;
 	width: 100%;
 	border: 2px solid #F3F3F3;
 	height: 72px;
@@ -477,8 +478,9 @@
 	right: 0;
 	height: 72px;
 	width: 208px;
-	top: 30px;	
+	top: 40px;	
 	z-index: 5;
+	padding-top: 0;
 }
 #newsletter-form #wp-form .wpforms-submit-container button{
 	height: 100%;

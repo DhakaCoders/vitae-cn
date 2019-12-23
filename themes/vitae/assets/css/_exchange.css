@@ -63,14 +63,14 @@
     padding-left: 63px;
     padding-right: 63px;
 }
-.exchangeSolutionSlider .slick-list {
+/*.exchangeSolutionSlider .slick-list {
     padding-left: 10px;
     padding-right: 10px;
-}
+}*/
 .esSlideItemInner {
     padding: 110px 10px 65px;
     text-align: center;
-    box-shadow: 0px 18px 30px rgba(10, 17, 27, 0.6);
+    box-shadow: 0px 10px 15px rgba(10, 17, 27, 0.6);
     border-radius: 6px;
     background: #141C28;
     position: relative;
