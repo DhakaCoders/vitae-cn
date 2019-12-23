@@ -2,7 +2,8 @@
 	h1{
 		font-size: 60px;
 	}
-	h2{
+	h2,
+	.lm-social-platform-map-hdr #continents-data strong{
 		font-size: 54px ;
 	}
 }
@@ -16,7 +17,8 @@
 	h1{
 		font-size: 55px;
 	}
-	h2{
+	h2,
+	.lm-social-platform-map-hdr #continents-data strong{
 		font-size: 48px ;
 	}
 	.contac-form-dsc h1,
@@ -38,7 +40,8 @@
 	h1{
 		font-size: 50px;
 	}
-	h2{
+	h2,
+	.lm-social-platform-map-hdr #continents-data strong{
 		font-size: 45px ;
 	}
 	h3{
@@ -70,7 +73,8 @@
 	h1{
 		font-size: 45px;
 	}
-	h2{
+	h2,
+	.lm-social-platform-map-hdr #continents-data strong{
 		font-size: 40px ;
 	}
 	h3{
@@ -106,7 +110,8 @@
 	h1{
 		font-size: 40px;
 	}
-	h2{
+	h2,
+	.lm-social-platform-map-hdr #continents-data strong{
 		font-size: 34px ;
 	}
 	h3{

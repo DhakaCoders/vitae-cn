@@ -653,6 +653,14 @@
 	left: 0;
 	padding: 0 55px;
 }
+.dft-map-module #jmaps{
+	height: 395px;
+	left: 0;
+	padding: 0 55px;
+}
+.lm-social-platform-map #jmaps{
+	height: 615px;
+}
 .jvectormap-container svg{
 	position: absolute;
 	width: 100%;

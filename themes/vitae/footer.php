@@ -52,7 +52,7 @@ if( is_array($logoObj) ){
               </ul>
               <?php endif; ?>
               <div class="ftr-socail-btn hide-sm">
-                <span href="#">VITAE.COM</span>
+                <a href="#">VITAE.COM</a>
               </div>
             </div>
           </div>

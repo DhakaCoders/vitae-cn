@@ -18,7 +18,9 @@ $thisID = get_the_ID();
       <div class="row">
         <div class="col-lg-6 col-md-12 order-2">
           <div class="about-drk-img">
-            <img src="<?php echo $introsrc; ?>" alt="intro">
+            <?php if(!empty($intro['afbeelding'])){ ?>
+              <img src="<?php echo $introsrc; ?>" alt="intro">
+            <?php } ?>
           </div>
         </div>
         <div class="col-lg-6 col-md-12 order-1">
@@ -233,7 +235,9 @@ $thisID = get_the_ID();
     <div class="row">
       <div class="col-lg-6 col-md-12">
         <div class="about-drk-ipsum-btm-img">
-          <img src="<?php echo $intro2src; ?>" alt="intro2">
+          <?php if(!empty($intro2['afbeelding'])){ ?>
+            <img src="<?php echo $intro2src; ?>" alt="intro2">
+          <?php } ?>
         </div>
       </div>
       <div class="col-lg-6 col-md-12">

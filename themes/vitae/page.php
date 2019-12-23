@@ -110,11 +110,6 @@ $thisID = get_the_ID();
                     printf('<h3>%s</h3>', $fc_title);
                     printf('<div><a target="%s" href="%s">%s</a></div>', $fc_knop['target'], $fc_knop['url'], $fc_knop['title']);
                     echo "</div></div>";
-                  }elseif( get_row_layout() == 'map' ){
-                    echo '<div class="dft-map-module"><div class="dft-map-module-inner">';
-                    echo '<strong>200.000 Users <span>in Europe</span></strong>';
-                    echo '<div><img src="'.THEME_URI.'/assets/images/dft-map-img.jpg"></div>';
-                    echo '</div></div>';
                   }elseif( get_row_layout() == 'tabel' ){
                     $fc_table = get_sub_field('fc_table');
                     cbv_table($fc_table);
@@ -165,6 +160,33 @@ $thisID = get_the_ID();
                   }elseif( get_row_layout() == 'gap' ){
                    $gap = get_sub_field('aantal_pixels');
                    printf('<div class="gap clearfix" data-value="'.$gap.'" data-md="10" data-xs="10" data-sm="10" data-xxs="10"></div>', $gap);
+                  }elseif( get_row_layout() == 'social_media_statistics' ){
+                    $use_simple_image = get_sub_field('use_simple_image');
+                    if( $use_simple_image ){
+                    $statistics_afbeelding = get_sub_field('statistics_afbeelding');
+                    echo '<div class="dft-map-module"><div class="dft-map-module-inner">';
+                      if( !empty( $statistics_afbeelding['titel'] ) )
+                        printf('<strong>%s</span></strong>', $statistics_afbeelding['titel']);
+                      if( !empty( $statistics_afbeelding['afbeelding'] ) )
+                      echo '<div><img src="'.THEME_URI.'/assets/images/dft-map-img.jpg"></div>';
+                      printf('<div><img src="%s"></div>', $statistics_afbeelding['afbeelding']);
+                    echo '</div></div>';
+                    }else{
+echo '<div class="dft-map-module"><div class="dft-map-module-inner">';
+echo '<div id="continents-data" class="WW">
+  <strong class="worldwide">900.000 Users <span>Worldwide</span></strong>
+  <strong class="EU">200.000 Users <span>in Europe</span></strong>
+  <strong class="AF">100.000 Users <span>in Africa</span></strong>
+  <strong class="NA">125.000 Users <span>in North America</span></strong>
+  <strong class="OC">175.000 Users <span>in Oceania</span></strong>
+  <strong class="AS">250.000 Users <span>in Asia</span></strong>
+  <strong class="SA">150.000 Users <span>in South America</span></strong>
+</div>
+<div class="vt-sm-map-xs-ctlr">
+  <div id="jmaps"></div>
+</div>';
+echo '</div></div>';
+                    }
                   }
               endwhile;
               }

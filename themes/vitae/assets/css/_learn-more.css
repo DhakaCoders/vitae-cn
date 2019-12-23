@@ -101,6 +101,15 @@
 .lm-social-platform-map-hdr h2 span{
 	color: #47A348
 }
+.lm-social-platform-map-hdr #continents-data strong{
+	font-weight: 600;
+	font-size: 56px;
+	line-height:60px;
+	color: #47A348;
+}
+.lm-social-platform-map-hdr #continents-data strong span{
+	color: #10303C;
+}
 .lm-social-platform-map img{
 	max-width: 1166px;
 	width:100%;
@@ -399,7 +408,8 @@
 		line-height: 60px;
 	}
 	.lm-mauris-aliquam-des h2,
-	.lm-social-platform-map-hdr h2 {
+	.lm-social-platform-map-hdr h2,
+	.lm-social-platform-map-hdr #continents-data strong{
 	    line-height: 55px;
 	}
 	.lm-mauris-aliquam-des {
@@ -450,7 +460,8 @@
 		line-height: 55px;
 	}
 	.lm-mauris-aliquam-des h2,
-	.lm-social-platform-map-hdr h2 {
+	.lm-social-platform-map-hdr h2,
+	.lm-social-platform-map-hdr #continents-data strong{
 	    line-height: 50px;
 	}
 	.lm-social-platform-block .lmSocialSilder-item {
@@ -558,7 +569,8 @@
 		line-height: 50px;
 	}
 	.lm-mauris-aliquam-des h2,
-	.lm-social-platform-map-hdr h2 {
+	.lm-social-platform-map-hdr h2,
+	.lm-social-platform-map-hdr #continents-data strong{
 	    line-height: 45px;
 	}
 	.lm-homework-des-sec .lm-homework-des-top-bar h3{

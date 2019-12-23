@@ -84,10 +84,18 @@ $thisID = get_the_ID();
           </div>
           <div class="lm-social-platform-map-con">
             <div class="lm-social-platform-map-hdr">
-              <h2><span>200.000 Users</span> in Europe</h2>
+<div id="continents-data" class="WW">
+  <strong class="worldwide">900.000 Users <span>Worldwide</span></strong>
+  <strong class="EU">200.000 Users <span>in Europe</span></strong>
+  <strong class="AF">100.000 Users <span>in Africa</span></strong>
+  <strong class="NA">125.000 Users <span>in North America</span></strong>
+  <strong class="OC">175.000 Users <span>in Oceania</span></strong>
+  <strong class="AS">250.000 Users <span>in Asia</span></strong>
+  <strong class="SA">150.000 Users <span>in South America</span></strong>
+</div>
             </div>
             <div class="lm-social-platform-map">
-              <img src="<?php echo THEME_URI; ?>/assets/images/learn-more-user-map.png" alt="" />
+  <div id="jmaps"></div>
             </div>
           </div>
         </div>
@@ -102,7 +110,7 @@ $thisID = get_the_ID();
     $clinks = $comnty['links'];
     $cmpostersrc = '';
     if(!empty($comnty['afbeelding'])){
-      $cmpostersrc = $comnty['afbeelding'];
+      $cmpostersrc = cbv_get_image_src($comnty['afbeelding'], 'lmimg1');
     }
     $knop = $clinks['knop'];
     $cmurl = '#';
@@ -116,9 +124,11 @@ $thisID = get_the_ID();
       <div class="col-sm-12">
         <div class="lm-mauris-aliquam-innr">
           <div class="lm-mauris-aliquam-img">
-            <a href="<?php echo $cmurl; ?>">
-              <img src="<?php echo $cmpostersrc; ?>" alt="">
+            <?php if(!empty($comnty['afbeelding'])){ ?>
+            <a>
+              <img src="<?php echo $cmpostersrc; ?>" alt="Grid image 1">
             </a>
+            <?php } ?>
           </div>
           <div class="lm-mauris-aliquam-des">
             <?php 
@@ -145,7 +155,7 @@ $fears = $features['features'];
         <div class="lm-community-innr clearfix">
           <div class="lm-community-head text-center">
             <?php 
-              if( !empty( $features['titel'] ) ) printf( '<h3>%s</h3>', $features['titel']);  
+              if( !empty( $features['title'] ) ) printf( '<h3>%s</h3>', $features['title']);  
               if( !empty( $features['beschrijving'] ) ) echo wpautop($features['beschrijving']);
             ?>
           </div>

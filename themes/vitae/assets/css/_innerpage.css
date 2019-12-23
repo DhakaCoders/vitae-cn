@@ -474,7 +474,7 @@
 .dft-img-grd{
 	float: left;
 	width: 50%;
-	padding: 20px 12px 40px;
+	padding: 20px 12px 20px;
 }
 .dft-img-grd-inner-img{
 	border-radius: 6px;
@@ -490,7 +490,9 @@
 .dft-img-grd-inner-des p:last-of-type{
 	margin-bottom: 0;
 }
-
+.dft-map-module{
+	padding-top: 20px;
+}
 .dft-map-module-inner{
 	background: #FFFFFF;
 	box-shadow: 0px 18px 30px #F0F2F6;
