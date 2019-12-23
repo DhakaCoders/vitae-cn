@@ -84,7 +84,7 @@ if( is_array($logoObj) ){
               ?>
            </div>
            <div class="ftr-btm-rgt">
-             <a href="#">webdesign by conversal</a>
+             <a target="_blank" href="https://www.conversal.be/">webdesign by conversal</a>
            </div>
          </div>
        </div>
