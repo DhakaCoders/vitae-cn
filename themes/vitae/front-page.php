@@ -125,12 +125,14 @@ if($intro):
       <div class="row">
         <div class="col-md-12 col-lg-5 order-md-1 order-lg-2">
           <?php 
-            $abtoken = get_field('about_the_token', HOMEID);
-            if($abtoken):
+            $vitaetoken = get_field('about_the_token', HOMEID);
+            if($vitaetoken):
+              $abtoken = $vitaetoken['rights'];
           ?>
           <div class="vt-about-the-token-des">
             <?php 
               if( !empty( $abtoken['titel'] ) ) printf( '<h2>%s</h2>', $abtoken['titel']);  
+              if( !empty( $abtoken['subtitel'] ) ) printf( '<span class="subtitle">%s</span>', $abtoken['subtitel']);  
               if( !empty( $abtoken['Beschrijving'] ) ) echo wpautop($abtoken['Beschrijving']);
               $knops = $abtoken['knops'];
               if($knops):
@@ -152,6 +154,7 @@ if($intro):
         <div class="ol-md-12 col-lg-7 order-md-2 order-lg-1">
           <?php 
             if(function_exists('APIdata')):
+              $lefts = $vitaetoken['lefts'];
             $vitae = APIdata();
            //var_dump($vitae);
             $preMine = $maxSupply = $superNodeBurn = $remainingPreMine = 0;
@@ -164,27 +167,37 @@ if($intro):
             }
           ?>
           <div class="vt-about-tokens">
+            <?php 
+            $maximum_supply_titel = $lefts['maximum_supply_titel'];
+            $maximum_supply_tooltip = $lefts['maximum_supply_tooltip'];
+            $pre_mine_titel = $lefts['pre_mine_titel'];
+            $pre_mine_tooltip = $lefts['pre_mine_tooltip'];
+            $super_node_titel = $lefts['super_node_titel'];
+            $super_node_tooltip = $lefts['super_node_tooltip'];
+            $remaining_pre_mine_titel = $lefts['remaining_pre_mine_titel'];
+            $remaining_pre_mine_tooltip = $lefts['remaining_pre_mine_tooltip'];
+            ?>
             <div class="vt-about-token vt-about-token-01">
               <div class="vt-about-token-inner">
                 <div class="text-right bt-tooltip-btn">
-                  <span data-toggle="tooltip" title="Lorem ipsum dolor"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg"></span>
+                  <span data-toggle="tooltip" title="<?php echo $pre_mine_tooltip; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg"></span>
                 </div>
                 <div class="vt-about-token-con">
                   <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-01.svg">
                   <?php printf('<strong>%s</strong>', $preMine); ?>
-                  <span>Pre Mine</span>
+                  <span><?php echo $pre_mine_titel; ?></span>
                 </div>
               </div>
             </div>
             <div class="vt-about-token vt-about-token-02">
               <div class="vt-about-token-inner">
                 <div class="text-right bt-tooltip-btn">
-                  <span data-toggle="tooltip" title="Lorem ipsum dolor"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg"></span>
+                  <span data-toggle="tooltip" title="<?php echo $maximum_supply_tooltip; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg"></span>
                 </div>
                 <div class="vt-about-token-con">
                   <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-02.svg">
                   <?php printf('<strong>%s</strong>', $maxSupply); ?>
-                  <span>Maximum Supply</span>
+                  <span><?php echo $maximum_supply_titel; ?></span>
                 </div>
               </div>
             </div>
@@ -196,24 +209,24 @@ if($intro):
             <div class="vt-about-token vt-about-token-03">
               <div class="vt-about-token-inner">
                 <div class="text-right bt-tooltip-btn">
-                  <span data-toggle="tooltip" title="Lorem ipsum dolor"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg"></span>
+                  <span data-toggle="tooltip" title="<?php echo $super_node_tooltip; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg"></span>
                 </div>
                 <div class="vt-about-token-con">
                   <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-03.svg">
                   <?php printf('<strong>%s</strong>', $superNodeBurn); ?>
-                  <span>Super Node Burn</span>
+                  <span><?php echo $super_node_titel; ?></span>
                 </div>
               </div>
             </div>
             <div class="vt-about-token vt-about-token-04">
               <div class="vt-about-token-inner">
                 <div class="text-right bt-tooltip-btn">
-                  <span data-toggle="tooltip" title="Lorem ipsum dolor"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg"></span>
+                  <span data-toggle="tooltip" title="<?php echo $remaining_pre_mine_tooltip; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg"></span>
                 </div>
                 <div class="vt-about-token-con">
                   <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-04.svg">
                   <?php printf('<strong>%s</strong>', $remainingPreMine); ?>
-                  <span>Remaining Pre Mine</span>
+                  <span><?php echo $remaining_pre_mine_titel; ?></span>
                 </div>
               </div>
             </div>
@@ -334,7 +347,7 @@ if($intro):
               <?php 
               $faqknop = $faq['knop'];
                 if( is_array( $faqknop ) &&  !empty( $faqknop['url'] ) ){
-                  printf('<div class="more-faq-btn"><a class="fl-fade-effect" href="%s" target="%s">%s</a></div>', $faqknop['url'], $faqknop['target'], $faqknop['title']); 
+                  printf('<div class="more-faq-btn"><a class="fl-fade-effect" href="%s" target="%s"><span>%s</span></a></div>', $faqknop['url'], $faqknop['target'], $faqknop['title']); 
                 }
 
               ?>

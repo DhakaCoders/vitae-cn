@@ -516,7 +516,9 @@
 .vt-about-the-token-des p{
 	margin-bottom: 35px;
 }
-.vt-about-the-token-des p:first-of-type{
+.vt-about-the-token-des-no p:first-of-type,
+.vt-about-the-token-des span.subtitle{
+	display: block;
 	font-size: 18px;
 	line-height: 32px;
 	margin-bottom: 15px;
@@ -1183,8 +1185,9 @@
 		padding-left: 5px;
 		padding-right: 5px;
 	}
-	.vt-about-the-token-des p:first-of-type,
-	.home-bnr-des p strong {
+	.vt-about-the-token-des-no p:first-of-type,
+	.home-bnr-des p strong,
+	.vt-about-the-token-des span.subtitle{
 	    font-size: 17px;
 	    line-height: 30px;
 	}
