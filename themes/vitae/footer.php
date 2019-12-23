@@ -1,5 +1,6 @@
 <?php 
 $copyright_text = get_field('copyright_text', 'options');
+$ftknop = get_field('knop', 'options');
 $smedias = get_field('sociale_media', 'options');
 $logoObj = get_field('logo_header', 'options');
 if( is_array($logoObj) ){
@@ -50,10 +51,12 @@ if( is_array($logoObj) ){
                 </a></li>
               <?php endforeach; ?>
               </ul>
-              <?php endif; ?>
-              <div class="ftr-socail-btn hide-sm">
-                <a href="#">VITAE.COM</a>
-              </div>
+              <?php endif; 
+              if( is_array( $ftknop ) &&  !empty( $ftknop['url'] ) ){
+                printf('<div class="ftr-socail-btn hide-sm"><a href="%s" target="%s">%s</a></div>', $ftknop['url'], $ftknop['target'], $ftknop['title']); 
+              }
+              ?>
+
             </div>
           </div>
         </div>
