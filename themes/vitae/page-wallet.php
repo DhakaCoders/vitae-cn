@@ -268,114 +268,51 @@ $thisID = get_the_ID();
             ?>
             </div>
           </div>
-          <?php endif; ?>
-        <div class="col-sm-12">
-          <div class="partners-slider-ctlr">
-            <span class="slide-prev-btn"></span>
-            <span class="slide-next-btn"></span>
-            <div class="partnersSlider xs-pagi-ctrl">
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-01.svg"></span>
-                    <strong>MasterNodes.Pro </strong>
+          <?php endif;           
+
+          $Query = new WP_Query(array( 
+                  'post_type'=> 'partner',
+                  'post_status' => 'publish',
+                  'posts_per_page' => -1,
+                  'order'=> 'DESC'
+                ) 
+              );
+
+          if( $Query->have_posts() ):
+          ?>
+          <div class="col-sm-12">
+            <div class="partners-slider-ctlr">
+              <span class="slide-prev-btn"></span>
+              <span class="slide-next-btn"></span>
+              <div class="partnersSlider xs-pagi-ctrl">
+                <?php 
+                while($Query->have_posts()): $Query->the_post(); 
+                  $partners = get_field('partners', get_the_ID());
+                  $plogosrc = '';
+                  if(!empty($partners['logo'])){
+                      $plogosrc = $partners['logo'];
+                  }
+                  $pllink = $partners['knop'];
+                  $plurl = '#';
+                  if( is_array( $pllink ) &&  !empty( $pllink['url'] ) ){
+                    $plurl = $pllink['url'];
+                  }
+                ?>
+                <div class="partnersSlideItem">
+                  <div class="partnersSlideItemInner matchHeightCol">
+                    <a class="overlay-link" href="<?php echo $plurl; ?>" target="_blank"></a>
+                    <div>
+                      <span class="partners-logo-bx"><img src="<?php echo $plogosrc; ?>" alt="<?php the_title(); ?>"></span>
+                      <strong><?php the_title(); ?></strong>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-02.svg"></span>
-                    <strong>MasterNode.Live </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-03.svg"></span>
-                    <strong>NodeHub.io </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-04.svg"></span>
-                    <strong>MasterNodes.Online </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-01.svg"></span>
-                    <strong>MasterNodes.Pro </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-01.svg"></span>
-                    <strong>MasterNodes.Pro </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-01.svg"></span>
-                    <strong>MasterNodes.Pro </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-01.svg"></span>
-                    <strong>MasterNodes.Pro </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-01.svg"></span>
-                    <strong>MasterNodes.Pro </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-01.svg"></span>
-                    <strong>MasterNodes.Pro </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-01.svg"></span>
-                    <strong>MasterNodes.Pro </strong>
-                  </div>
-                </div>
+                <?php endwhile; ?>
+                
               </div>
             </div>
           </div>
-        </div>
+          <?php endif; wp_reset_postdata(); ?>
       </div>
   </div>    
 </section>

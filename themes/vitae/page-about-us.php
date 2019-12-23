@@ -69,15 +69,18 @@ $gfirst = $gsecond = $gthird = $g1title = $g2title = $g3title ='';
 if($galleries){
   foreach ($galleries as $key => $gallery) {
     if($key == 0) {
-      $gfirst = $gallery['url'];
+      $gimgID = $gallery['ID'];
+      $gfirst = cbv_get_image_src($gimgID, 'augl1');
       $g1title = $gallery['title'];
     }
     if($key == 1){
-      $gsecond = $gallery['url'];
+      $gimgID = $gallery['ID'];
+      $gsecond = cbv_get_image_src($gimgID, 'augl2');
       $g2title = $gallery['title'];
     } 
     if($key == 2) {
-      $gthird = $gallery['url'];
+      $gimgID = $gallery['ID'];
+      $gthird = cbv_get_image_src($gimgID, 'augl3');
       $g3title = $gallery['title'];
     }
   }
@@ -90,18 +93,22 @@ if($galleries){
       <div class="col-sm-12">
         <div class="about-our-team-wrp clearfix">
           <div class="about-our-team-lft">
+            <?php if( !empty( $gfirst ) ){ ?>
             <div class="about-our-team-img-small">
               <img src="<?php echo $gfirst; ?>" alt="<?php echo $g1title; ?>">
             </div>
+            <?php }if( !empty( $gsecond ) ){ ?>
             <div class="about-our-team-img">
               <img src="<?php echo $gsecond; ?>" alt="<?php echo $g2title; ?>">
             </div>
+            <?php } ?>
           </div>
           <div class="about-our-team-rgt">
+            <?php if( !empty( $gthird ) ){ ?>
             <div class="about-our-team-img show-md">
-              <img src="<?php echo $gthird; ?>" alt="<?php echo $g3title; ?>">
+              <img src="<?php echo $gthird; ?>" alt="<?php echo $g3title; ?> device-md">
             </div>
-            <?php 
+            <?php }
               if($ourteam):
             ?>
             <div class="about-our-team-dsc">
@@ -111,9 +118,11 @@ if($galleries){
               ?>
             </div>
             <?php endif; ?>
+            <?php if( !empty( $gthird ) ){ ?>
             <div class="about-our-team-img hide-md">
-              <img src="<?php echo THEME_URI; ?>/assets/images/about-our-team-img-3.png">
+              <img src="<?php echo $gthird; ?>" alt="<?php echo $g3title; ?>">
             </div>
+            <?php } ?>
           </div>
         </div>
       </div>
@@ -137,88 +146,51 @@ if($galleries){
             ?>
             </div>
           </div>
-          <?php endif; ?>
-        <div class="col-sm-12">
-          <div class="partners-slider-ctlr">
-            <span class="slide-prev-btn"></span>
-            <span class="slide-next-btn"></span>
-            <div class="partnersSlider xs-pagi-ctrl">
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-01.svg"></span>
-                    <strong>MasterNodes.Pro </strong>
+          <?php endif; 
+
+          $Query = new WP_Query(array( 
+                  'post_type'=> 'partner',
+                  'post_status' => 'publish',
+                  'posts_per_page' => -1,
+                  'order'=> 'DESC'
+                ) 
+              );
+
+          if( $Query->have_posts() ):
+          ?>
+          <div class="col-sm-12">
+            <div class="partners-slider-ctlr">
+              <span class="slide-prev-btn"></span>
+              <span class="slide-next-btn"></span>
+              <div class="partnersSlider xs-pagi-ctrl">
+                <?php 
+                while($Query->have_posts()): $Query->the_post(); 
+                  $partners = get_field('partners', get_the_ID());
+                  $plogosrc = '';
+                  if(!empty($partners['logo'])){
+                      $plogosrc = $partners['logo'];
+                  }
+                  $pllink = $partners['knop'];
+                  $plurl = '#';
+                  if( is_array( $pllink ) &&  !empty( $pllink['url'] ) ){
+                    $plurl = $pllink['url'];
+                  }
+                ?>
+                <div class="partnersSlideItem">
+                  <div class="partnersSlideItemInner matchHeightCol">
+                    <a class="overlay-link" href="<?php echo $plurl; ?>" target="_blank"></a>
+                    <div>
+                      <span class="partners-logo-bx"><img src="<?php echo $plogosrc; ?>" alt="<?php the_title(); ?>"></span>
+                      <strong><?php the_title(); ?></strong>
+                    </div>
                   </div>
                 </div>
+                <?php endwhile; ?>
+                
               </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-02.svg"></span>
-                    <strong>MasterNode.Live </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-03.svg"></span>
-                    <strong>NodeHub.io </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-04.svg"></span>
-                    <strong>MasterNodes.Online </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-01.svg"></span>
-                    <strong>MasterNodes.Pro </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-01.svg"></span>
-                    <strong>MasterNodes.Pro </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-01.svg"></span>
-                    <strong>MasterNodes.Pro </strong>
-                  </div>
-                </div>
-              </div>
-              <div class="partnersSlideItem">
-                <div class="partnersSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="#" target="_blank"></a>
-                  <div>
-                    <span class="partners-logo-bx"><img src="<?php echo THEME_URI; ?>/assets/images/partners-logo-01.svg"></span>
-                    <strong>MasterNodes.Pro </strong>
-                  </div>
-                </div>
-              </div>
-              
             </div>
           </div>
-        </div>
+          <?php endif; wp_reset_postdata(); ?>
       </div>
   </div>    
 </section>
@@ -327,16 +299,21 @@ if($galleries){
 <section class="social-media-platform-sec about-social-media-sec">
   <div class="container">
       <div class="row">
+        <?php 
+          $mplatform = get_field('social_media_platform', $thisID);
+          $afbeelding = $mplatform['afbeelding'];
+        ?>
         <div class="col-sm-12 col-lg-7">
           <div class="map-img-grd-col">
+            <?php if( !empty( $afbeelding ) ){ ?>
             <div class="vt-sm-map-xs-ctlr">
-              <img src="<?php echo THEME_URI; ?>/assets/images/home-map-img.jpg">
+              <img src="<?php echo $afbeelding; ?>">
             </div>
+            <?php } ?>
           </div>
         </div>
         <div class="col-sm-12 col-lg-5">
-        <?php 
-          $mplatform = get_field('social_media_platform', $thisID);
+        <?php
           if($mplatform):
             $maplinks = $mplatform['links'];
         ?>

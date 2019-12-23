@@ -29,6 +29,9 @@ if( !function_exists('cbv_theme_setup') ){
     add_image_size( 'pgallery', 442, 360, true );
     add_image_size( 'dfppage2', 452, 372, true );
     add_image_size( 'mbscrnimage', 338, 694, true );
+    add_image_size( 'augl1', 297, 288, true );
+    add_image_size( 'augl2', 556, 388, true );
+    add_image_size( 'augl3', 788, 517, true );
 
 		
 		// add size to media uploader
