@@ -23,6 +23,12 @@ if( !function_exists('cbv_theme_setup') ){
 			add_theme_support('category-thumbnails');
 		}
     add_image_size( 'lmimg1', 672, 482, true );
+    add_image_size( 'vdimg', 645, 506, true );
+    add_image_size( 'vdimg2', 906, 600, true );
+    add_image_size( 'dfpageg1', 906, 430, true );
+    add_image_size( 'pgallery', 442, 360, true );
+    add_image_size( 'dfppage2', 452, 372, true );
+    add_image_size( 'mbscrnimage', 338, 694, true );
 
 		
 		// add size to media uploader

@@ -194,7 +194,7 @@ $fears = $features['features'];
     $vurl = $comvideo['video_url'];
     $cpostertag = '';
     if(!empty($comvideo['poster'])){
-        $cpostertag = cbv_get_image_tag($comvideo['poster'], 'hmbbox');
+        $cpostertag = cbv_get_image_tag($comvideo['poster'], 'vdimg');
     }
     if(!empty($vurl)){
       $vposertag = '<a data-fancybox href="'.$vurl.'">

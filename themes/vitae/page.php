@@ -17,7 +17,7 @@ $thisID = get_the_ID();
                     echo '<div class="dfp-promo-module clearfix">';
                       if( !empty($title) ) printf('<h1>%s</h1>', $title);
                       if( !empty($afbeelding) ){
-                        echo '<div class="dfp-plate-one-img-bx">', cbv_get_image_tag($afbeelding), '</div>';
+                        echo '<div class="dfp-plate-one-img-bx">', cbv_get_image_tag($afbeelding, 'dfpageg1'), '</div>';
                       }
                     echo '</div>';    
                 }elseif( get_row_layout() == 'teksteditor' ){
@@ -27,7 +27,7 @@ $thisID = get_the_ID();
                     echo '</div>';    
                   }elseif( get_row_layout() == 'afbeelding_tekst' ){
                     $fc_afbeelding = get_sub_field('fc_afbeelding');
-                    $imgsrc = cbv_get_image_src($fc_afbeelding, 'dfpageg1');
+                    $imgsrc = cbv_get_image_src($fc_afbeelding, 'dfppage2');
                     $fc_tekst = get_sub_field('fc_tekst');
                     $fc_cirkel = get_sub_field('cirkel');
                     $positie_afbeelding = get_sub_field('positie_afbeelding');
@@ -59,10 +59,10 @@ $thisID = get_the_ID();
                     if( $gallery_cn ):
                     echo "<div class='gallery-wrap clearfix'><div class='gallery gallery-columns-{$kolom}'>";
                       foreach( $gallery_cn as $image ):
-                      $imgsrc = cbv_get_image_src($image['ID'], 'dfpageg1');  
+                      $imgsrc = cbv_get_image_src($image['ID'], 'pgallery');  
                       echo "<figure class='gallery-item'><div class='gallery-icon portrait'>";
                       if( $lightbox ) echo "<a data-fancybox='gallery' href='{$image['url']}'>";
-                          echo wp_get_attachment_image( $image['ID'], 'dfpageg1' );
+                          echo wp_get_attachment_image( $image['ID'], 'pgallery' );
                       if( $lightbox ) echo "</a>";
                       echo "</div></figure>";
                       endforeach;
@@ -94,7 +94,7 @@ $thisID = get_the_ID();
                     $fc_videolink = get_sub_field('video_url');
                     $fc_videoposter = '';
                     if(get_sub_field('video_afbeelding')){
-                      $fc_videoposter = cbv_get_image_tag(get_sub_field('video_afbeelding'));
+                      $fc_videoposter = cbv_get_image_tag(get_sub_field('video_afbeelding'), 'vdimg2');
                     }
                     echo "<div class='dfp-fancy-bx'><div class='video-play'>";
                     if(!empty($fc_videolink)):
