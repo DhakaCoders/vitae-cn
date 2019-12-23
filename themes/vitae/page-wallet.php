@@ -61,7 +61,7 @@ $thisID = get_the_ID();
             $fe2blocks = $fblock['features_block'];
             $feab2src = '';
             if(!empty($fblock['afbeelding'])){
-                $feab2src = cbv_get_image_src($fblock['afbeelding'], 'hmbbox');
+                $feab2src = cbv_get_image_src($fblock['afbeelding'], 'mbscrnimage');
             }
               
         ?>
@@ -124,7 +124,7 @@ $thisID = get_the_ID();
 	if($features1):
 		$fea1src = '';
 	    if(!empty($features1['afbeelding'])){
-	        $fea1src = cbv_get_image_src($features1['afbeelding']['id'], 'hmbbox');
+	        $fea1src = cbv_get_image_src($features1['afbeelding']['id']);
 	    }
 	    $fe1lists = $features1['features_list'];
 	?>
@@ -170,7 +170,7 @@ $thisID = get_the_ID();
     		    $fe2blocks = $fblock['features_block'];
     		    $feab2src = '';
     		    if(!empty($fblock['afbeelding'])){
-    		        $feab2src = cbv_get_image_src($fblock['afbeelding'], 'hmbbox');
+    		        $feab2src = cbv_get_image_src($fblock['afbeelding'], 'mbscrnimage');
     		    }
     		    if($fe2blocks):
     		    	
