@@ -40,6 +40,7 @@ $shortcode = get_field('shortcode', $thisID);
             <?php 
               $newsletter = get_field('newsletter', HOMEID);
               if($newsletter):
+                $form_shortcode = $newsletter['form_shortcode'];
             ?>
             <div class="community-we-hdr">
             <?php 
@@ -49,7 +50,10 @@ $shortcode = get_field('shortcode', $thisID);
             </div>
             <div class="newsletter-form" id="newsletter-form">
               <div id="wp-form">
-                <?php echo do_shortcode('[wpforms id="592"]'); ?>
+                <?php 
+                if( !empty( $form_shortcode ) )
+                echo do_shortcode($form_shortcode); 
+                ?>
               </div>
             </div>
             <?php endif; ?>

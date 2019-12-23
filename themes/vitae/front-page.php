@@ -375,7 +375,10 @@ if($intro):
             </div>
             <div class="newsletter-form" id="newsletter-form">
               <div id="wp-form">
-                <?php echo do_shortcode($form_shortcode); ?>
+                <?php 
+                if( !empty( $form_shortcode ) )
+                echo do_shortcode($form_shortcode); 
+                ?>
               </div>
             </div>
             <?php endif; ?>
