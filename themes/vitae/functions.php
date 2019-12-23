@@ -23,6 +23,9 @@ if( !function_exists('cbv_theme_setup') ){
 			add_theme_support('category-thumbnails');
 		}
     add_image_size( 'lmimg1', 672, 482, true );
+    add_image_size( 'augl1', 297, 288, true );
+    add_image_size( 'augl2', 556, 388, true );
+    add_image_size( 'augl3', 788, 517, true );
 
 		
 		// add size to media uploader
