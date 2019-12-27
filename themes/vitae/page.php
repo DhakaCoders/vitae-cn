@@ -1,7 +1,6 @@
 <?php 
-get_header(); 
+get_header('page'); 
 $thisID = get_the_ID();
-
 ?>
 <section class="innerpage-con-wrap">
   <div class="container-sm">
@@ -14,12 +13,21 @@ $thisID = get_the_ID();
                 if( get_row_layout() == 'introductietekst' ){
                     $title = get_sub_field('titel');
                     $afbeelding = get_sub_field('afbeelding');
+                    if( !empty( $afbeelding ) ){
                     echo '<div class="dfp-promo-module clearfix">';
                       if( !empty($title) ) printf('<h1>%s</h1>', $title);
                       if( !empty($afbeelding) ){
                         echo '<div class="dfp-plate-one-img-bx">', cbv_get_image_tag($afbeelding, 'dfpageg1'), '</div>';
                       }
-                    echo '</div>';    
+                    echo '</div>';   
+                    }else{
+                    echo '<div class="dfp-promo-module introNoImage clearfix">';
+                      if( !empty($title) ) printf('<h1>%s</h1>', $title);
+                      if( !empty($afbeelding) ){
+                        echo '<div class="dfp-plate-one-img-bx">', cbv_get_image_tag($afbeelding, 'dfpageg1'), '</div>';
+                      }
+                    echo '</div>';                    
+                    }
                 }elseif( get_row_layout() == 'teksteditor' ){
                     $beschrijving = get_sub_field('fc_teksteditor');
                     echo '<div class="dfp-text-module clearfix">';
@@ -124,17 +132,18 @@ $thisID = get_the_ID();
                       echo '<div class="dfp-grd-slider-ctlr dfp-grd-slider-ctlr-2 "><span class="slide-prev-btn"></span><span class="slide-next-btn"></span><div class="dfp-grd-slider dfp-grd-slider-2 xs-pagi-ctrl">';
                         while($memQuery->have_posts()): $memQuery->the_post();
                           $partners = get_field('partners', get_the_ID());
-                          $plogosrc = '';
+                          $plogotag = '';
                           if(!empty($partners['logo'])){
-                              $plogosrc = $partners['logo'];
+                              $plogotag = '<img src="'.$plogosrc.'" alt="'.cbv_get_image_alt( $plogosrc ).'">';
                           }
                           $pllink = $partners['knop'];
                           $knicon = $partners['knop_icon'];
                           $kniconhover = $partners['knop_hover_icon'];
                           $positie_icon = $partners['positie_icon'];
-                          $plurl = '#';
                           if( is_array( $pllink ) &&  !empty( $pllink['url'] ) ){
-                            $plurl = $pllink['url'];
+                            $ptag = '<a target="_blank" href="'.$pllink['url'].'">'.$plogotag.'</a>';
+                          }else{
+                            $ptag = $plogotag;
                           }
                           $content = $partners['beschrijving'];
                           
@@ -145,9 +154,7 @@ $thisID = get_the_ID();
                           }
                         echo '<div class="dfp-grd-slide-item">';
                         echo '<div class="dfp-grd-slide-item-inner matchHeightCol">
-                          <div class="dfp-grd-slide-item-img">
-                            <a target="_blank" href="'.$plurl.'"><img src="'.$plogosrc.'" alt=""></a>
-                          </div>
+                          <div class="dfp-grd-slide-item-img">'.$ptag.'</div>
                           <a href="'.$plurl.'" target="_blank">'.get_the_title().'</a>
                         </div>
                         <div class="dft-two-plate-des-col '.$classiposition.' matchHeightCol">'.wpautop( $content ).'</p>';

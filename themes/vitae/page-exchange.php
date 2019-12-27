@@ -31,7 +31,7 @@ if($intro):
       <div class="row">
         <div class="col-sm-12">
           <div class="vt-exchange-form">
-            <img src="<?php echo THEME_URI; ?>/assets/images/vt-exchange-form.png">
+            <img src="<?php echo THEME_URI; ?>/assets/images/vt-exchange-form.png" alt="Exchange form">
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@ if($intro):
   <?php 
     $partners = get_field('partners', $thisID);
     if($partners):
-    	$prtlogos = $partners['exchange_solutions'];
+      $prtlogos = $partners['exchange_solutions'];
   ?>
   <section class="vt-more-exchange-sec">
     <div class="container">
@@ -61,30 +61,28 @@ if($intro):
             <div class="exchange-solution-slider exchangeSolutionSlider xs-pagi-ctrl">
               <?php 
               foreach($prtlogos as $prtlogo): 
-              	$fea1src = '';
-      			    if(!empty($prtlogo['logo'])){
-      			        $fea1src = $prtlogo['logo'];
-      			    }
-      			    $pllink = $prtlogo['knop'];
-      			    $plurl = '#';
-      			    if( is_array( $pllink ) &&  !empty( $pllink['url'] ) ){
-      			    	$plurl = $pllink['url'];
-      			    }
+                $pllink = $prtlogo['knop'];
               ?>
               <div class="esSlideItem">
                 <div class="esSlideItemInner matchHeightCol">
-                  <a class="overlay-link" href="<?php echo $plurl; ?>" target="_blank"></a>
+                <?php if( is_array( $pllink ) &&  !empty( $pllink['url'] ) ){ ?>
+                  <a class="overlay-link" href="<?php echo $pllink['url']; ?>" target="_blank"></a>
+                  <?php } ?>
                   <div>
-                    <span class="esSlideItem-logo-bx"><img src="<?php echo $fea1src; ?>" alt="<?php echo $prtlogo['titel'] ?>"></span>
-                    <?php if( !empty( $prtlogo['titel'] ) ) printf( '<strong>%s</strong>', $prtlogo['titel']); ?>
+                    <?php if(!empty($prtlogo['logo'])){ ?>
+                    <span class="esSlideItem-logo-bx">
+                    <img src="<?php echo $prtlogo['logo']; ?>" alt="<?php echo cbv_get_image_alt( $prtlogo['logo'] ); ?>">
+                    </span>
+                    <?php } 
+                    if( !empty( $prtlogo['titel'] ) ) printf( '<strong>%s</strong>', $prtlogo['titel']); ?>
                   </div>
                 </div>
               </div>
-          	  <?php endforeach; ?>
+              <?php endforeach; ?>
             </div>
           </div>
         </div>
-    	<?php endif; ?>
+      <?php endif; ?>
       </div>
     </div>
   </section>

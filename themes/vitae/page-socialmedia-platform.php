@@ -37,10 +37,11 @@ $thisID = get_the_ID();
                 <?php foreach ($features1 as $key => $tab1) { ?>
                 <div class="lmSocialSilder-item">
                   <div class="matchHeightCol">
+                  <?php if(!empty($tab1['icon'])): ?>
                     <i>
-                      <img src="<?php echo $tab1['icon']; ?>" alt="">
+                      <img src="<?php echo $tab1['icon']; ?>" alt="<?php echo cbv_get_image_alt( $tab1['icon'] ); ?>">
                     </i>                
-                    <?php if( !empty( $tab1['tekst'] ) ) echo wpautop($tab1['tekst']); ?>
+                    <?php endif; if( !empty( $tab1['tekst'] ) ) echo wpautop($tab1['tekst']); ?>
                   </div>
                 </div>
                  <?php } ?>
@@ -61,10 +62,11 @@ $thisID = get_the_ID();
                  <?php foreach ($features2 as $key => $tab2) { ?>
                 <div class="lmSocialSilder-item">
                   <div class="matchHeightCol">
+                  <?php if(!empty($tab2['icon'])): ?>
                     <i>
-                      <img src="<?php echo $tab2['icon']; ?>" alt="">
+                      <img src="<?php echo $tab2['icon']; ?>" alt="<?php echo cbv_get_image_alt( $tab2['icon'] ); ?>">
                     </i>                
-                    <?php if( !empty( $tab2['tekst'] ) ) echo wpautop($tab2['tekst']); ?>
+                    <?php endif; if( !empty( $tab2['tekst'] ) ) echo wpautop($tab2['tekst']); ?>
                   </div>
                 </div>
                  <?php } ?>
@@ -126,7 +128,7 @@ $thisID = get_the_ID();
           <div class="lm-mauris-aliquam-img">
             <?php if(!empty($comnty['afbeelding'])){ ?>
             <a>
-              <img src="<?php echo $cmpostersrc; ?>" alt="Grid image 1">
+              <img src="<?php echo $cmpostersrc; ?>" alt="<?php echo cbv_get_image_alt( $cmpostersrc ); ?>">
             </a>
             <?php } ?>
           </div>
@@ -168,10 +170,12 @@ $fears = $features['features'];
             <div class="clearfix lmCommunitySlider xs-pagi-ctrl">
               <?php foreach ($fears as $key => $feature) { ?>
               <div class="lmCommunitySlider-item">
+              <?php if(!empty($feature['icon'])): ?>
                 <i>
-                  <img src="<?php echo $feature['icon']; ?>" alt="<?php echo $feature['titel']; ?>">
+                  <img src="<?php echo $feature['icon']; ?>" alt="<?php echo cbv_get_image_alt( $feature['icon'] ); ?>">
                 </i>              
                 <?php 
+                endif;
                   if( !empty( $feature['titel'] ) ) printf( '<h6>%s</h6>', $feature['titel']);  
                   if( !empty( $feature['tekst'] ) ) echo wpautop($feature['tekst']);
                 ?>
@@ -198,7 +202,7 @@ $fears = $features['features'];
     }
     if(!empty($vurl)){
       $vposertag = '<a data-fancybox href="'.$vurl.'">
-        <i><img src="'.THEME_URI.'/assets/images/play-btn-icon-white.svg"></i>
+        <i><img src="'.THEME_URI.'/assets/images/play-btn-icon-white.svg" alt="play icon"></i>
         '.$cpostertag.'
       </a>';
     }else{
@@ -262,7 +266,7 @@ $fears = $features['features'];
           <div class="lm-homework-des-main-con clearfix">
             <div class="lm-homework-des-bq">
               <i>
-                <img src="<?php echo THEME_URI; ?>/assets/images/lm-quote-inc.svg" alt="" />  
+                <img src="<?php echo THEME_URI; ?>/assets/images/lm-quote-inc.svg" alt="Quote" />  
               </i>              
               <?php if( !empty( $testimonials['tekst'] ) ) echo wpautop($testimonials['tekst']);
               if( !empty( $testimonials['naam'] ) ) printf( '<span>- %s</span>', $testimonials['naam']); 

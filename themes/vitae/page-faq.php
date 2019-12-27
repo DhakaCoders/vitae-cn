@@ -26,7 +26,7 @@ $thisID = get_the_ID();
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $Query = new WP_Query(array( 
                     'post_type'=> 'faqs',
-                    'post_status' => 'publish',
+                    'post_status' => 'draft',
                     'posts_per_page' => 8,
                     'paged' => $paged,
                     'order'=> 'DESC'
@@ -41,7 +41,7 @@ $thisID = get_the_ID();
             <?php while($Query->have_posts()): $Query->the_post(); ?>
               <li>
                 <div class="vt-faq-grd-item matchHeightCol">
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/faq-grd-icon.svg"></i>
+                  <i><img src="<?php echo THEME_URI; ?>/assets/images/faq-grd-icon.svg" alt="<?php the_title(); ?>"></i>
                   <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
                   <?php the_excerpt(); ?>
                   <a href="<?php the_permalink(); ?>">Read More</a>                
@@ -69,7 +69,13 @@ $thisID = get_the_ID();
             ?>
           </div>
         </div>
-        <?php endif;wp_reset_postdata(); ?>
+        <?php else: 
+        $no_results = get_field('no_results', 'options');
+        ?>
+        <div class="col-sm-12">
+            <div class="noResults"><?php echo $no_results; ?></div>
+        </div>
+        <?php endif; wp_reset_postdata();?>
       </div>
   </div>    
 </section><!-- end of faq-overview-sec-wrp -->

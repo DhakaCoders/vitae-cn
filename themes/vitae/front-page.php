@@ -2,16 +2,15 @@
 $intro = get_field('intro', HOMEID);
 if($intro):
   $introlinks = $intro['links'];
-  $introsrc = '';
-  if(!empty($intro['afbeelding'])) $introsrc = $intro['afbeelding'];
-
 ?>
 <section class="home-banner">
   <div class="container">
       <div class="row">
         <div class="col-lg-12 col-xl-6 order-md-1 order-xl-2">
           <div class="home-bnr-img" style="margin-right: -185px">
-            <img src="<?php echo $introsrc; ?>" alt="intro">
+            <?php if(!empty($intro['afbeelding'])): ?>
+            <img src="<?php echo $intro['afbeelding']; ?>" alt="<?php echo cbv_get_image_alt( $intro['afbeelding'] ); ?>">
+            <?php endif; ?>
           </div>
         </div>
         <div class="col-lg-12 col-xl-6 order-md-2 order-xl-1">
@@ -83,7 +82,7 @@ if($intro):
     }
     if(!empty($vurl)){
       $vposertag = '<a data-fancybox href="'.$vurl.'">
-        <i><img src="'.THEME_URI.'/assets/images/play-btn-icon-white.svg"></i>
+        <i><img src="'.THEME_URI.'/assets/images/play-btn-icon-white.svg" alt="play icon"></i>
         '.$cpostertag.'
       </a>';
     }else{
@@ -180,10 +179,10 @@ if($intro):
             <div class="vt-about-token vt-about-token-01">
               <div class="vt-about-token-inner">
                 <div class="text-right bt-tooltip-btn">
-                  <span data-toggle="tooltip" title="<?php echo $pre_mine_tooltip; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg"></span>
+                  <span data-toggle="tooltip" title="<?php echo $pre_mine_tooltip; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg" alt="tooltip icon"></span>
                 </div>
                 <div class="vt-about-token-con">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-01.svg">
+                  <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-01.svg" alt="token icon">
                   <?php printf('<strong>%s</strong>', $preMine); ?>
                   <span><?php echo $pre_mine_titel; ?></span>
                 </div>
@@ -192,10 +191,10 @@ if($intro):
             <div class="vt-about-token vt-about-token-02">
               <div class="vt-about-token-inner">
                 <div class="text-right bt-tooltip-btn">
-                  <span data-toggle="tooltip" title="<?php echo $maximum_supply_tooltip; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg"></span>
+                  <span data-toggle="tooltip" title="<?php echo $maximum_supply_tooltip; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg" alt="supply icon"></span>
                 </div>
                 <div class="vt-about-token-con">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-02.svg">
+                  <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-02.svg" alt="maximum supply">
                   <?php printf('<strong>%s</strong>', $maxSupply); ?>
                   <span><?php echo $maximum_supply_titel; ?></span>
                 </div>
@@ -203,16 +202,16 @@ if($intro):
             </div>
 
             <div class="vt-about-token-center-logo">
-              <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-mdl.svg">
+              <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-mdl.svg" alt="supper node">
             </div>
 
             <div class="vt-about-token vt-about-token-03">
               <div class="vt-about-token-inner">
                 <div class="text-right bt-tooltip-btn">
-                  <span data-toggle="tooltip" title="<?php echo $super_node_tooltip; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg"></span>
+                  <span data-toggle="tooltip" title="<?php echo $super_node_tooltip; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg" alt="supper node icon"></span>
                 </div>
                 <div class="vt-about-token-con">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-03.svg">
+                  <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-03.svg" alt="Supper node token">
                   <?php printf('<strong>%s</strong>', $superNodeBurn); ?>
                   <span><?php echo $super_node_titel; ?></span>
                 </div>
@@ -221,10 +220,10 @@ if($intro):
             <div class="vt-about-token vt-about-token-04">
               <div class="vt-about-token-inner">
                 <div class="text-right bt-tooltip-btn">
-                  <span data-toggle="tooltip" title="<?php echo $remaining_pre_mine_tooltip; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg"></span>
+                  <span data-toggle="tooltip" title="<?php echo $remaining_pre_mine_tooltip; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tooltip-btn-icon.svg" alt="Remaining pre mine"></span>
                 </div>
                 <div class="vt-about-token-con">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-04.svg">
+                  <img src="<?php echo THEME_URI; ?>/assets/images/vt-token-icon-04.svg" alt="Remaining pre">
                   <?php printf('<strong>%s</strong>', $remainingPreMine); ?>
                   <span><?php echo $remaining_pre_mine_titel; ?></span>
                 </div>
@@ -272,10 +271,6 @@ if($intro):
                 <?php 
                 while($Query->have_posts()): $Query->the_post(); 
                   $partners = get_field('partners', get_the_ID());
-                  $plogosrc = '';
-                  if(!empty($partners['logo'])){
-                      $plogosrc = $partners['logo'];
-                  }
                   $pllink = $partners['knop'];
                   $plurl = '#';
                   if( is_array( $pllink ) &&  !empty( $pllink['url'] ) ){
@@ -286,7 +281,11 @@ if($intro):
                   <div class="partnersSlideItemInner matchHeightCol">
                     <a class="overlay-link" href="<?php echo $plurl; ?>" target="_blank"></a>
                     <div>
-                      <span class="partners-logo-bx"><img src="<?php echo $plogosrc; ?>" alt="<?php the_title(); ?>"></span>
+                      <span class="partners-logo-bx">
+                      <?php if(!empty($partners['logo'])){ ?>
+                      <img src="<?php echo $partners['logo']; ?>" alt="<?php echo cbv_get_image_alt( $partners['logo'] ); ?>">
+                      <?php } ?>
+                      </span>
                       <strong><?php the_title(); ?></strong>
                     </div>
                   </div>
@@ -301,8 +300,7 @@ if($intro):
     </div>    
   </section>
 
-
-  <section class="home-vt-faq-sec position-rltv-10">
+<section class="home-vt-faq-sec position-rltv-10">
     <div id="faqParticles"></div>
     <div class="container">
         <div class="row">
@@ -336,7 +334,7 @@ if($intro):
               <?php while($Query->have_posts()): $Query->the_post(); ?>
                 <li>
                   <div class="vt-faq-grd-item matchHeightCol">
-                    <i><img src="<?php echo THEME_URI; ?>/assets/images/faq-grd-icon.svg"></i>
+                    <i><img src="<?php echo THEME_URI; ?>/assets/images/faq-grd-icon.svg" alt="<?php the_title(); ?>"></i>
                     <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
                     <?php the_excerpt(); ?>
                     <a href="<?php the_permalink(); ?>">Read More</a>                
@@ -396,4 +394,5 @@ if($intro):
         </div>
     </div>    
   </section>
+  
 <?php get_footer(); ?>

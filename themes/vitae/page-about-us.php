@@ -37,8 +37,10 @@ $thisID = get_the_ID();
             <li>
               <div class="about-service-inr mHc">
                 <div class="about-service-dsc">
-                  <i><img src="<?php echo $feature['icon']; ?>" alt="<?php echo $feature['titel']; ?>"></i>
+                <?php if(!empty($feature['icon'])): ?>
+                  <i><img src="<?php echo $feature['icon']; ?>" alt="<?php echo cbv_get_image_alt( $feature['icon'] ); ?>"></i>
                   <?php 
+                  endif;
                   $knop2 = $feature['knop'];
                   $furl = '#';
                   if( is_array( $knop2 ) &&  !empty( $knop2['url'] ) ){
@@ -166,21 +168,19 @@ if($galleries){
                 <?php 
                 while($Query->have_posts()): $Query->the_post(); 
                   $partners = get_field('partners', get_the_ID());
-                  $plogosrc = '';
-                  if(!empty($partners['logo'])){
-                      $plogosrc = $partners['logo'];
-                  }
                   $pllink = $partners['knop'];
-                  $plurl = '#';
-                  if( is_array( $pllink ) &&  !empty( $pllink['url'] ) ){
-                    $plurl = $pllink['url'];
-                  }
                 ?>
                 <div class="partnersSlideItem">
                   <div class="partnersSlideItemInner matchHeightCol">
-                    <a class="overlay-link" href="<?php echo $plurl; ?>" target="_blank"></a>
+                    <?php if( is_array( $pllink ) &&  !empty( $pllink['url'] ) ): ?>
+                    <a class="overlay-link" href="<?php echo $pllink['url']; ?>" target="_blank"></a>
+                    <?php endif; ?>
                     <div>
-                      <span class="partners-logo-bx"><img src="<?php echo $plogosrc; ?>" alt="<?php the_title(); ?>"></span>
+                      <?php if(!empty($partners['logo'])): ?>
+                      <span class="partners-logo-bx">
+                      <img src="<?php echo $partners['logo']; ?>" alt="<?php echo cbv_get_image_alt( $partners['logo'] ); ?>">
+                      </span>
+                      <?php endif; ?>
                       <strong><?php the_title(); ?></strong>
                     </div>
                   </div>
@@ -208,7 +208,7 @@ if($galleries){
     }
     if(!empty($vurl)){
       $vposertag = '<a data-fancybox href="'.$vurl.'">
-        <i><img src="'.THEME_URI.'/assets/images/play-btn-icon-white.svg"></i>
+        <i><img src="'.THEME_URI.'/assets/images/play-btn-icon-white.svg" alt="play icon"></i>
         '.$cpostertag.'
       </a>';
     }else{
@@ -307,7 +307,7 @@ if($galleries){
           <div class="map-img-grd-col">
             <?php if( !empty( $afbeelding ) ){ ?>
             <div class="vt-sm-map-xs-ctlr">
-              <img src="<?php echo $afbeelding; ?>">
+              <img src="<?php echo $afbeelding; ?>" alt="<?php echo cbv_get_image_alt( $afbeelding ); ?>">
             </div>
             <?php } ?>
           </div>
